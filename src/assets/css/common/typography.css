@@ -112,7 +112,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 70px;
-    line-height: 70px;
+    line-height: 1;
     letter-spacing: 0.06rem;
     display: inline-block;
     background: linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
@@ -123,10 +123,10 @@
   
   .sec_title_sub{
     display: block;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 500;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
     letter-spacing: 0.08rem;
     color: #292f4a;
     margin-top: 1rem;
