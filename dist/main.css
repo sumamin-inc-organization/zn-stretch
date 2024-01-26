@@ -231,7 +231,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 70px;
-    line-height: 70px;
+    line-height: 1;
     letter-spacing: 0.06rem;
     display: inline-block;
     background: linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
@@ -242,10 +242,10 @@
   
   .sec_title_sub{
     display: block;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 500;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
     letter-spacing: 0.08rem;
     color: #292f4a;
     margin-top: 1rem;
@@ -401,7 +401,123 @@
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/precedent.css ***!
   \********************************************************************************/
+#precedent{
+    background-color: #fff;
+    /* background-image: url(../images/common/slash_01.svg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: top 20px right 0; */
+    /* background-size: 245px; */
 
+    position: relative;
+    /* border: 1px solid black; */
+    /* min-height: 100vh; */
+    display: grid;
+    place-content: center;
+    padding: 245px 0;
+}
+
+.precedent_content{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px #ff0000; */
+    position: relative;
+    z-index: 3;
+    max-width: 1100px;
+}
+
+.precedent_content:after {
+    width: 64vw;
+    height: 77.3vh;
+    top: 0;
+    left: 0;
+}
+
+.precedent_content:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #EBF5FF;
+    border-radius: 50px 0 0 50px;
+}
+
+.precedent_top{
+    display: flex;
+    column-gap: 80px;
+    align-items: end;
+}
+
+.precedent_top img{
+    width: 41.8%;
+    border-radius: 20px;
+}
+
+.precedent_top_text{
+    padding-bottom: 10px;
+}
+
+.precedent_top p{
+    font-size: 20px;
+    line-height: 2.6;
+    letter-spacing: 0.06rem;
+    margin-top: 60px;   
+}
+
+/*---------------------------------
+    Salary Example / 給与例
+----------------------------------*/
+.precedent_bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    padding: 0 40px;
+}
+
+.precedent_bottom_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precedent_bottom_item img{
+    max-width: 265px;
+}
+
+.precedent_bottom_item h3{
+    line-height: 1;
+    letter-spacing: 0.05rem;
+    margin-top: 20px;
+}
+
+.precedent_bottom_item .data{
+    font-size: 16px;
+    list-style: 1.75;
+    margin-top: 10px;
+}
+
+.precedent_bottom_item .salary{
+    font-size: 20px;
+    margin-top: 25px;
+    /* padding: 0 1.1em; */
+    width: 286px;
+    text-align: center;
+}
+
+.precedent_bottom_item .price{
+    font-size: 40px;
+    font-style: italic;
+    padding: 0 0.1em;
+}
+
+
+
+
+/* いらないやつ */
+#point{
+    margin-top: 245px;
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recruit.css ***!
   \******************************************************************************/
