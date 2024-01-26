@@ -1,0 +1,16 @@
+import "./assets/css/common/reset.css";
+import "./assets/css/common/typography.css";
+import "./assets/css/common/utility.css";
+import "./assets/css/about.css";
+import "./assets/css/area.css";
+import "./assets/css/entry.css";
+import "./assets/css/flow.css";
+import "./assets/css/footer.css";
+import "./assets/css/header.css";
+import "./assets/css/interview.css";
+import "./assets/css/keyvisual.css";
+import "./assets/css/navigation.css";
+import "./assets/css/point.css";
+import "./assets/css/precedent.css";
+import "./assets/css/recruit.css";
+import "./assets/css/schedule.css";
