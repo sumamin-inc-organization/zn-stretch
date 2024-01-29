@@ -1,0 +1,49 @@
+#recruit{
+    background-color: #fff;
+    padding: 120px 0;
+}
+
+.recruit_title{
+    text-align: center;
+}
+
+.recruit_content{
+    max-width: 1100px;
+    margin: 70px auto 0;
+}
+
+.recruit_content table{
+    width: 100%;
+    border-spacing: 0 20px;
+}
+
+.recruit_content table tr{
+    margin-top: 20px;
+}
+
+.recruit_content th{
+    width: 20%;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+.recruit_content td{
+    width: 80%;
+    background-color: #F2F2F2;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 20px 30px;
+    text-align: justify;
+}
+
+.table_navy_bg{
+    background-color: #292F4A;
+    margin: 25px 0 20px;
+    padding: 0 20px 0.1em;
+    border-radius: 5px;
+    display: inline-block;
+}

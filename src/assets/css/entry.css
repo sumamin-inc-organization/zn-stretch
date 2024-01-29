@@ -1,0 +1,33 @@
+#entry{
+    background: linear-gradient(to bottom, #81B3E6 50%, #467DD2 100%);
+    padding: 120px 0 100px;
+}
+
+.entry_title{
+    text-align: center;
+}
+
+.entry_title h2{
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+}
+
+.entry_title span{
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+    margin-top: 1rem;
+}
+
+.entry_content{
+    margin-top: 70px;
+}
+
+.entry_content p{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: center;
+}

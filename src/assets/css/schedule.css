@@ -1,7 +1,10 @@
 #schedule{
     background-color: #fff;
     padding: 170px 0;
-    margin-bottom: 200px;
+}
+
+.schedule_title{
+    text-align: center;
 }
 
 .schedule_content{
@@ -32,42 +35,99 @@
 ----------------------------------*/
 /*タイムライン全体の設定*/
 .timeline{
-	max-width: 400px;
-	width:100%;
-	margin:50px auto;
-	padding:0 30px;
+	/* max-width: 400px; */
+	max-width:1100px;
+	margin:70px auto;
+	padding:0 100px;
 }
 
 .timeline li{
     /*線の起点とするためrelativeを設定*/
     position: relative;
 	list-style: none;
-	padding:0 0 20px 0;
+	padding:0 0 35px 0;
+}
+
+.timeline li:last-child{
+    padding-bottom: 0;
+}
+
+.timeline li:last-child dl{
+    align-items: end;
 }
 
 .timeline dl{
-	margin:0 0 20px 3em;
+	margin:0 0 0 70px;
+    display: flex;
+    column-gap: 60px;
+}
+
+.timeline dt{
+    font-size: 30px;
+}
+
+.timeline dd{
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.timeline dd img{
+    width: 39.1%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0  20px;
+}
+
+.timeline dd .timeline_text{
+    padding: 35px 30px 40px;
+    text-align: left;
+}
+
+.timeline dd .timeline_text h4{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+}
+
+.timeline dd .timeline_text p{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.75;
 }
 
 /*絶対配置で線を設定*/
 .border-line {
     /*線の位置*/
 	position: absolute;
-	left:0.2em;
-	top:0;
-	width:2px;/*線の太さ*/
+	left:10px;
+	top:20px;
+	width:0;/*線の太さ*/
 	height:0;/*はじめは高さを0に*/
-	background: #ccc;
+	/* background: #ccc; */
+    border-left: dotted 4px #092F4A;
 }
 
 /*タイムラインの見出し横の丸の位置と形状*/
 .timeline li::after{
 	content:'';
 	position: absolute;
-	top:0;
+	top:13px;
 	left:0;
-	width:10px;
-	height: 10px;
-	background:#666;
-	border-radius: 50%;
+	width:24px;
+	height: 24px;
+    background-image: url(../images/schedule/timeline_circle.png);
+    background-size: 100%;
+	/* background:#fff; */
+    /* border-width: 3px; */
+    /* border-style: solid; */
+    /* border-image-source: linear-gradient(to right, #96BEE6, #6496DC); */
+    /* border-image-slice: 1; */
+    /* border-radius: 50%; */
+}
+
+.timeline li:last-child::after{
+    top: initial;
+    bottom: 10px;
 }

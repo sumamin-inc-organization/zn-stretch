@@ -1,0 +1,26 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0;
+}
+
+footer p{
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.12rem;
+    text-align: center;
+}
+
+footer img{
+    width: 363px;
+    margin-top: 20px;
+}
+
+footer small{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 16px;
+    line-height: 1;
+}
