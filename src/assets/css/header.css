@@ -10,3 +10,41 @@ header{
 header h1{
     width: 303px;
 }
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+}
+.btn__link {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 1.2em 0.5em;
+    color: #fff;
+    background: linear-gradient(to right, #ff2e2e 0%, #ff8800 50%, #ffcf75 100%);
+    border-radius: 40px;
+    transition: background 0.5s ease-in-out;
+}
+
+.btn__link:hover {
+    text-decoration: none;
+    background: linear-gradient(to right, #ffcf75 0%, #ff8800 50%, #ff2e2e 100%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
