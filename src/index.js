@@ -16,13 +16,16 @@ import "./assets/css/recruit.css";
 import "./assets/css/schedule.css";
 
 
+/*----------------------------
+      Timeline / 1日の流れ
+----------------------------*/
 //線が伸びるための設定を関数でまとめる
 function ScrollTimelineAnime(){
 	$('.timeline li').each(function(){// それぞれのli要素の
 		var elemPos = $(this).offset().top;// 上からの高さ取得
 		var scroll = $(window).scrollTop();// スクロール値取得
 		var windowHeight = $(window).height();// windowの高さ取得
-		var startPoint = 100; //線をスタートさせる位置を指定※レイアウトによって調整してください
+		var startPoint = 500; //線をスタートさせる位置を指定※レイアウトによって調整してください
 		if (scroll >= elemPos - windowHeight-startPoint){				
 			var H = $(this).outerHeight(true)//liの余白と高さを含めた数値を取得
 			//スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
