@@ -300,7 +300,48 @@
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/about.css ***!
   \****************************************************************************/
+#about{
+    background-color: #fff;
+    padding: 130px 0;
+    background-image: url(./images/about_bg.png);
+    background-repeat: no-repeat;
+    background-position: top 150% right 0;
+    background-size: 62.9vw;
+}
 
+.about_content{
+    text-align: center;
+}
+
+.about_top{
+    background-image: url(./images/slash_02.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 0;
+    background-size: 167px;
+    padding-bottom: 80px;
+}
+
+.about_top p{
+    font-size: 20px;
+    line-height: 2.6;
+    margin-top: 60px;
+}
+
+.about_top iframe{
+    margin-top: 70px;
+    width: 720px;
+    height: 405px;
+}
+
+.about_bottom h3{
+    width: 470px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+    border-radius: 20px;
+    padding: 0.5em 0;
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/area.css ***!
   \***************************************************************************/
@@ -509,14 +550,6 @@
     font-size: 40px;
     font-style: italic;
     padding: 0 0.1em;
-}
-
-
-
-
-/* いらないやつ */
-#point{
-    margin-top: 245px;
 }
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recruit.css ***!
