@@ -1,0 +1,73 @@
+#schedule{
+    background-color: #fff;
+    padding: 170px 0;
+    margin-bottom: 200px;
+}
+
+.schedule_content{
+    text-align: center;
+}
+
+.schedule_content h3{
+    width: 470px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+    border-radius: 20px;
+    margin-top: 70px;
+    padding: 0.5em 0;
+}
+
+.schedule_content iframe{
+    width: 720px;
+    height: 405px;
+    display: block;
+    margin: 60px auto;
+}
+
+
+/*---------------------------------
+    Timeline / 1日の流れ
+----------------------------------*/
+/*タイムライン全体の設定*/
+.timeline{
+	max-width: 400px;
+	width:100%;
+	margin:50px auto;
+	padding:0 30px;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding:0 0 20px 0;
+}
+
+.timeline dl{
+	margin:0 0 20px 3em;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left:0.2em;
+	top:0;
+	width:2px;/*線の太さ*/
+	height:0;/*はじめは高さを0に*/
+	background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:10px;
+	height: 10px;
+	background:#666;
+	border-radius: 50%;
+}
