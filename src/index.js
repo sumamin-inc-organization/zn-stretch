@@ -33,7 +33,7 @@ function ScrollTimelineAnime(){
 
 			// 100% を超えたらずっと100%を入れ続ける
 			if(percent  > 100){
-				percent  = 100;
+				percent  = 98;
 			}
 			// ボーダーの長さをセット
 			$(this).children('.border-line').css({
