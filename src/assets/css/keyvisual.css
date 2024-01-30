@@ -4,24 +4,43 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    /* height: 90vh; */
+    /* display: flex; */
+    /* align-items: bottom; */
+    position: relative;
+    padding: 9% 0 6%;
+}
+
+.keyvisual_content{
     display: flex;
+    max-width: 76.7vw;
+    /* height: 93dvh; */
+    margin: 0 auto;
+    align-items: center;
+    /* position: relative; */
+}
+
+.keyvisual_left{
+    width: 53%;
+    /* margin-top: 3%; */
 }
 
 .keyvisual_left img{
     width: 35.9vw;
+    margin-left: 30px;
 }
 
 .keyvisual_left .keyvisual_copy{
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 1.98vw;
     transform: skewX(-10deg);
     /* padding-bottom: 10px; */
     border-bottom: solid 2px #fff;
 }
 
 .keyvisual_left .ten-million{
-    font-size: 50px;
-    /* font-style: italic; */
+    /* font-size: 50px; */
+    font-size: 3.31vw;
 }
 
 .keyvisual_left .comma{
@@ -46,24 +65,58 @@
 }
 
 .keyvisual_left_point_item h3 .point{
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 1.46vw;
     font-style: italic;
     line-height: 1;
 }
 
 .keyvisual_left_point_item h3 .number{
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 2.38vw;
     font-style: italic;
     line-height: 1;
 }
 
 .keyvisual_left_point_item p{
-    font-size: 20px;
-    line-height: 31px;
+    /* font-size: 20px; */
+    font-size: 1.32vw;
+    line-height: 1.55;
     letter-spacing: 0.04rem;
+    margin-top: 0.1rem;
+}
+
+.keyvisual_right{
+    position: absolute;
+    width: 49%;
+    left: 51%;
+    bottom: 0;
 }
 
 .keyvisual_right img{
-    width: 48.9vw;
-    font-size: 50px;
+    width: 100%;
+}
+
+/*----------------------------
+    CTA
+    応募ボタン
+----------------------------*/
+#keyvisual button{
+    width: 100%;
+    border-radius: 35px;    
+    font-size: 25px;
+    line-height: 70px;
+    letter-spacing: 0.11rem;
+    position: relative;
+    margin-top: 30px;
+    box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
+}
+
+#keyvisual button img{
+    width: 13px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 30px;
 }

@@ -1,3 +1,6 @@
+/*----------------------------
+      CSS / スタイリングシート
+----------------------------*/
 import "./assets/css/common/reset.css";
 import "./assets/css/common/typography.css";
 import "./assets/css/common/utility.css";

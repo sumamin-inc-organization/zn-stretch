@@ -296,7 +296,28 @@
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utility.css ***!
   \*************************************************************************************/
+.button_common{
+    /*ボタンの形状*/
+    display: inline-block;
+    color:#fff;
+    /* padding: 18px 60px; */
+    /* border-radius:30px; */
+    /* text-decoration: none; */
+    border: none;
+    pointer-events: cursor;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg, #30508D 50%, #092F5A 100%);
+    background-position: 1% 50%;
+    background-size: 200% auto;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease-out;
+}
 
+/*hoverした際の、背景の場所とテキスト色の変更*/
+.button_common:hover {
+    color: #fff;
+    background-position: 99% 50%;
+}
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/about.css ***!
   \****************************************************************************/
@@ -342,14 +363,110 @@
     border-radius: 20px;
     padding: 0.5em 0;
 }
+
+/*----------------------------
+      Media / メディア
+----------------------------*/
+.slider{
+    width:70%;
+    margin:0 auto;
+}
+.slider img{
+    width:100%;
+}
+.slider .slick-slide{
+    height:auto!important;
+}
+.slider .slick-arrow{
+    z-index:2!important;
+}
+.slider .slick-next{
+    right:0!important;
+}
+.slider .slick-prev{
+    left:0!important;
+}
+.slick-slide{
+    margin-right: 1vw!important;
+    margin-left: 1vw!important;
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/area.css ***!
   \***************************************************************************/
+#area{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 130px 0 150px;
+}
 
+.area_wrap{
+    position: relative;
+}
+
+.area_wrap img{
+    width: 80.3%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.area_content{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-bottom: 24%;
+}
+
+.area_content .bg_gradient{
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.04rem;
+    margin-top: 15px;
+    padding: 0.4em 0.6em;
+}
+
+.area_content p:last-child{
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 20px;
+}
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/entry.css ***!
   \****************************************************************************/
+#entry{
+    background: linear-gradient(to bottom, #81B3E6 50%, #467DD2 100%);
+    padding: 120px 0 100px;
+}
 
+.entry_title{
+    text-align: center;
+}
+
+.entry_title h2{
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+}
+
+.entry_title span{
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+    margin-top: 1rem;
+}
+
+.entry_content{
+    margin-top: 70px;
+}
+
+.entry_content p{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: center;
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
   \***************************************************************************/
@@ -357,19 +474,230 @@
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0;
+}
 
+footer p{
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.12rem;
+    text-align: center;
+}
+
+footer img{
+    width: 363px;
+    margin-top: 20px;
+}
+
+footer small{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 16px;
+    line-height: 1;
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
+header{
+    position: fixed;
+    padding: 40px 40px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
 
+header h1{
+    width: 303px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+}
+.btn__link {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 1.2em 0.5em;
+    color: #fff;
+    background: linear-gradient(to right, #ff2e2e 0%, #ff8800 50%, #ffcf75 100%);
+    border-radius: 40px;
+    transition: background 0.5s ease-in-out;
+}
+
+.btn__link:hover {
+    text-decoration: none;
+    background: linear-gradient(to right, #ffcf75 0%, #ff8800 50%, #ff2e2e 100%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/interview.css ***!
   \********************************************************************************/
+#interview{
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1100px 1fr; */
+    background-color: #EBF5FF;
+    padding: 130px 0 140px;
+}
 
+.interview_wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.schedule_title{
+    /* grid-column: 2 / 3; */
+}
+
+.interview_item{
+    display: flex;
+    align-items: end;
+    column-gap: 60px;
+    margin-top: 75px;
+}
+
+.interview_item:nth-child(2){
+    margin-top: 60px;
+}
+
+.interview_item img{
+    width: 48.2%;
+    border-radius: 20px;
+}
+
+.interview_item_text_name{
+    display: flex;
+    column-gap: 25px;
+    align-items: flex-end;
+}
+
+.interview_item_text_name span{
+    font-size: 16px;
+    line-height: 1;
+}
+
+.interview_item_text_name h3{
+    font-size: 20px;
+    line-height: 1;
+}
+
+.interview_item_text_qa{
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius:20px;
+    padding: 25px 20px;
+}
+
+.interview_item_text_qa:nth-child(3){
+    margin-top: 15px;
+}
+
+.interview_item_text_qa h4{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+}
+
+.interview_item_text_qa p{
+    font-size: 16px;
+    line-height: 1.75;
+    margin-top: 20px;
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
+#keyvisual{
+    background-color: #96BEE6;
+    background-image: url(./images/keyvisual_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+}
 
+.keyvisual_left img{
+    width: 35.9vw;
+}
+
+.keyvisual_left .keyvisual_copy{
+    font-size: 30px;
+    transform: skewX(-10deg);
+    /* padding-bottom: 10px; */
+    border-bottom: solid 2px #fff;
+}
+
+.keyvisual_left .ten-million{
+    font-size: 50px;
+    /* font-style: italic; */
+}
+
+.keyvisual_left .comma{
+    font-size: 80%;
+}
+
+.keyvisual_left_point{
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.keyvisual_left_point_item{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
+    -webkit-box-shadow: 3px 3px 5px rgba(131, 151, b198, .6);
+    text-align: center;
+    padding: 20px 0 25px;
+    width: 100%;
+}
+
+.keyvisual_left_point_item h3 .point{
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1;
+}
+
+.keyvisual_left_point_item h3 .number{
+    font-size: 36px;
+    font-style: italic;
+    line-height: 1;
+}
+
+.keyvisual_left_point_item p{
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0.04rem;
+}
+
+.keyvisual_right img{
+    width: 48.9vw;
+    font-size: 50px;
+}
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/navigation.css ***!
   \*********************************************************************************/
@@ -554,10 +882,190 @@
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recruit.css ***!
   \******************************************************************************/
+#recruit{
+    background-color: #fff;
+    padding: 120px 0;
+}
 
+.recruit_title{
+    text-align: center;
+}
+
+.recruit_content{
+    max-width: 1100px;
+    margin: 70px auto 0;
+}
+
+.recruit_content table{
+    width: 100%;
+    border-spacing: 0 20px;
+}
+
+.recruit_content table tr{
+    margin-top: 20px;
+}
+
+.recruit_content th{
+    width: 20%;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+.recruit_content td{
+    width: 80%;
+    background-color: #F2F2F2;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 20px 30px;
+    text-align: justify;
+}
+
+.table_navy_bg{
+    background-color: #292F4A;
+    margin: 25px 0 20px;
+    padding: 0 20px 0.1em;
+    border-radius: 5px;
+    display: inline-block;
+}
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/schedule.css ***!
   \*******************************************************************************/
+#schedule{
+    background-color: #fff;
+    padding: 170px 0;
+}
 
+.schedule_title{
+    text-align: center;
+}
+
+.schedule_content{
+    text-align: center;
+}
+
+.schedule_content h3{
+    width: 470px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+    border-radius: 20px;
+    margin-top: 70px;
+    padding: 0.5em 0;
+}
+
+.schedule_content iframe{
+    width: 720px;
+    height: 405px;
+    display: block;
+    margin: 60px auto;
+}
+
+
+/*---------------------------------
+    Timeline / 1日の流れ
+----------------------------------*/
+/*タイムライン全体の設定*/
+.timeline{
+	/* max-width: 400px; */
+	max-width:1100px;
+	margin:70px auto;
+	padding:0 100px;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding:0 0 35px 0;
+}
+
+.timeline li:last-child{
+    padding-bottom: 0;
+}
+
+.timeline li:last-child dl{
+    align-items: end;
+}
+
+.timeline dl{
+	margin:0 0 0 70px;
+    display: flex;
+    column-gap: 60px;
+}
+
+.timeline dt{
+    font-size: 30px;
+}
+
+.timeline dd{
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.timeline dd img{
+    width: 39.1%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0  20px;
+}
+
+.timeline dd .timeline_text{
+    padding: 35px 30px 40px;
+    text-align: left;
+}
+
+.timeline dd .timeline_text h4{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+}
+
+.timeline dd .timeline_text p{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left:10px;
+	top:20px;
+	width:0;/*線の太さ*/
+	height:0;/*はじめは高さを0に*/
+	/* background: #ccc; */
+    border-left: dotted 4px #092F4A;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:13px;
+	left:0;
+	width:24px;
+	height: 24px;
+    background-image: url(./images/timeline_circle.png);
+    background-size: 100%;
+	/* background:#fff; */
+    /* border-width: 3px; */
+    /* border-style: solid; */
+    /* border-image-source: linear-gradient(to right, #96BEE6, #6496DC); */
+    /* border-image-slice: 1; */
+    /* border-radius: 50%; */
+}
+
+.timeline li:last-child::after{
+    top: initial;
+    bottom: 10px;
+}
 
 /*# sourceMappingURL=main.css.map*/

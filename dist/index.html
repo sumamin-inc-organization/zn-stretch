@@ -8,11 +8,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
-<script defer src="main.a5737d04a46a1ef445f8.js"></script><link href="main.css" rel="stylesheet"></head>
+<script defer src="main.5026198ba7194c0a530e.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>
-    <header></header>
+    <header>
+        <h1><img src="./images/logo_wh.psd.png" alt="全力ストレッチ"></h1>
+        <div class="header_right">
+            <button class="button_common" type=“button” onclick="location.href='#'">WEBで簡単エントリー</button>
+        </div>
+    </header>
+
     <main>
-        <section id="keyvisual"></section>
+        <section id="keyvisual">
+            <div class="keyvisual_left">
+                <img src="./images/keyvisual_title.svg" alt="あなたが輝く最高のキャリア">
+                <p class="keyvisual_copy font-notosans bold white">未経験からでも<span class="yellow">年収<span class="ten-million font-roboto bold">1<span class="comma">,</span>000</span>万円</span>が目指せる</p>
+
+                <div class="keyvisual_left_point">
+                    <div class="keyvisual_left_point_item">
+                        <h3 class="font-roboto bold"><span class="tx_gradient point">POINT.</span><span class="tx_gradient number">01</span></h3>
+                        <p class="font-notosans bold navy">9割が未経験<br>スタート</p>
+                    </div>
+
+                    <div class="keyvisual_left_point_item">
+                        <h3 class="font-roboto bold"><span class="tx_gradient point">POINT.</span><span class="tx_gradient number">02</span></h3>
+                        <p class="font-notosans bold navy">業界最高水準の<br>給与体系</p>
+                    </div>
+
+                    <div class="keyvisual_left_point_item">
+                        <h3 class="font-roboto bold"><span class="tx_gradient point">POINT.</span><span class="tx_gradient number">03</span></h3>
+                        <p class="font-notosans bold navy">芸能人アスリート<br>御用達
+                        </p>
+                    </div>
+                </div>
+
+                WEBで簡単エントリー
+            </div>
+
+            <div class="keyvisual_right"><img src="./images/keyvisual_img.png"></div>
+        </section>
 
         <section id="precedent">
             <div class="precedent_content navy">
@@ -73,17 +106,24 @@
                 <div class="about_bottom">
                     <h3 class="bg_gradient white bold">芸能人やアスリートの方々が御用達</h3>
 
-                    <ul class="slider">
-                        <li><img src="./images/about_thumb_01.jpg" alt=""><h4 class="font-notosans regular navy">ゴルフ雑誌「ALBA」にてインタビュー記事が
+                    <!-- <ul class="slider">
+                        <li><img src="assets/images/about/about_thumb_01.jpg" alt=""><h4 class="font-notosans regular navy">ゴルフ雑誌「ALBA」にてインタビュー記事が
                             取り上げられました。</h4></li>
-                        <li><img src="./images/about_thumb_02.jpg" alt=""><h4 class="font-notosans regular navy">TBS系列「100％!アピールちゃん」で
+                        <li><img src="assets/images/about/about_thumb_02.jpg" alt=""><h4 class="font-notosans regular navy">TBS系列「100％!アピールちゃん」で
                             NMB48渋谷凪咲さんが通われてるところが
                             放映されました。</h4></li>
-                        <li><img src="./images/about_thumb_03.jpg" alt=""><h4 class="font-notosans regular navy">日テレ系列「月曜から夜ふかし」でフェフ姉さんが
+                        <li><img src="assets/images/about/about_thumb_03.jpg" alt=""><h4 class="font-notosans regular navy">日テレ系列「月曜から夜ふかし」でフェフ姉さんが
                             通われているところが放映されました。</h4></li>
-                        <li><img src="./images/about_thumb_04.jpg" alt=""><h4 class="font-notosans regular navy">ゆってぃさんのYouTubeで全力ストレッチに
+                        <li><img src="assets/images/about/about_thumb_04.jpg" alt=""><h4 class="font-notosans regular navy">ゆってぃさんのYouTubeで全力ストレッチに
                             挑んでいただきました。</h4></li>
-                    </ul>
+                    </ul> -->
+
+                    <div class="slider">   
+                        <div><img src="./images/about_thumb_01.jpg"></div>
+                        <div><img src="./images/about_thumb_02.jpg"><div>   
+                        <div><img src="./images/about_thumb_03.jpg"></div>
+                        <div><img src="./images/about_thumb_04.jpg"></div>
+                    </div>
                 </div>
 
             </div>
@@ -129,13 +169,259 @@
             </div>
         </section>
 
-        <section id="schedule"></section>
-        <section id="interview"></section>
-        <section id="area"></section>
+        <section id="schedule">
+            <div class="schedule_title">
+                <h2 class="sec_title">SCHEDULE</h2>
+                <span class="sec_title_sub">仕事内容</span>
+            </div>
+            
+            <div class="schedule_content">
+                <h3 class="bg_gradient white bold">トレーナーの仕事内容を動画でご紹介</h3>
+                <iframe src="https://www.youtube.com/embed/M15nCZH8PkI?si=cBLEOEnc6Q1NwG2x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <h3 class="bg_gradient white bold">トレーナーの1日の流れ</h3>
+
+                <ul class="timeline">
+                    <li><!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
+                        <dl>
+                            <dt class="font-roboto medium navy">10:00</dt>
+                            <dd>
+                                <img src="./images/schedule_img_10.jpg">
+                                <div class="timeline_text">
+                                    <h4 class="font-notosans medium navy">出社</h4>
+                                    <p class="font-notosans">忙しくて大変なイメージではなく余裕感が伝わるテキストが良い。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="font-roboto medium navy">11:00</dt>
+                            <dd>
+                                <img src="./images/schedule_img_11.jpg">
+                                <div class="timeline_text">
+                                    <h4 class="font-notosans medium navy">トレーナー業務</h4>
+                                    <p class="font-notosans">忙しくて大変なイメージではなく余裕感が伝わるテキストが良い。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="font-roboto medium navy">13:00</dt>
+                            <dd>
+                                <img src="./images/schedule_img_13.jpg">
+                                <div class="timeline_text">
+                                    <h4 class="font-notosans medium navy">お昼ご飯</h4>
+                                    <p class="font-notosans">忙しくて大変なイメージではなく余裕感が伝わるテキストが良い。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="font-roboto medium navy">17:00</dt>
+                            <dd>
+                                <img src="./images/schedule_img_17.jpg">
+                                <div class="timeline_text">
+                                    <h4 class="font-notosans medium navy">退勤</h4>
+                                    <p class="font-notosans">忙しくて大変なイメージではなく余裕感が伝わるテキストが良い。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="interview">
+            <div class="interview_wrap">
+                <div class="schedule_title">
+                    <h2 class="sec_title">INTERVIEW</h2>
+                    <span class="sec_title_sub">先輩インタビュー</span>
+                </div>
+
+                <div class="interview_item">
+                    <img src="./images/interview_img_01.jpg">
+                    <div class="interview_item_text">
+                        <div class="interview_item_text_name font-notosans medium navy">
+                            <span>入社○年目 〇〇店</span>
+                            <h3>〇〇さん</h3>
+                        </div>
+                        <div class="interview_item_text_qa font-notosans">
+                            <h4 class="medium lightblue">どうして全力ストレッチを選んだのか。</h4>
+                            <p class="regular navy">未経験でも研修が充実していたので始めやすかったなど。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                        </div>
+
+                        <div class="interview_item_text_qa font-notosans">
+                            <h4 class="medium lightblue">現在のやりがいは？</h4>
+                            <p class="regular navy">れまでに就いた仕事に比べ、ワークライフバランスや給与、キャリアアップはどうなったか。今後はどういった未来を目指しているか、など。未来に希望が持てそうな内容にする。。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interview_item">
+                    <div class="interview_item_text">
+                        <div class="interview_item_text_name font-notosans medium navy">
+                            <span>入社○年目 〇〇店</span>
+                            <h3>〇〇さん</h3>
+                        </div>
+                        <div class="interview_item_text_qa font-notosans">
+                            <h4 class="medium lightblue">どうして全力ストレッチを選んだのか。</h4>
+                            <p class="regular navy">未経験でも研修が充実していたので始めやすかったなど。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                        </div>
+
+                        <div class="interview_item_text_qa font-notosans">
+                            <h4 class="medium lightblue">現在のやりがいは？</h4>
+                            <p class="regular navy">れまでに就いた仕事に比べ、ワークライフバランスや給与、キャリアアップはどうなったか。今後はどういった未来を目指しているか、など。未来に希望が持てそうな内容にする。。</p>
+                        </div>
+                    </div>
+                    <img src="./images/interview_img_01.jpg">
+                </div>
+            </div>
+        </section>
+
+        <section id="area">
+            <div class="area_wrap">
+                <img src="./images/area_map.png" alt="">
+                <div class="area_title">
+                    <h2 class="sec_title">AREA</h2>
+                    <span class="sec_title_sub">あなたに合ったエリアで働ける</span>
+                </div>
+                <div class="area_content">
+                    <p class="bg_gradient font-notosans bold white">全力ストレッチは全国35店舗</p>
+                    <p class="bg_gradient font-notosans bold white">まだまだ出店拡大中！</p>
+                    <p class="font-notosans regular navy">一緒に全力ストレッチを育てていける<br>スタッフを募集しています。</p>
+                </div>
+            </div>
+        </section>
+
         <section id="flow"></section>
-        <section id="recruit"></section>
-        <section id="entry"></section>
+
+        <section id="recruit">
+            <div class="recruit_title">
+                <h2 class="sec_title">SCHEDULE</h2>
+                <span class="sec_title_sub">仕事内容</span>
+            </div>
+
+            <div class="recruit_content">
+                <table class="font-notosans navy">
+                    <tr>
+                        <th class="medium">募集要項</th>
+                        <td class="regular">パーソナルトレーナー</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">仕事内容</th>
+                        <td class="regular"><p>体感軸調整トレーナーとして、お客様への施術・接客をお任せ致します。<br>
+                        これまで大勢のトレーナーを輩出した充実の研修制度がありますので、未経験でもご安心ください！ <br>
+                        （ZSTA協会認定トレーナー資格取得可）<p>
+                        <p class="table_navy_bg medium white">入社後は...？</p>
+                        <p>ストレッチ専門店は新しい分野。勢いのある当店で皆さんの色を積極的にドンドン出してもらいたいと思ってます。 「こんなお店にしたい」「こんな事をやってみたい」等、やりたい事をどんどん遠慮なく聞かせてください！また当社はキャリアアップへのステージもご用意しております。「技術力」「カウンセリングスキル」「マネジメント能力」「店舗運営」等、 ご自身の目標に向けた必要なスキルを磨いていきたい意欲を、全力でバックアップしていきます！</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">応募資格</th>
+                        <td class="regular">〈未経験・フリーランス歓迎！〉<br>
+                         ◎学歴・ブランク・知識・経験など一切不問！<br>
+                        ★独立支援サポート有！野心のある方も歓迎！</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">雇用形態</th>
+                        <td class="regular">アルバイト</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">勤務地</th>
+                        <td class="regular">全国35店舗の中からお選びいただけます。
+                        札幌店、仙台店、東池袋店、池袋西口店、高田馬場店、新宿西口店、新宿三丁目店、新宿御苑店、渋谷宮益坂店、三軒茶屋店、中目黒店、学芸大学店、自由が丘店、恵比寿店、目黒店、赤坂店、麻布十番店、人形町店、新橋店銀座５店、秋葉原店、三田店、六本木店、表参道店、西五反田店、町田店、吉祥寺店、川崎店、横浜元町店、横浜西口店、名古屋栄店、大阪堀江店、大阪西梅田店、神戸元町店、福岡天神赤坂店</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">勤務時間</th>
+                        <td class="regular"><p>10:00～22:00内でシフト制<br>
+                        ★週○日､1日○h～OK！フルタイムも大歓迎！ライフスタイルに合った働き方が可能です。<p>
+                        <p class="table_navy_bg medium white">シフト例</p>
+                        <p>・入社○年目 週5回勤務の場合
+                         月160時間×時給4,000円＋指名300,000円＝940,000円<br>
+                        ・入社○年目 週3回勤務の場合<br>
+                         月96時間×時給3,000円＋指名210,000円＝498,000円<br>
+                        ・入社○ヶ月 週2回勤務の場合<br>
+                         月64時間×時給1,800円＋指名150,000円＝265,200円</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">給与</th>
+                        <td class="regular"><p>時給1,600円～5,000円<br>
+                        ◎随時昇給・昇格あり！<p>
+                        <p class="table_navy_bg medium white">月収例</p>
+                        <p>・10:00～14:00 (実働4h)<br>
+                        ・10:00～19:00 (実働8h)</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">休日休暇</th>
+                        <td class="regular">シフト制<br>
+                        ■年末年始休暇<br>
+                        ■夏期休暇<br>
+                        ■有給休暇</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">福利厚生･待遇</th>
+                        <td class="regular">■交通費支給（月1万円まで）<br>
+                        ■インセンティブ支給<br>
+                        ■昇給制度<br>
+                        ■社会保険完備<br>
+                        ■制服支給<br>
+                        ■独立支援制度<br>
+                        ■ZSTA協会認定トレーナー資格取得制度</td>
+                    </tr>
+
+                    <tr>
+                        <th class="medium">当店の魅力</th>
+                        <td class="regular">芸能人や俳優、モデル御用達の体感軸調整ストレッチサロン。<br>
+                        多くのメディアでも取り上げていただいております。 また頑張りはしっかり評価！<br>
+                        ガッツリ稼ぎたい方にとっても嬉しい評価制度をご用意しております。</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="entry">
+            <div class="entry_title white">
+                <h2 class="font-roboto bold">ENTRY</h2>
+                <span class="font-notosans medium">エントリーフォーム</span>
+            </div>
+
+            <div class="entry_content">
+                <p class="font-notosans medium white">※必須項目をご入力の上、送信ボタンを押してください。<p>
+                <!-- <div >
+                    お名前必須
+                    生年月日必須
+                    メールアドレス必須
+                    電話番号必須
+                    希望エリア
+                </div> -->
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p class="font-notosans regular navy">体幹軸調整で驚くほど広がる｡</p>
+        <a href="#"><img src="./images/logo_bk.png" alt="全力ストレッチ"></a>
+
+        <small class="font-notosans regular navy">&copy;2024 全力ストレッチ All Rights Reserved.</small>
+        
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>
