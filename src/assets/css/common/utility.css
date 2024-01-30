@@ -58,3 +58,50 @@ button.gradient-btn {
 .gradient-btn:hover::before {
     opacity: 0;
 }
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+/* PCのみ表示 */
+.pc_only{
+    display: block;
+}
+
+.tb_only{
+    display: none;
+}
+
+.sp_only{
+    display: none;
+}
+
+/* タブレットのみ表示 */
+@media screen and (max-width:1024px){
+    .pc_only{
+        display: none;
+    }
+    
+    .tb_only{
+        display: block;
+    }
+    
+    .sp_only{
+        display: none;
+    }
+}
+
+/* スマホのみ表示 */
+@media screen and (max-width:767px){
+    .pc_only{
+        display: none;
+    }
+    
+    .tb_only{
+        display: none;
+    }
+    
+    .sp_only{
+        display: block;
+    }
+}

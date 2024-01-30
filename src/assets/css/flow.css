@@ -1,0 +1,90 @@
+.flow_calltoaction{
+    background-image: url(../images/flow/flow_cta_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-position: bottom; */
+    position: relative;
+}
+
+.flow_calltoaction_content{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8% 0 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.flow_calltoaction_content h3{
+    display: inline-block;
+    background-color: #fff;
+    font-size: min(2.71vw, 41px);
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    /* margin-top: 60px; */
+    padding: 0.3em 0.5em;
+}
+
+.flow_calltoaction_content h3:nth-child(2){
+    margin-top: 1.1%;
+}
+
+.flow_calltoaction_content p{
+    /* font-size: 16px; */
+    font-size: min(1.06vw, 16px);
+    line-height: 2.2em;
+    letter-spacing: 0.05rem;
+    margin-top: 1.99vw;
+}
+
+.cta_number{
+    font-size: 25px;
+}
+
+.flow_calltoaction img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 53.8vw;
+}
+
+/*----------------------------
+    CTA
+    応募ボタン
+----------------------------*/
+.flow_calltoaction_content button{
+    width: 370px;
+    border-radius: 35px;    
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 0.11rem;
+    position: relative;
+    margin-top: 1.99vw;
+    /* margin-bottom: 60px; */
+    box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
+}
+
+.flow_calltoaction_content button img{
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 20px;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .flow_calltoaction_content{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .flow_calltoaction_content button{
+        font-size: 20px;
+        line-height: 48px;
+    }
+}

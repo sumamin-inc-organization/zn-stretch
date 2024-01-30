@@ -1,6 +1,7 @@
 #schedule{
     background-color: #fff;
     padding: 170px 0;
+    position: relative;
 }
 
 .schedule_title{
@@ -27,6 +28,13 @@
     height: 405px;
     display: block;
     margin: 60px auto;
+}
+
+.schedule_bg{
+    position: absolute;
+    width: 288px;
+    top: 180px;
+    left: 0;
 }
 
 
@@ -75,7 +83,7 @@
 
 .timeline dd img{
     width: 39.1%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
     border-radius: 20px 0 0  20px;
 }
@@ -130,4 +138,11 @@
 .timeline li:last-child::after{
     top: initial;
     bottom: 10px;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    
 }

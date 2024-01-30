@@ -3,7 +3,7 @@
     padding: 130px 0;
     background-image: url(../images/about/about_bg.png);
     background-repeat: no-repeat;
-    background-position: top 150% right 0;
+    background-position: top 380px right 0;
     background-size: 62.9vw;
 }
 
@@ -14,9 +14,9 @@
 .about_top{
     background-image: url(../images/common/slash_02.svg);
     background-repeat: no-repeat;
-    background-position: bottom 0 left 0;
+    background-position: bottom 55px left 0;
     background-size: 167px;
-    padding-bottom: 80px;
+    padding-bottom: 140px;
 }
 
 .about_top p{
@@ -44,26 +44,21 @@
 /*----------------------------
       Media / メディア
 ----------------------------*/
-.slider{
-    width:70%;
-    margin:0 auto;
+.about_slick{
+    margin-top: 60px;
 }
-.slider img{
-    width:100%;
+
+.about_slick li{
+    margin: 0 20px;
 }
-.slider .slick-slide{
-    height:auto!important;
+
+.about_slick .slick-arrow{
+    display: none !important;
 }
-.slider .slick-arrow{
-    z-index:2!important;
-}
-.slider .slick-next{
-    right:0!important;
-}
-.slider .slick-prev{
-    left:0!important;
-}
-.slick-slide{
-    margin-right: 1vw!important;
-    margin-left: 1vw!important;
+
+.about_slick h4{
+    font-size: 20px;
+    line-height: 1.75;
+    letter-spacing: 0.08rem;
+    margin-top: 25px;
 }

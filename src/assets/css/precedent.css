@@ -12,6 +12,7 @@
     grid-template-columns: 1fr 1100px 1fr;
     place-content: center;
     padding-top: 150px;
+    position: relative;;
 }
 
 .precedent_middle{
@@ -58,7 +59,8 @@
 
 .precedent_top{
     display: flex;
-    column-gap: 80px;
+    /* column-gap: 80px; */
+    justify-content: space-between;
     align-items: end;
 }
 
@@ -86,12 +88,14 @@
     justify-content: space-between;
     margin-top: 120px;
     padding: 0 40px;
+    max-width: 100%;
 }
 
 .precedent_bottom_item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 100%; */
 }
 
 .precedent_bottom_item img{
@@ -122,4 +126,56 @@
     font-size: 40px;
     font-style: italic;
     padding: 0 0.1em;
+}
+
+/*---------------------------------
+    Backgroung / 背景イラスト
+----------------------------------*/
+.precedent_bg_01{
+    width: 288px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 10;
+}
+
+.precedent_bg_02{
+    width: 253px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    z-index: 10;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    #precedent{
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    .precedent_top p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .precedent_bottom{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .precedent_bottom_item img{
+        max-width: 212px;
+    }
+
+    .precedent_bottom_item .salary{
+        font-size: 16px;
+        width: 220px;
+    }
+
+    .precedent_bottom_item .price{
+        font-size: 32px;
+    }
 }

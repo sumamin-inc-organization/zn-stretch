@@ -17,7 +17,7 @@ import "./assets/css/point.css";
 import "./assets/css/precedent.css";
 import "./assets/css/recruit.css";
 import "./assets/css/schedule.css";
-
+import "./assets/css/slick.css";
 
 /*----------------------------
       Timeline / 1日の流れ
