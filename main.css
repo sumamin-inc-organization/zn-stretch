@@ -234,8 +234,8 @@
     line-height: 1;
     letter-spacing: 0.06rem;
     display: inline-block;
-    background: linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
-    background: -webkit-linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
+    background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+    background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -257,15 +257,15 @@
   /* 背景 */
   .bg_gradient{
     display: inline-block;
-    background: linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
-    background: -webkit-linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
+    background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+    background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
   }
   
   /* 文字 */
   .tx_gradient{
     display: inline-block;
-    background: linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
-    background: -webkit-linear-gradient(0deg, #82B4E6 50%, #467DD2 100%);
+    background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+    background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -296,27 +296,112 @@
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utility.css ***!
   \*************************************************************************************/
-.button_common{
-    /*ボタンの形状*/
-    display: inline-block;
-    color:#fff;
-    /* padding: 18px 60px; */
-    /* border-radius:30px; */
-    /* text-decoration: none; */
+/*----------------------------
+    CTA
+    応募ボタン
+----------------------------*/
+/* buttonタグのリセットCSS */
+button.gradient-btn {
     border: none;
-    pointer-events: cursor;
-    /*背景の色と形状*/
-    background: linear-gradient(270deg, #30508D 50%, #092F5A 100%);
-    background-position: 1% 50%;
-    background-size: 200% auto;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease-out;
+    appearance: none;
+    padding: 0;
+  }
+  
+/* ボタン本体の装飾 */
+.gradient-btn {
+    position: relative; /* static以外を指定 */
+    z-index: 0; /* グラデーションよりも上に配置 */
+    display: inline-block; /* inline以外にする */
+    /* width: 200px; 横幅 */
+    /* height: 60px; 縦幅 */
+    /* line-height: 1; 行の高さ(heightと同じにする) */
+    background: transparent; /* 背景を透明にする */
+    /* border-radius: 5px; 角の丸み */
+    overflow: hidden; /* はみ出した部分を非表示(角丸を付ける場合は必須) */
+    cursor: pointer; /* カーソルをポインターにする */
+    /* 以下ボタンのテキスト装飾(自由にカスタマイズしてください) */
+    color: #fff;
+    /* font-size: 16px; */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+/* ::before, ::afterで2種類のグラデーションを用意 */
+.gradient-btn::before,
+.gradient-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+/* グラデーション1 */
+.gradient-btn::before {
+    transition: all 0.6s; /* アニメーション実行時間 */
+    z-index: -1;
+    background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
+}
+  
+/* グラデーション2 */
+.gradient-btn::after {
+    z-index: -2;
+    background: linear-gradient(90deg, #092F5A 0%, #30508D 100%);
+}
+  
+/* ホバー時にグラデーション1を透明にする */
+.gradient-btn:hover::before {
+    opacity: 0;
 }
 
-/*hoverした際の、背景の場所とテキスト色の変更*/
-.button_common:hover {
-    color: #fff;
-    background-position: 99% 50%;
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+/* PCのみ表示 */
+.pc_only{
+    display: block;
+}
+
+.tb_only{
+    display: none;
+}
+
+.sp_only{
+    display: none;
+}
+
+/* タブレットのみ表示 */
+@media screen and (max-width:1024px){
+    .pc_only{
+        display: none;
+    }
+    
+    .tb_only{
+        display: block;
+    }
+    
+    .sp_only{
+        display: none;
+    }
+}
+
+/* スマホのみ表示 */
+@media screen and (max-width:767px){
+    .pc_only{
+        display: none;
+    }
+    
+    .tb_only{
+        display: none;
+    }
+    
+    .sp_only{
+        display: block;
+    }
 }
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/about.css ***!
@@ -326,7 +411,7 @@
     padding: 130px 0;
     background-image: url(./images/about_bg.png);
     background-repeat: no-repeat;
-    background-position: top 150% right 0;
+    background-position: top 380px right 0;
     background-size: 62.9vw;
 }
 
@@ -337,9 +422,9 @@
 .about_top{
     background-image: url(./images/slash_02.svg);
     background-repeat: no-repeat;
-    background-position: bottom 0 left 0;
+    background-position: bottom 55px left 0;
     background-size: 167px;
-    padding-bottom: 80px;
+    padding-bottom: 140px;
 }
 
 .about_top p{
@@ -367,28 +452,23 @@
 /*----------------------------
       Media / メディア
 ----------------------------*/
-.slider{
-    width:70%;
-    margin:0 auto;
+.about_slick{
+    margin-top: 60px;
 }
-.slider img{
-    width:100%;
+
+.about_slick li{
+    margin: 0 20px;
 }
-.slider .slick-slide{
-    height:auto!important;
+
+.about_slick .slick-arrow{
+    display: none !important;
 }
-.slider .slick-arrow{
-    z-index:2!important;
-}
-.slider .slick-next{
-    right:0!important;
-}
-.slider .slick-prev{
-    left:0!important;
-}
-.slick-slide{
-    margin-right: 1vw!important;
-    margin-left: 1vw!important;
+
+.about_slick h4{
+    font-size: 20px;
+    line-height: 1.75;
+    letter-spacing: 0.08rem;
+    margin-top: 25px;
 }
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/area.css ***!
@@ -431,6 +511,30 @@
     line-height: 28px;
     margin-top: 20px;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    #area{
+        padding: 130px 50px 150px;
+    }
+
+    .area_wrap img{
+        width: 60%;
+        top: initial;
+        bottom: 0;
+    }
+
+    .area_content{
+        margin-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .area_content .bg_gradient{
+        font-size: 24px;
+    }
+}
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/entry.css ***!
   \****************************************************************************/
@@ -470,7 +574,96 @@
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
   \***************************************************************************/
+.flow_calltoaction{
+    background-image: url(./images/flow_cta_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-position: bottom; */
+    position: relative;
+}
 
+.flow_calltoaction_content{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8% 0 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.flow_calltoaction_content h3{
+    display: inline-block;
+    background-color: #fff;
+    font-size: min(2.71vw, 41px);
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    /* margin-top: 60px; */
+    padding: 0.3em 0.5em;
+}
+
+.flow_calltoaction_content h3:nth-child(2){
+    margin-top: 1.1%;
+}
+
+.flow_calltoaction_content p{
+    /* font-size: 16px; */
+    font-size: min(1.06vw, 16px);
+    line-height: 2.2em;
+    letter-spacing: 0.05rem;
+    margin-top: 1.99vw;
+}
+
+.cta_number{
+    font-size: 25px;
+}
+
+.flow_calltoaction img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 53.8vw;
+}
+
+/*----------------------------
+    CTA
+    応募ボタン
+----------------------------*/
+.flow_calltoaction_content button{
+    width: 370px;
+    border-radius: 35px;    
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 0.11rem;
+    position: relative;
+    margin-top: 1.99vw;
+    /* margin-bottom: 60px; */
+    box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
+}
+
+.flow_calltoaction_content button img{
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 20px;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .flow_calltoaction_content{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .flow_calltoaction_content button{
+        font-size: 20px;
+        line-height: 48px;
+    }
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
@@ -509,67 +702,50 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+    z-index: 1000;
 }
 
 header h1{
     width: 303px;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin-inline: auto;
-}
-.btn__link {
-    display: block;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    line-height: 1.6;
-    padding: 1.2em 0.5em;
-    color: #fff;
-    background: linear-gradient(to right, #ff2e2e 0%, #ff8800 50%, #ffcf75 100%);
-    border-radius: 40px;
-    transition: background 0.5s ease-in-out;
-}
-
-.btn__link:hover {
-    text-decoration: none;
-    background: linear-gradient(to right, #ffcf75 0%, #ff8800 50%, #ff2e2e 100%);
-}
-
-.wrapper {
-  max-width: 1000px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (max-width: 1000px) {
-  .wrapper {
-    margin-right: 5%;
-    margin-left: 5%;
-  }
+header button{
+  width: 250px;
+  border-radius: 25px;
+  /* padding: 10px 0; */
+  font-size: 18px;
+  line-height: 50px;
+  letter-spacing: 0.08rem;
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/interview.css ***!
   \********************************************************************************/
 #interview{
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1100px 1fr; */
+    display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
+    position: relative;
+}
+
+.interview_left{
     background-color: #EBF5FF;
+}
+
+.interview_middle{
     padding: 130px 0 140px;
+    position: relative;
 }
 
-.interview_wrap{
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.schedule_title{
-    /* grid-column: 2 / 3; */
+.interview_middle:before {
+    width: 91%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #EBF5FF;
+    border-radius: 0 50px 50px 0;
 }
 
 .interview_item{
@@ -626,6 +802,30 @@ header h1{
     line-height: 1.75;
     margin-top: 20px;
 }
+
+/*---------------------------------
+    Backgroung / 背景イラスト
+----------------------------------*/
+.interview_bg{
+    width: 245px;
+    position: absolute;
+    top: -185px;
+    right: 0;
+    z-index: 10;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    #interview{
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    .interview_item img{
+        height: 100%;
+    }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -635,24 +835,55 @@ header h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    /* height: 90vh; */
+    /* display: flex; */
+    /* align-items: bottom; */
+    position: relative;
+    padding: 8% 0 6%;
+}
+
+.keyvisual_content{
     display: flex;
+    max-width: 76.7vw;
+    /* height: 93dvh; */
+    margin: 0 auto;
+    align-items: center;
+    /* position: relative; */
+}
+
+.keyvisual_left{
+    width: 53%;
+    /* margin-top: 3%; */
 }
 
 .keyvisual_left img{
     width: 35.9vw;
+    margin-left: 30px;
 }
 
 .keyvisual_left .keyvisual_copy{
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 1.98vw;
     transform: skewX(-10deg);
     /* padding-bottom: 10px; */
-    border-bottom: solid 2px #fff;
+    /* border-bottom: solid 2px #fff; */
+    position: relative;
+}
+
+.keyvisual_left .keyvisual_copy::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    background-color: #fff;
 }
 
 .keyvisual_left .ten-million{
-    font-size: 50px;
-    /* font-style: italic; */
+    /* font-size: 50px; */
+    font-size: 3.31vw;
 }
 
 .keyvisual_left .comma{
@@ -677,26 +908,61 @@ header h1{
 }
 
 .keyvisual_left_point_item h3 .point{
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 1.46vw;
     font-style: italic;
     line-height: 1;
 }
 
 .keyvisual_left_point_item h3 .number{
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 2.38vw;
     font-style: italic;
     line-height: 1;
 }
 
 .keyvisual_left_point_item p{
-    font-size: 20px;
-    line-height: 31px;
+    /* font-size: 20px; */
+    font-size: 1.32vw;
+    line-height: 1.55;
     letter-spacing: 0.04rem;
+    margin-top: 0.1rem;
+}
+
+.keyvisual_right{
+    position: absolute;
+    width: 49%;
+    left: 51%;
+    bottom: 0;
 }
 
 .keyvisual_right img{
-    width: 48.9vw;
-    font-size: 50px;
+    width: 100%;
+}
+
+/*----------------------------
+    CTA
+    応募ボタン
+----------------------------*/
+#keyvisual button{
+    width: 100%;
+    border-radius: 35px;    
+    font-size: 25px;
+    font-size: min(1.65vw, 25px);
+    line-height: 70px;
+    letter-spacing: 0.11rem;
+    position: relative;
+    margin-top: 30px;
+    box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
+}
+
+#keyvisual button img{
+    width: 13px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 30px;
 }
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/navigation.css ***!
@@ -736,6 +1002,7 @@ header h1{
 .point_item img{
     width: 51%;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .point_item_text{
@@ -767,6 +1034,24 @@ header h1{
     line-height: 1.75;
     text-align: justify;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .point_content{
+        max-width: 100%;
+        padding: 0 50px;
+    }
+
+    .point_item{
+        column-gap: 50px;
+    }
+
+    .point_item h3{
+        font-size: 24px;
+    }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/precedent.css ***!
   \********************************************************************************/
@@ -777,15 +1062,17 @@ header h1{
     /* background-position: top 20px right 0; */
     /* background-size: 245px; */
 
-    position: relative;
+    /* position: relative; */
     /* border: 1px solid black; */
     /* min-height: 100vh; */
     display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
     place-content: center;
-    padding: 245px 0;
+    padding-top: 150px;
+    position: relative;;
 }
 
-.precedent_content{
+.precedent_middle{
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -793,17 +1080,15 @@ header h1{
     border: solid 1px #ff0000; */
     position: relative;
     z-index: 3;
-    max-width: 1100px;
+    /* max-width: 1100px; */
+    padding-bottom: 115px;
 }
 
-.precedent_content:after {
-    width: 64vw;
-    height: 77.3vh;
-    top: 0;
-    left: 0;
-}
-
-.precedent_content:after {
+.precedent_middle:before {
+    width: 91%;
+    height: 93%;
+    bottom: 0;
+    right: 0;
     content: "";
     display: block;
     position: absolute;
@@ -812,9 +1097,27 @@ header h1{
     border-radius: 50px 0 0 50px;
 }
 
+.precedent_right{
+    position: relative;
+    z-index: 3;
+}
+
+.precedent_right:before{
+    width: 100%;
+    height: 93%;
+    bottom: 0;
+    right: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #EBF5FF;
+}
+
 .precedent_top{
     display: flex;
-    column-gap: 80px;
+    /* column-gap: 80px; */
+    justify-content: space-between;
     align-items: end;
 }
 
@@ -842,12 +1145,14 @@ header h1{
     justify-content: space-between;
     margin-top: 120px;
     padding: 0 40px;
+    max-width: 100%;
 }
 
 .precedent_bottom_item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 100%; */
 }
 
 .precedent_bottom_item img{
@@ -878,6 +1183,58 @@ header h1{
     font-size: 40px;
     font-style: italic;
     padding: 0 0.1em;
+}
+
+/*---------------------------------
+    Backgroung / 背景イラスト
+----------------------------------*/
+.precedent_bg_01{
+    width: 288px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 10;
+}
+
+.precedent_bg_02{
+    width: 253px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    z-index: 10;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    #precedent{
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    .precedent_top p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .precedent_bottom{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .precedent_bottom_item img{
+        max-width: 212px;
+    }
+
+    .precedent_bottom_item .salary{
+        font-size: 16px;
+        width: 220px;
+    }
+
+    .precedent_bottom_item .price{
+        font-size: 32px;
+    }
 }
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recruit.css ***!
@@ -931,12 +1288,22 @@ header h1{
     border-radius: 5px;
     display: inline-block;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .recruit_content{
+        padding: 0 50px;
+    }
+}
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/schedule.css ***!
   \*******************************************************************************/
 #schedule{
     background-color: #fff;
     padding: 170px 0;
+    position: relative;
 }
 
 .schedule_title{
@@ -963,6 +1330,13 @@ header h1{
     height: 405px;
     display: block;
     margin: 60px auto;
+}
+
+.schedule_bg{
+    position: absolute;
+    width: 288px;
+    top: 180px;
+    left: 0;
 }
 
 
@@ -1011,7 +1385,7 @@ header h1{
 
 .timeline dd img{
     width: 39.1%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
     border-radius: 20px 0 0  20px;
 }
@@ -1067,5 +1441,135 @@ header h1{
     top: initial;
     bottom: 10px;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    
+}
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/slick.css ***!
+  \****************************************************************************/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
