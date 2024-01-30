@@ -649,6 +649,21 @@ button.gradient-btn {
     transform: translate(-50%, -50%);
     right: 20px;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .flow_calltoaction_content{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .flow_calltoaction_content button{
+        font-size: 20px;
+        line-height: 48px;
+    }
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/

@@ -19,3 +19,18 @@ header button{
   line-height: 50px;
   letter-spacing: 0.08rem;
 }
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+  header{
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+
+  header h1{
+    width: 242px;
+  }
+}

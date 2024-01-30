@@ -46,6 +46,23 @@
     }
 
     .area_wrap img{
+        /* width: 60%; */
+        /* top: initial; */
+        /* bottom: 0; */
+    }
+
+    .area_content{
+        /* margin-top: 30px; */
+        /* padding-bottom: 0; */
+    }
+
+    .area_content .bg_gradient{
+        /* font-size: 24px; */
+    }
+}
+
+@media screen and (max-width:1024px){
+    .area_wrap img{
         width: 60%;
         top: initial;
         bottom: 0;

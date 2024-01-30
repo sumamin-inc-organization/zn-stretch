@@ -84,7 +84,8 @@
     }
 
     .flow_calltoaction_content button{
-        font-size: 20px;
+        width: 296px;
+        font-size: 16px;
         line-height: 48px;
     }
 }
