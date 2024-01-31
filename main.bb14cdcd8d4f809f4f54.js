@@ -326,8 +326,43 @@ $(window).on('scroll', function(){
 $(window).on('load', function(){
 	ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
 });
+
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
+
+$(document).ready(function () {
+	var $slider = $(".insp-slider");
+	var $indicators = $(".indicators .indicator");
+
+	$slider.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 2000,
+		nextArrow: document.getElementById("slider-next"),
+		prevArrow: document.getElementById("slider-prev"),
+	});
+
+	// Click event for indicators
+	// インジケータのクリックイベント
+
+	$(".indicators .indicator").on("click", function () {
+		var slideIndex = $(this).data("slide-index");
+		$slider.slick("slickGoTo", parseInt(slideIndex));
+	});
+
+	// Click events for navigation buttons
+	// ナビゲーションボタンのクリックイベント
+
+	$slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+		$indicators.removeClass("active");
+		$indicators.eq(nextSlide).addClass("active");
+	});
+});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.e334d96b29fdbd66a0a6.js.map
+//# sourceMappingURL=main.bb14cdcd8d4f809f4f54.js.map
