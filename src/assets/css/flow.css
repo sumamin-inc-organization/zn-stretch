@@ -34,12 +34,12 @@
     background-color: #EBF5FF;
 }
 
-/* .flow_bottom{
-    display: grid;
-    grid-template-columns: 1fr 1100px 1f;
+.flow_bottom{
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1100px 1f; */
     position: relative;
     padding: 75px 0 150px 100px;
-} */
+}
 
 /* .flow_bottom::before{
     width: 100%;
@@ -55,7 +55,7 @@
 } */
 
 .insp-slider{
-    grid-column: 2/4;
+    /* grid-column: 2/4; */
 }
 
 /*----------------------------
@@ -292,12 +292,19 @@
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1500px){
     .flow_calltoaction_content{
-        /* padding-right: 50px; */
-        /* padding-left: 50px; */
+        padding-top: 7.5%
     }
+}
 
+@media screen and (max-width:1300px){
+    .flow_calltoaction_content{
+        padding-top: 7%
+    }
+}
+
+@media screen and (max-width:1100px){
     .flow_calltoaction_content button{
         /* width: 296px; */
         /* font-size: 16px; */

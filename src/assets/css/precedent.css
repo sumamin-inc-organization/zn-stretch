@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1100px 1fr;
     place-content: center;
-    padding-top: 150px;
+    padding: 150px 0 0 0;
     position: relative;;
 }
 
@@ -59,7 +59,7 @@
 
 .precedent_top{
     display: flex;
-    /* column-gap: 80px; */
+    column-gap: 80px;
     justify-content: space-between;
     align-items: end;
 }
@@ -70,6 +70,7 @@
 }
 
 .precedent_top_text{
+    width: 100%;
     padding-bottom: 10px;
 }
 
@@ -89,6 +90,7 @@
     margin-top: 120px;
     padding: 0 40px;
     max-width: 100%;
+    column-gap: 80px;
 }
 
 .precedent_bottom_item{
@@ -99,7 +101,9 @@
 }
 
 .precedent_bottom_item img{
-    max-width: 265px;
+    /* max-width: 265px; */
+    width: 100%;
+    padding: 0 10px;
 }
 
 .precedent_bottom_item h3{
@@ -115,15 +119,18 @@
 }
 
 .precedent_bottom_item .salary{
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: min(1.32vw, 20px);
     margin-top: 25px;
     /* padding: 0 1.1em; */
-    width: 286px;
+    /* width: 286px; */
+    width: 100%;
     text-align: center;
 }
 
 .precedent_bottom_item .price{
     font-size: 40px;
+    font-size: min(2.65vw, 40px);
     font-style: italic;
     padding: 0 0.1em;
 }
@@ -150,9 +157,9 @@
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1300px){
     #precedent{
-        grid-template-columns: 1fr 90% 1fr;
+        grid-template-columns: 8vw 1fr 8vw;
     }
 
     .precedent_top p{
@@ -161,21 +168,26 @@
     }
 
     .precedent_bottom{
+        column-gap: 40px;
         padding: 0;
     }
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
+    .precedent_top{
+        column-gap: 40px;
+    }
+
     .precedent_bottom_item img{
-        max-width: 212px;
+        /* max-width: 212px; */
     }
 
     .precedent_bottom_item .salary{
-        font-size: 16px;
-        width: 220px;
+        /* font-size: 16px; */
+        /* width: 220px; */
     }
 
     .precedent_bottom_item .price{
-        font-size: 32px;
+        /* font-size: 32px; */
     }
 }
