@@ -446,7 +446,7 @@ button.gradient-btn {
     line-height: 1;
     letter-spacing: 0.06rem;
     border-radius: 20px;
-    padding: 0.5em 0;
+    padding: 0.4em 0 0.6em;
 }
 
 /*----------------------------
@@ -520,6 +520,23 @@ button.gradient-btn {
         padding: 130px 50px 150px;
     }
 
+    .area_wrap img{
+        /* width: 60%; */
+        /* top: initial; */
+        /* bottom: 0; */
+    }
+
+    .area_content{
+        /* margin-top: 30px; */
+        /* padding-bottom: 0; */
+    }
+
+    .area_content .bg_gradient{
+        /* font-size: 24px; */
+    }
+}
+
+@media screen and (max-width:1024px){
     .area_wrap img{
         width: 60%;
         top: initial;
@@ -660,7 +677,8 @@ button.gradient-btn {
     }
 
     .flow_calltoaction_content button{
-        font-size: 20px;
+        width: 296px;
+        font-size: 16px;
         line-height: 48px;
     }
 }
@@ -716,6 +734,21 @@ header button{
   font-size: 18px;
   line-height: 50px;
   letter-spacing: 0.08rem;
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:1100px){
+  header{
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+
+  header h1{
+    width: 242px;
+  }
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/interview.css ***!
@@ -868,6 +901,7 @@ header button{
     /* padding-bottom: 10px; */
     /* border-bottom: solid 2px #fff; */
     position: relative;
+    padding-left: 0.3em;
 }
 
 .keyvisual_left .keyvisual_copy::after{
@@ -1304,6 +1338,10 @@ header button{
     background-color: #fff;
     padding: 170px 0;
     position: relative;
+    background-image: url(./images/slash_03.svg);
+    background-repeat: no-repeat;
+    background-position: top 180px left 0;
+    background-size: 288px;
 }
 
 .schedule_title{
@@ -1312,6 +1350,7 @@ header button{
 
 .schedule_content{
     text-align: center;
+    z-index: 1;
 }
 
 .schedule_content h3{
@@ -1322,7 +1361,7 @@ header button{
     letter-spacing: 0.06rem;
     border-radius: 20px;
     margin-top: 70px;
-    padding: 0.5em 0;
+    padding: 0.4em 0 0.6em;
 }
 
 .schedule_content iframe{

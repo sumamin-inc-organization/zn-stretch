@@ -28,7 +28,7 @@
 
 .interview_item{
     display: flex;
-    align-items: end;
+    /* align-items: end; */
     column-gap: 60px;
     margin-top: 75px;
 }
@@ -62,7 +62,7 @@
     margin-top: 25px;
     background-color: #fff;
     border-radius:20px;
-    padding: 25px 20px;
+    padding: 25px 30px;
 }
 
 .interview_item_text_qa:nth-child(3){

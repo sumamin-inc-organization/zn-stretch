@@ -1,13 +1,224 @@
+#flow{
+    /* margin-bottom: 200px; */
+}
+
+.flow_top{
+    /* background-color: #EBF5FF; */
+    display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
+    position: relative;
+}
+
+.flow_top_middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    padding: 150px 0 0 100px;
+}
+
+.flow_top_middle::before{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #EBF5FF;
+    border-radius: 50px 0 0 0;
+}
+
+.flow_top_right{
+    background-color: #EBF5FF;
+}
+
+/* .flow_bottom{
+    display: grid;
+    grid-template-columns: 1fr 1100px 1f;
+    position: relative;
+    padding: 75px 0 150px 100px;
+} */
+
+/* .flow_bottom::before{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #EBF5FF;
+    border-radius: 50px 0 0 50px;
+} */
+
+.insp-slider{
+    grid-column: 2/4;
+}
+
+/*----------------------------
+    Slider Controls
+    スライダーコントロール
+----------------------------*/
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 30px;
+  }
+  
+  .indicators {
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .indicators:hover {
+    cursor: pointer;
+  }
+  
+  .indicator{
+    letter-spacing: 0.08em;
+  }
+  
+  .slider-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  .slider-btn {
+    background: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+  }
+  .slider-btn img {
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .slider-btn:hover {
+    cursor: pointer;
+  }
+  
+  .slider-buttons .next{
+    padding-right: 0;
+  }
+  
+  /*----------------------------
+      Slider
+      スライダー
+  ----------------------------*/
+
+  .card_left{
+    max-width: 41.8%;
+  }
+
+  .card_left img{
+    border-radius: 20px 0 0 20px;
+  }
+
+  .card_right{
+    background: #fff;
+    padding: 50px;
+  }
+
+  .card_right_step{
+    display: flex;
+    align-items: end;
+    column-gap: 20px;
+  }
+
+  .card_right span{
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+  }
+
+  .card_right .step_number{
+    font-size: 40px;
+  }
+
+  .card_right h3{
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    margin-bottom: 5px;
+  }
+
+  .card_right p{
+    font-size: 16px;
+    line-height: 1.75;
+    margin-top: 20px;
+  }
+
+  .card_right .card_right_navy{
+    background-color: #292F4A;
+    padding: 0 1.5em 0.1em;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .card_right .card_right_navy p{
+    margin-top: 0;
+  }
+
+  .slide_item {
+    width: 50%;
+    position: relative;
+  }
+  
+  .card-inner {
+    display: flex;
+    flex-direction: row;
+    /* gap: 2px; */
+  }
+  
+  /* .slide_item p {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 0px;
+    left: 0;
+    z-index: 3;
+    background-color: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+    display: grid;
+    place-content: center;
+    letter-spacing: 2.88px;
+  } */
+  
+  .active {
+    color: #6496DC;
+  }
+  
+  .ba_label{
+    font-size: 16px;
+  }
+
+/*---------------------------------
+    Banner / バナー
+----------------------------------*/
+
 .flow_calltoaction{
     background-image: url(../images/flow/flow_cta_bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-position: bottom; */
     position: relative;
+    padding-left: 13.6vw;
+    margin-top: 200px;
 }
 
 .flow_calltoaction_content{
-    max-width: 1100px;
+    /* max-width: 1100px; */
     margin: 0 auto;
     padding: 8% 0 6%;
     display: flex;
@@ -19,7 +230,8 @@
 .flow_calltoaction_content h3{
     display: inline-block;
     background-color: #fff;
-    font-size: min(2.71vw, 41px);
+    /* font-size: min(2.71vw, 41px); */
+    font-size: 2.71vw;
     line-height: 1;
     letter-spacing: 0.08rem;
     /* margin-top: 60px; */
@@ -32,7 +244,8 @@
 
 .flow_calltoaction_content p{
     /* font-size: 16px; */
-    font-size: min(1.06vw, 16px);
+    /* font-size: min(1.06vw, 16px); */
+    font-size: 1.06vw;
     line-height: 2.2em;
     letter-spacing: 0.05rem;
     margin-top: 1.99vw;
@@ -54,9 +267,11 @@
     応募ボタン
 ----------------------------*/
 .flow_calltoaction_content button{
-    width: 370px;
+    /* width: 370px; */
+    width: 24.5vw;
     border-radius: 35px;    
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.32vw;
     line-height: 60px;
     letter-spacing: 0.11rem;
     position: relative;
@@ -79,13 +294,13 @@
 ----------------------------------*/
 @media screen and (max-width:1100px){
     .flow_calltoaction_content{
-        padding-right: 50px;
-        padding-left: 50px;
+        /* padding-right: 50px; */
+        /* padding-left: 50px; */
     }
 
     .flow_calltoaction_content button{
-        width: 296px;
-        font-size: 16px;
+        /* width: 296px; */
+        /* font-size: 16px; */
         line-height: 48px;
     }
 }

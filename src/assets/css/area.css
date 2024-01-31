@@ -1,10 +1,10 @@
 #area{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 130px 0 150px;
+    padding: 130px 8vw 150px;
 }
 
 .area_wrap{
+    max-width: 1100px;
+    margin: 0 auto;
     position: relative;
 }
 
