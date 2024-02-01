@@ -470,6 +470,21 @@ button.gradient-btn {
     letter-spacing: 0.08rem;
     margin-top: 25px;
 }
+
+/*----------------------------
+      Tablet / タブレット
+----------------------------*/
+@media screen and (max-width:1200px){
+    .about_slick h4{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .about_slick h4{
+        font-size: 16px;
+    }
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/area.css ***!
   \***************************************************************************/
@@ -627,12 +642,12 @@ button.gradient-btn {
     background-color: #EBF5FF;
 }
 
-/* .flow_bottom{
-    display: grid;
-    grid-template-columns: 1fr 1100px 1f;
+.flow_bottom{
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1100px 1f; */
     position: relative;
     padding: 75px 0 150px 100px;
-} */
+}
 
 /* .flow_bottom::before{
     width: 100%;
@@ -648,7 +663,7 @@ button.gradient-btn {
 } */
 
 .insp-slider{
-    grid-column: 2/4;
+    /* grid-column: 2/4; */
 }
 
 /*----------------------------
@@ -885,12 +900,19 @@ button.gradient-btn {
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1500px){
     .flow_calltoaction_content{
-        /* padding-right: 50px; */
-        /* padding-left: 50px; */
+        padding-top: 7.5%
     }
+}
 
+@media screen and (max-width:1300px){
+    .flow_calltoaction_content{
+        padding-top: 7%
+    }
+}
+
+@media screen and (max-width:1100px){
     .flow_calltoaction_content button{
         /* width: 296px; */
         /* font-size: 16px; */
@@ -1032,7 +1054,7 @@ header button{
     margin-top: 25px;
     background-color: #fff;
     border-radius:20px;
-    padding: 25px 30px;
+    padding: 30px 20px;
 }
 
 .interview_item_text_qa:nth-child(3){
@@ -1041,7 +1063,7 @@ header button{
 
 .interview_item_text_qa h4{
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.5;
     letter-spacing: 0.08rem;
 }
 
@@ -1065,13 +1087,9 @@ header button{
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1300px){
     #interview{
-        grid-template-columns: 1fr 90% 1fr;
-    }
-
-    .interview_item img{
-        height: 100%;
+        grid-template-columns: 8vw 1fr 8vw;
     }
 }
 /*!********************************************************************************!*\
@@ -1250,6 +1268,7 @@ header button{
 
 .point_item img{
     width: 51%;
+    height: 100%;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -1257,9 +1276,9 @@ header button{
 .point_item_text{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     align-items: start;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .point_item span{
@@ -1287,7 +1306,7 @@ header button{
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1250px){
     .point_content{
         max-width: 100%;
         padding: 0 50px;
@@ -1298,7 +1317,7 @@ header button{
     }
 
     .point_item h3{
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 /*!********************************************************************************!*\
@@ -1317,7 +1336,7 @@ header button{
     display: grid;
     grid-template-columns: 1fr 1100px 1fr;
     place-content: center;
-    padding-top: 150px;
+    padding: 150px 0 0 0;
     position: relative;;
 }
 
@@ -1365,7 +1384,7 @@ header button{
 
 .precedent_top{
     display: flex;
-    /* column-gap: 80px; */
+    column-gap: 80px;
     justify-content: space-between;
     align-items: end;
 }
@@ -1376,6 +1395,7 @@ header button{
 }
 
 .precedent_top_text{
+    width: 100%;
     padding-bottom: 10px;
 }
 
@@ -1395,6 +1415,7 @@ header button{
     margin-top: 120px;
     padding: 0 40px;
     max-width: 100%;
+    column-gap: 80px;
 }
 
 .precedent_bottom_item{
@@ -1405,7 +1426,9 @@ header button{
 }
 
 .precedent_bottom_item img{
-    max-width: 265px;
+    /* max-width: 265px; */
+    width: 100%;
+    padding: 0 10px;
 }
 
 .precedent_bottom_item h3{
@@ -1421,15 +1444,18 @@ header button{
 }
 
 .precedent_bottom_item .salary{
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: min(1.32vw, 20px);
     margin-top: 25px;
     /* padding: 0 1.1em; */
-    width: 286px;
+    /* width: 286px; */
+    width: 100%;
     text-align: center;
 }
 
 .precedent_bottom_item .price{
     font-size: 40px;
+    font-size: min(2.65vw, 40px);
     font-style: italic;
     padding: 0 0.1em;
 }
@@ -1456,9 +1482,9 @@ header button{
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1300px){
     #precedent{
-        grid-template-columns: 1fr 90% 1fr;
+        grid-template-columns: 8vw 1fr 8vw;
     }
 
     .precedent_top p{
@@ -1467,22 +1493,27 @@ header button{
     }
 
     .precedent_bottom{
+        column-gap: 40px;
         padding: 0;
     }
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
+    .precedent_top{
+        column-gap: 40px;
+    }
+
     .precedent_bottom_item img{
-        max-width: 212px;
+        /* max-width: 212px; */
     }
 
     .precedent_bottom_item .salary{
-        font-size: 16px;
-        width: 220px;
+        /* font-size: 16px; */
+        /* width: 220px; */
     }
 
     .precedent_bottom_item .price{
-        font-size: 32px;
+        /* font-size: 32px; */
     }
 }
 /*!******************************************************************************!*\

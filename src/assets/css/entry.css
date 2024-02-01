@@ -31,3 +31,124 @@
     letter-spacing: 0.08rem;
     text-align: center;
 }
+
+/*---------------------------------
+    Form / 応募フォーム
+----------------------------------*/
+.entry_form{
+    background-color: #fff;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding: 55px 75px 75px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.entry_form table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 35px;
+}
+
+.entry_form th{
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: right;
+    width: 25%;
+}
+
+.entry_form th span{
+    background-color: #6496DC;
+    font-size: 12px;
+    letter-spacing: 0.08rem;
+    border-radius: 3px;
+    padding: 0 0.3em 0.1em;
+    margin-left: 15px;
+}
+
+.entry_form  .not_required{
+    background-color: initial;
+    margin-left: 41px;
+}
+
+.entry_form td{
+    width: 75%;
+}
+
+::placeholder{
+    color: #96BEE6;
+}
+
+.entry_form input[type="text" i],
+.entry_form input[type="email" i],
+.entry_form input[type="tel" i],
+.entry_form select{
+    background-color: #EBF5FF;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    width: 100%;
+}
+
+.input_navy{
+    color: #292F4A;
+}
+
+.input_lightblue{
+    color:#81B3E6;
+}
+
+.entry_form .select_wrap{
+    position:relative;
+}
+
+.entry_form .select_wrap::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/entry/icon_dropdown.svg);
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    pointer-events: none;
+}
+
+.entry_form select{
+    appearance: none;
+}
+
+.entry_form input[type="submit" i]{
+    margin-top: 30px;
+    background-color: #292F4A;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.16rem;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.entry_form input[type="submit" i]:active{
+    background-color: rgba(41, 47, 74, .8);
+}
+
+/*---------------------------------
+    Tablet / タブレット版
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .entry_form th{
+        width: 30%;
+    }
+
+    .entry_form td{
+        width: 70%;
+    }
+}

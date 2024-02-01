@@ -66,10 +66,10 @@
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1250px){
+@media screen and (max-width:1100px){
     .point_content{
         max-width: 100%;
-        padding: 0 50px;
+        padding: 0 40px;
     }
 
     .point_item{

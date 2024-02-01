@@ -43,7 +43,7 @@
                     </div>
                     <button class="gradient-btn" type="button" onclick="location.href='#entry'">WEBで簡単エントリー<img src="assets/images/common/arrow_button.svg"></button>
                 </div>
-                <div class="keyvisual_right"><img src="assets/images/keyvisual/keyvisual_img.png"></div>
+                <div class="keyvisual_right"><img src="assets/images/keyvisual/keyvisual_img_1.png"></div>
             </div>
         </section>
 
@@ -445,7 +445,7 @@
                 <div class="flow_calltoaction_content">
                     <h3 class="font-notosans medium navy">理想の未来に､</h3>
                     <h3 class="font-notosans medium navy">一歩踏み出そう｡</h3>
-                    <p class="font-notosans bold white">今エントリーされた方に限り､資格講習費の<span class="cta_number">10</span>万円が<span>0</span>円で<br>
+                    <p class="font-notosans bold white">今エントリーされた方に限り､資格講習費の<span>10</span>万円が<span class="cta_number">0</span>円で<br>
                     ZSTA協会認定トレーナー資格が取得できるキャンペーン中！</p>
                     <button class="gradient-btn" type="button" onclick="location.href='#entry'">WEBで簡単エントリー<img src="assets/images/common/arrow_button.svg"></button>
                 </div>
@@ -555,16 +555,51 @@
 
             <div class="entry_content">
                 <p class="font-notosans medium white">※必須項目をご入力の上、送信ボタンを押してください。<p>
-                <!-- <div >
-                    お名前必須
-                    生年月日必須
-                    メールアドレス必須
-                    電話番号必須
-                    希望エリア
-                </div> -->
+                    <div class="entry_form">
+                        <table class="font-notosans navy">
+                            <tr>
+                                <th class="navy medium">お名前<span class="white regular">必須</span></th>
+                                <td><input class="form_input regular lightblue" id="name" type="text" name="yourname" placeholder="フルネームをご入力ください"></td>
+                            </tr>
+                            <tr>
+                                <th class="navy medium">生年月日<span class="white regular">必須</span></th>
+                                <td><input class="form_input regular navy" id="birthday" type="text" name="yourbirthday" placeholder="20000101 スラッシュは不要です"></td>
+                            </tr>
+                            <tr>
+                                <th class="navy medium">メールアドレス<span class="white regular">必須</span></th>
+                                <td><input class="form_input regular navy" id="email" type="email" name="youremail" placeholder="zenryoku@stretch.jp"></td>
+                            </tr>
+                            <tr>
+                                <th class="navy medium">電話番号<span class="white regular">必須</span></th>
+                                <td><input class="form_input regular navy" id="tel" type="tel" name="yourtel" placeholder="半角英字ハイフンなしでご入力ください"></td>
+                            </tr>
+                            <tr class="work_location">
+                                <th class="navy medium">希望エリア<span class="not_required"></span></th>
+                                <td>
+                                    <div class="select_wrap"><select onchange="this.className=this.options[this.selectedIndex].className"
+                                    class="input_lightblue" class="form_input regular" name="example" required>
+                                        <option class="input_lightblue" value="">選択してください</option>
+                                        <option class="input_navy">選択肢のサンプル1</option>
+                                        <option class="input_navy">選択肢のサンプル2</option>
+                                        <option class="input_navy">選択肢のサンプル3</option>
+                                        <option class="input_navy">選択肢のサンプル4</option>
+                                        <option class="input_navy">選択肢のサンプル5</option>
+                                        </select></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="送信">
+                    </div>
             </div>
         </section>
     </main>
+    <!-- <select
+    onchange="this.className=this.options[this.selectedIndex].className"
+    class="input_lightblue">
+    <option class="input_lightblue" value="apple" >Apple</option>
+    <option class="input_navy" value="banana" >Banana</option>
+    <option class="blueText" value="grape" >Grape</option>
+</select> -->
     <footer>
         <p class="font-notosans regular navy">体幹軸調整で驚くほど広がる｡</p>
         <a href="#"><img src="assets/images/common/logo_bk.png" alt="全力ストレッチ"></a>
