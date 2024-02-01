@@ -326,6 +326,7 @@ button.gradient-btn {
     font-weight: bold;
     text-align: center;
     background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
+    transition-duration: 0.5s;
   }
 
 /* ホバー時 */
