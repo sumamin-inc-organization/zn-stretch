@@ -1178,13 +1178,13 @@ header button{
   font-size: 18px;
   line-height: 50px;
   letter-spacing: 0.08rem;
-  border: solid 1px #30508D;
+  /* border: solid 1px #30508D; */
 }
 
 header button:hover{
   /* border: solid 1px #30508D; */
   outline: solid 1px #30508D;
-  outline-offset: 0px;
+  outline-offset: -1px;
 }
 
 /*---------------------------------
