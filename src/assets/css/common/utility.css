@@ -27,36 +27,43 @@ button.gradient-btn {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     text-align: center;
+    background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
   }
+
+/* ホバー時 */
+    .gradient-btn:hover{
+        background: #fff;
+        color: #30508D;
+    }
   
 /* ::before, ::afterで2種類のグラデーションを用意 */
 .gradient-btn::before,
 .gradient-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
+    /* content: ''; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* display: block; */
+    /* width: 100%; */
+    /* height: 100%; */
   }
   
 /* グラデーション1 */
 .gradient-btn::before {
-    transition: all 0.6s; /* アニメーション実行時間 */
-    z-index: -1;
-    background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
+    /* transition: all 0.6s; アニメーション実行時間 */
+    /* z-index: -1; */
+    /* background: linear-gradient(90deg, #30508D 0%, #092F5A 100%); */
 }
   
 /* グラデーション2 */
 .gradient-btn::after {
-    z-index: -2;
-    background: linear-gradient(90deg, #092F5A 0%, #30508D 100%);
+    /* z-index: -2; */
+    /* background: linear-gradient(90deg, #092F5A 0%, #30508D 100%); */
 }
   
 /* ホバー時にグラデーション1を透明にする */
 .gradient-btn:hover::before {
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 /*----------------------------

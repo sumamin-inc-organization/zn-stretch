@@ -1,12 +1,15 @@
 #flow{
     /* margin-bottom: 200px; */
+    /* background-color: #EBF5FF; */
+    background: linear-gradient(to bottom, #EBF5FF 90%, #fff 90%);
 }
 
 .flow_top{
     /* background-color: #EBF5FF; */
-    display: grid;
-    grid-template-columns: 1fr 1100px 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1100px 1fr; */
     position: relative;
+    padding: 0 8vw;
 }
 
 .flow_top_middle{
@@ -14,10 +17,13 @@
     justify-content: space-between;
     align-items: end;
     position: relative;
-    padding: 150px 0 0 100px;
+    /* padding: 150px 0 0 100px; */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 150px;
 }
 
-.flow_top_middle::before{
+/* .flow_top_middle::before{
     width: 100%;
     height: 100%;
     top: 0;
@@ -28,7 +34,7 @@
     z-index: -1;
     background-color: #EBF5FF;
     border-radius: 50px 0 0 0;
-}
+} */
 
 .flow_top_right{
     background-color: #EBF5FF;
@@ -37,8 +43,15 @@
 .flow_bottom{
     /* display: grid; */
     /* grid-template-columns: 1fr 1100px 1f; */
-    position: relative;
-    padding: 75px 0 150px 100px;
+    /* position: relative; */
+    /* padding: 75px 0 150px 100px; */
+    margin-top: 70px;
+    padding: 0 8vw;
+}
+
+.insp-slider{
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* .flow_bottom::before{
@@ -113,23 +126,34 @@
       Slider
       スライダー
   ----------------------------*/
+  .card{
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
   .card_left{
-    max-width: 41.8%;
+    width: 42%;
+    /* border-radius: 20px 0 0 20px; */
   }
 
   .card_left img{
-    border-radius: 20px 0 0 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 20px 0 0 20px; */
   }
 
   .card_right{
     background: #fff;
     padding: 50px;
+    width: 58%;
+    /* border-radius: 0 20px 20px 0; */
   }
 
   .card_right_step{
     display: flex;
-    align-items: end;
+    /* align-items: end; */
+    align-items: start;
     column-gap: 20px;
   }
 
@@ -145,9 +169,10 @@
 
   .card_right h3{
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.75;
     letter-spacing: 0.08rem;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    margin-top: 10px;
   }
 
   .card_right p{
@@ -180,6 +205,16 @@
     flex-direction: row;
     /* gap: 2px; */
   }
+
+  .step4 .card_right_step{
+    /* align-items: start; */
+  }
+
+  .step4 .card_right h3{
+    /* margin-top: 10px; */
+    /* margin-bottom: 0; */
+    /* line-height: 1.75; */
+  }
   
   /* .slide_item p {
     position: absolute;
@@ -208,13 +243,14 @@
 ----------------------------------*/
 
 .flow_calltoaction{
-    background-image: url(../images/flow/flow_cta_bg.jpg);
+    background-image: url(../images/flow/flow_banner_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-position: bottom; */
     position: relative;
     padding-left: 10vw;
     margin-top: 200px;
+    margin-top: 150px;
 }
 
 .flow_calltoaction_content{
@@ -280,13 +316,17 @@
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-.flow_calltoaction_content button img{
+.flow_calltoaction_content button svg{
     width: 12px;
     height: 20px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     right: 20px;
+}
+
+.flow_calltoaction_content button:hover svg .cls-1{
+  fill: #30508D;
 }
 
 /*---------------------------------

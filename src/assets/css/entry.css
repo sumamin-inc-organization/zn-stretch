@@ -90,6 +90,7 @@
     padding: 1em;
     display: block;
     width: 100%;
+    font-size: 16px;
 }
 
 .input_navy{
@@ -134,6 +135,10 @@
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.entry_form input[type="submit" i]:hover{
+    opacity: .8;
 }
 
 .entry_form input[type="submit" i]:active{
