@@ -325,36 +325,43 @@ button.gradient-btn {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     text-align: center;
+    background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
   }
+
+/* ホバー時 */
+    .gradient-btn:hover{
+        background: #fff;
+        color: #30508D;
+    }
   
 /* ::before, ::afterで2種類のグラデーションを用意 */
 .gradient-btn::before,
 .gradient-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
+    /* content: ''; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* display: block; */
+    /* width: 100%; */
+    /* height: 100%; */
   }
   
 /* グラデーション1 */
 .gradient-btn::before {
-    transition: all 0.6s; /* アニメーション実行時間 */
-    z-index: -1;
-    background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
+    /* transition: all 0.6s; アニメーション実行時間 */
+    /* z-index: -1; */
+    /* background: linear-gradient(90deg, #30508D 0%, #092F5A 100%); */
 }
   
 /* グラデーション2 */
 .gradient-btn::after {
-    z-index: -2;
-    background: linear-gradient(90deg, #092F5A 0%, #30508D 100%);
+    /* z-index: -2; */
+    /* background: linear-gradient(90deg, #092F5A 0%, #30508D 100%); */
 }
   
 /* ホバー時にグラデーション1を透明にする */
 .gradient-btn:hover::before {
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 /*----------------------------
@@ -603,18 +610,147 @@ button.gradient-btn {
     letter-spacing: 0.08rem;
     text-align: center;
 }
+
+/*---------------------------------
+    Form / 応募フォーム
+----------------------------------*/
+.entry_form{
+    background-color: #fff;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding: 55px 75px 75px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.entry_form table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 35px;
+}
+
+.entry_form th{
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+    text-align: right;
+    width: 25%;
+}
+
+.entry_form th span{
+    background-color: #6496DC;
+    font-size: 12px;
+    letter-spacing: 0.08rem;
+    border-radius: 3px;
+    padding: 0 0.3em 0.1em;
+    margin-left: 15px;
+}
+
+.entry_form  .not_required{
+    background-color: initial;
+    margin-left: 41px;
+}
+
+.entry_form td{
+    width: 75%;
+}
+
+::placeholder{
+    color: #96BEE6;
+}
+
+.entry_form input[type="text" i],
+.entry_form input[type="email" i],
+.entry_form input[type="tel" i],
+.entry_form select{
+    background-color: #EBF5FF;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input_navy{
+    color: #292F4A;
+}
+
+.input_lightblue{
+    color:#81B3E6;
+}
+
+.entry_form .select_wrap{
+    position:relative;
+}
+
+.entry_form .select_wrap::after{
+    position: absolute;
+    content: '';
+    background-image: url(./images/icon_dropdown.svg);
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    pointer-events: none;
+}
+
+.entry_form select{
+    appearance: none;
+}
+
+.entry_form input[type="submit" i]{
+    margin-top: 30px;
+    background-color: #292F4A;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.16rem;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.entry_form input[type="submit" i]:hover{
+    opacity: .8;
+}
+
+.entry_form input[type="submit" i]:active{
+    background-color: rgba(41, 47, 74, .8);
+}
+
+/*---------------------------------
+    Tablet / タブレット版
+----------------------------------*/
+@media screen and (max-width:1100px){
+    .entry_form th{
+        width: 30%;
+    }
+
+    .entry_form td{
+        width: 70%;
+    }
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
   \***************************************************************************/
 #flow{
     /* margin-bottom: 200px; */
+    /* background-color: #EBF5FF; */
+    background: linear-gradient(to bottom, #EBF5FF 90%, #fff 90%);
 }
 
 .flow_top{
     /* background-color: #EBF5FF; */
-    display: grid;
-    grid-template-columns: 1fr 1100px 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1100px 1fr; */
     position: relative;
+    padding: 0 8vw;
 }
 
 .flow_top_middle{
@@ -622,10 +758,13 @@ button.gradient-btn {
     justify-content: space-between;
     align-items: end;
     position: relative;
-    padding: 150px 0 0 100px;
+    /* padding: 150px 0 0 100px; */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 150px;
 }
 
-.flow_top_middle::before{
+/* .flow_top_middle::before{
     width: 100%;
     height: 100%;
     top: 0;
@@ -636,7 +775,7 @@ button.gradient-btn {
     z-index: -1;
     background-color: #EBF5FF;
     border-radius: 50px 0 0 0;
-}
+} */
 
 .flow_top_right{
     background-color: #EBF5FF;
@@ -645,8 +784,15 @@ button.gradient-btn {
 .flow_bottom{
     /* display: grid; */
     /* grid-template-columns: 1fr 1100px 1f; */
-    position: relative;
-    padding: 75px 0 150px 100px;
+    /* position: relative; */
+    /* padding: 75px 0 150px 100px; */
+    margin-top: 70px;
+    padding: 0 8vw;
+}
+
+.insp-slider{
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* .flow_bottom::before{
@@ -721,23 +867,34 @@ button.gradient-btn {
       Slider
       スライダー
   ----------------------------*/
+  .card{
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
   .card_left{
-    max-width: 41.8%;
+    width: 42%;
+    /* border-radius: 20px 0 0 20px; */
   }
 
   .card_left img{
-    border-radius: 20px 0 0 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 20px 0 0 20px; */
   }
 
   .card_right{
     background: #fff;
     padding: 50px;
+    width: 58%;
+    /* border-radius: 0 20px 20px 0; */
   }
 
   .card_right_step{
     display: flex;
-    align-items: end;
+    /* align-items: end; */
+    align-items: start;
     column-gap: 20px;
   }
 
@@ -753,9 +910,10 @@ button.gradient-btn {
 
   .card_right h3{
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.75;
     letter-spacing: 0.08rem;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    margin-top: 10px;
   }
 
   .card_right p{
@@ -788,6 +946,16 @@ button.gradient-btn {
     flex-direction: row;
     /* gap: 2px; */
   }
+
+  .step4 .card_right_step{
+    /* align-items: start; */
+  }
+
+  .step4 .card_right h3{
+    /* margin-top: 10px; */
+    /* margin-bottom: 0; */
+    /* line-height: 1.75; */
+  }
   
   /* .slide_item p {
     position: absolute;
@@ -816,13 +984,14 @@ button.gradient-btn {
 ----------------------------------*/
 
 .flow_calltoaction{
-    background-image: url(./images/flow_cta_bg.jpg);
+    background-image: url(./images/flow_banner_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-position: bottom; */
     position: relative;
-    padding-left: 13.6vw;
+    padding-left: 10vw;
     margin-top: 200px;
+    margin-top: 150px;
 }
 
 .flow_calltoaction_content{
@@ -888,13 +1057,17 @@ button.gradient-btn {
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-.flow_calltoaction_content button img{
+.flow_calltoaction_content button svg{
     width: 12px;
     height: 20px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     right: 20px;
+}
+
+.flow_calltoaction_content button:hover svg .cls-1{
+  fill: #30508D;
 }
 
 /*---------------------------------
@@ -1223,13 +1396,17 @@ header button{
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-#keyvisual button img{
+#keyvisual button svg{
     width: 13px;
     height: 20px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     right: 30px;
+}
+
+#keyvisual button:hover svg .cls-1{
+    fill: #30508D;
 }
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/navigation.css ***!
@@ -1306,10 +1483,10 @@ header button{
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
-@media screen and (max-width:1250px){
+@media screen and (max-width:1100px){
     .point_content{
         max-width: 100%;
-        padding: 0 50px;
+        padding: 0 40px;
     }
 
     .point_item{
