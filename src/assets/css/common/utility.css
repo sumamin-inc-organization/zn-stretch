@@ -29,7 +29,7 @@ button.gradient-btn {
     text-align: center;
     background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
     transition-duration: .5s;
-    transition-timing-function: ease-in;
+    transition-timing-function: linear;
 }
 
 .gradient-btn::before{
