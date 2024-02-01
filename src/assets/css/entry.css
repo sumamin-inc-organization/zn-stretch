@@ -76,6 +76,12 @@
     width: 75%;
 }
 
+input:focus,
+select:focus{
+    caret-color: #292F4A;
+    outline: solid 1px #292F4A;
+}
+
 ::placeholder{
     color: #96BEE6;
 }
@@ -127,18 +133,18 @@
     background-color: #292F4A;
     color: #fff;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 60px;
     letter-spacing: 0.16rem;
     width: 250px;
     border: none;
     border-radius: 10px;
-    transition: 0.3s;
+    transition-duration: 0.3s;
     cursor: pointer;
 }
 
 .entry_form input[type="submit" i]:hover{
-    opacity: .8;
+    background-color: #6496DC;
 }
 
 .entry_form input[type="submit" i]:active{

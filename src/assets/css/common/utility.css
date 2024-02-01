@@ -12,12 +12,12 @@ button.gradient-btn {
 /* ボタン本体の装飾 */
 .gradient-btn {
     position: relative; /* static以外を指定 */
-    z-index: 0; /* グラデーションよりも上に配置 */
+    /* z-index: 0; グラデーションよりも上に配置 */
     display: inline-block; /* inline以外にする */
     /* width: 200px; 横幅 */
     /* height: 60px; 縦幅 */
     /* line-height: 1; 行の高さ(heightと同じにする) */
-    background: transparent; /* 背景を透明にする */
+    /* background: transparent; 背景を透明にする */
     /* border-radius: 5px; 角の丸み */
     overflow: hidden; /* はみ出した部分を非表示(角丸を付ける場合は必須) */
     cursor: pointer; /* カーソルをポインターにする */
@@ -28,15 +28,26 @@ button.gradient-btn {
     font-weight: bold;
     text-align: center;
     background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
-    transition-duration: 0.5s;
-  }
+    transition-duration: .5s;
+}
+
+.gradient-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* ホバー時 */
-    .gradient-btn:hover{
-        background: #fff;
-        color: #30508D;
-    }
-  
+.gradient-btn:hover{
+    background: #fff;
+    color: #30508D;
+}
+
 /* ::before, ::afterで2種類のグラデーションを用意 */
 .gradient-btn::before,
 .gradient-btn::after {
@@ -85,7 +96,7 @@ button.gradient-btn {
 }
 
 /* タブレットのみ表示 */
-@media screen and (max-width:1024px){
+@media screen and(min-width:768px) and (max-width:1024px){
     .pc_only{
         display: none;
     }

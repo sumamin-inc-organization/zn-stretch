@@ -100,7 +100,7 @@
   
   .slider-buttons {
     display: flex;
-    gap: 20px;
+    gap: 8px;
   }
   .slider-btn {
     background: transparent;
@@ -108,10 +108,23 @@
     display: grid;
     place-items: center;
   }
-  .slider-btn img {
+  .slider-btn svg {
     object-fit: cover;
     height: 40px;
     width: 40px;
+  }
+
+  .slider-btn svg .cls-1,
+  .slider-btn svg .cls-2{
+    transition-duration: 0.5s;
+  }
+
+  .slider-btn:hover svg .cls-1{
+    fill: #092f4a;
+  }
+
+  .slider-btn:hover svg .cls-2{
+    fill: #fff;
   }
   
   .slider-btn:hover {
@@ -172,13 +185,15 @@
     line-height: 1.75;
     letter-spacing: 0.08rem;
     /* margin-bottom: 5px; */
-    margin-top: 10px;
+    margin-top: 8px;
+    text-align: justify;
   }
 
   .card_right p{
     font-size: 16px;
     line-height: 1.75;
     margin-top: 20px;
+    text-align: justify;
   }
 
   .card_right .card_right_navy{
