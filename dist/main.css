@@ -310,12 +310,12 @@ button.gradient-btn {
 /* ボタン本体の装飾 */
 .gradient-btn {
     position: relative; /* static以外を指定 */
-    z-index: 0; /* グラデーションよりも上に配置 */
+    /* z-index: 0; グラデーションよりも上に配置 */
     display: inline-block; /* inline以外にする */
     /* width: 200px; 横幅 */
     /* height: 60px; 縦幅 */
     /* line-height: 1; 行の高さ(heightと同じにする) */
-    background: transparent; /* 背景を透明にする */
+    /* background: transparent; 背景を透明にする */
     /* border-radius: 5px; 角の丸み */
     overflow: hidden; /* はみ出した部分を非表示(角丸を付ける場合は必須) */
     cursor: pointer; /* カーソルをポインターにする */
@@ -326,15 +326,26 @@ button.gradient-btn {
     font-weight: bold;
     text-align: center;
     background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
-    transition-duration: 0.5s;
-  }
+    transition-duration: .5s;
+}
+
+.gradient-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* ホバー時 */
-    .gradient-btn:hover{
-        background: #fff;
-        color: #30508D;
-    }
-  
+.gradient-btn:hover{
+    background: #fff;
+    color: #30508D;
+}
+
 /* ::before, ::afterで2種類のグラデーションを用意 */
 .gradient-btn::before,
 .gradient-btn::after {
@@ -383,7 +394,7 @@ button.gradient-btn {
 }
 
 /* タブレットのみ表示 */
-@media screen and (max-width:1024px){
+@media screen and(min-width:768px) and (max-width:1024px){
     .pc_only{
         display: none;
     }
@@ -656,6 +667,12 @@ button.gradient-btn {
     width: 75%;
 }
 
+input:focus,
+select:focus{
+    caret-color: #292F4A;
+    outline: solid 1px #292F4A;
+}
+
 ::placeholder{
     color: #96BEE6;
 }
@@ -707,18 +724,18 @@ button.gradient-btn {
     background-color: #292F4A;
     color: #fff;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 60px;
     letter-spacing: 0.16rem;
     width: 250px;
     border: none;
     border-radius: 10px;
-    transition: 0.3s;
+    transition-duration: 0.3s;
     cursor: pointer;
 }
 
 .entry_form input[type="submit" i]:hover{
-    opacity: .8;
+    background-color: #6496DC;
 }
 
 .entry_form input[type="submit" i]:active{
@@ -842,7 +859,7 @@ button.gradient-btn {
   
   .slider-buttons {
     display: flex;
-    gap: 20px;
+    gap: 8px;
   }
   .slider-btn {
     background: transparent;
@@ -850,10 +867,23 @@ button.gradient-btn {
     display: grid;
     place-items: center;
   }
-  .slider-btn img {
+  .slider-btn svg {
     object-fit: cover;
     height: 40px;
     width: 40px;
+  }
+
+  .slider-btn svg .cls-1,
+  .slider-btn svg .cls-2{
+    transition-duration: 0.5s;
+  }
+
+  .slider-btn:hover svg .cls-1{
+    fill: #092f4a;
+  }
+
+  .slider-btn:hover svg .cls-2{
+    fill: #fff;
   }
   
   .slider-btn:hover {
@@ -914,13 +944,15 @@ button.gradient-btn {
     line-height: 1.75;
     letter-spacing: 0.08rem;
     /* margin-bottom: 5px; */
-    margin-top: 10px;
+    margin-top: 8px;
+    text-align: justify;
   }
 
   .card_right p{
     font-size: 16px;
     line-height: 1.75;
     margin-top: 20px;
+    text-align: justify;
   }
 
   .card_right .card_right_navy{
@@ -1145,6 +1177,11 @@ header button{
   font-size: 18px;
   line-height: 50px;
   letter-spacing: 0.08rem;
+  border: solid 1px #30508D;
+}
+
+header button:hover{
+  border: solid 1px #30508D;
 }
 
 /*---------------------------------
