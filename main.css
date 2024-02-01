@@ -327,6 +327,7 @@ button.gradient-btn {
     text-align: center;
     background: linear-gradient(90deg, #30508D 0%, #092F5A 100%);
     transition-duration: .5s;
+    transition-timing-function: ease-in;
 }
 
 .gradient-btn::before{
@@ -1181,7 +1182,9 @@ header button{
 }
 
 header button:hover{
-  border: solid 1px #30508D;
+  /* border: solid 1px #30508D; */
+  outline: solid 1px #30508D;
+  outline-offset: 0px;
 }
 
 /*---------------------------------
