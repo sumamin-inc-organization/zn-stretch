@@ -131,7 +131,7 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  /*----------------------------
+/*----------------------------
     Font weight /フォントの太さ 
   ----------------------------*/
   .regular{
@@ -144,59 +144,9 @@
     font-weight: 700;
   }
   
-  /*----------------------------
-      Font Sizes / フォントサイズ
-    ----------------------------*/
-  .fs-11{
-    font-size: 11px;
-  }
-  .fs-14 {
-    font-size: 14px;
-  }
-  .fs-16 {
-    font-size: 16px;
-  }
-  .fs-18{
-    font-size: 18px;
-  }
-  .fs-20 {
-    font-size: 20px;
-  }
-  .fs-24 {
-    font-size: 24px;
-  }
-  .fs-25 {
-    font-size: 25px;
-  }
-  .fs-29 {
-    font-size: 29px;
-  }
-  .fs-30 {
-    font-size: 30px;
-  }
-  .fs-39 {
-    font-size: 39px;
-  }
-  .fs-55 {
-    font-size: 55px;
-  }
-  .fs-65 {
-    font-size: 65px;
-  }
-  .fs-85 {
-    font-size: 85px;
-  }
-  .fs-105 {
-    font-size: 105px;
-  }
-  .fs-136 {
-    font-size: 136px;
-  }
-  
-  /*----------------------------
+/*----------------------------
       Font Colors / フォントの色"
     ----------------------------*/
-  
   .white {
     color: #ffffff;
   }
@@ -210,21 +160,8 @@
     color: #ffff50;
   }
 
-  
-  /*---------------------------------
-    letter spacing
-  ----------------------------------*/
-  .letter-spacing-30{
-    letter-spacing: 0.06em;
-  }
-  .letter-spacing-01{
-    letter-spacing: 0.1rem;
-  }
-  .letter-spacing-02{
-    letter-spacing: 0.2rem;
-  }
-  
-  /*---------------------------------
+
+/*---------------------------------
     Section Title / セクションタイトル
   ----------------------------------*/
   .sec_title{
@@ -251,7 +188,7 @@
     margin-top: 1rem;
   }
 
-  /*---------------------------------
+/*---------------------------------
     Gradation / グラデーション
   ----------------------------------*/
   /* 背景 */
@@ -270,29 +207,23 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* ------------------- */
-  /* MOBILE              */
-  /* ------------------- */
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
   
-  /*-------------------------------------------------
-    Section Title - Mobile/ セクションタイトル - モバイル
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
   ---------------------------------------------------*/
   
-  @media (max-width: 767px) {
-    /* PC     -> 30px 
-     mobile -> 22px */
-    .sec_title{
-      font-size: 22px;
-      padding-bottom: 45px;
-    }
-    /* PC     -> 16px 
-     mobile -> 14px */
-    .sec_title_en {
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 40px;
   }
-  
+  .sec_title_sub {
+    font-size: 16px;
+    margin-top: 10px
+  }
+}  
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utility.css ***!
   \*************************************************************************************/
@@ -345,36 +276,6 @@ button.gradient-btn {
 .gradient-btn:hover{
     background: #fff;
     color: #30508D;
-}
-
-/* ::before, ::afterで2種類のグラデーションを用意 */
-.gradient-btn::before,
-.gradient-btn::after {
-    /* content: ''; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* display: block; */
-    /* width: 100%; */
-    /* height: 100%; */
-  }
-  
-/* グラデーション1 */
-.gradient-btn::before {
-    /* transition: all 0.6s; アニメーション実行時間 */
-    /* z-index: -1; */
-    /* background: linear-gradient(90deg, #30508D 0%, #092F5A 100%); */
-}
-  
-/* グラデーション2 */
-.gradient-btn::after {
-    /* z-index: -2; */
-    /* background: linear-gradient(90deg, #092F5A 0%, #30508D 100%); */
-}
-  
-/* ホバー時にグラデーション1を透明にする */
-.gradient-btn:hover::before {
-    /* opacity: 0; */
 }
 
 /*----------------------------
@@ -492,7 +393,7 @@ button.gradient-btn {
 }
 
 /*----------------------------
-      Tablet / タブレット
+    Tablet / タブレット
 ----------------------------*/
 @media screen and (max-width:1200px){
     .about_slick h4{
@@ -503,6 +404,61 @@ button.gradient-btn {
 @media screen and (max-width:1100px){
     .about_slick h4{
         font-size: 16px;
+    }
+}
+
+/*----------------------------
+    Mobile / スマホ
+----------------------------*/
+@media screen and (max-width:767px){
+    #about{
+        background-color: #fff;
+        padding: 60px 0;
+        background-image: url(./images/about_bg_sp.png);
+        background-repeat: no-repeat;
+        background-position: top 370px right 0;
+        background-size: 100vw;
+    }
+
+    .about_top {
+        background-position: top 0 left 0;
+        background-size: 20.5vw;
+        padding-bottom: 60px;
+    }
+
+    .about_top p{
+        margin-top: 34px;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 2.1;
+    }
+
+    .about_top iframe{
+        margin-top: 34px;
+        padding: 0 20px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350/196;
+    }
+
+    .about_bottom h3{
+        width: calc(100% - 40px);
+        font-size: 16px;
+    }
+
+    .about_slick{
+        margin-top: 34px;
+        margin-left: 20px !important;
+    }
+
+    .about_slick li{
+        width: 76.9vw !important;
+        margin: 0 10px;
+    }
+
+    .about_slick h4{
+        text-align: justify;
+        padding: 0 10px;
     }
 }
 /*!***************************************************************************!*\
@@ -725,6 +681,7 @@ select:focus{
     background-color: #292F4A;
     color: #fff;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 60px;
     letter-spacing: 0.16rem;
@@ -754,6 +711,80 @@ select:focus{
     .entry_form td{
         width: 70%;
     }
+}
+
+/*---------------------------------
+    Mobile / スマホ版
+----------------------------------*/
+@media screen and (max-width:767px){
+    #entry{
+        padding: 60px 20px;
+    }
+
+    .entry_title h2{
+        font-size: 40px;
+    }
+    
+    .entry_title span{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .entry_content{
+        margin-top: 34px;
+    }
+
+    .entry_content p{
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    /* Form / 応募フォーム */
+    .entry_form{
+        background-color: #fff;
+        margin: 34px auto 0;
+        padding: 10px 20px 80px;
+        border-radius: 0;
+    }
+
+    .entry_form table{
+        border-collapse: collapse;
+    }
+
+    .entry_form th,
+    .entry_form td{
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .entry_form th{
+        margin-top: 20px;
+    }
+
+    .entry_form td{
+        margin-top: 10px;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .entry_form input[type="text" i],
+    .entry_form input[type="email" i],
+    .entry_form input[type="tel" i],
+    .entry_form select{
+        border-radius: 0;
+    }
+
+    .entry_form .select_wrap::after{
+        right: 14px;
+    }
+
+    .entry_form input[type="submit" i]{
+        margin-top: 60px;
+    }
+
 }
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
@@ -1154,6 +1185,30 @@ footer small{
     margin-top: 70px;
     font-size: 16px;
     line-height: 1;
+    letter-spacing: 0.04rem;
+}
+
+
+/*----------------------------
+    Responsive /レスポンシブ
+----------------------------*/
+/* スマホ版 */
+@media screen and (max-width:768px){
+    footer{
+        padding: 55px 0;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    footer img{
+        width: 242px;
+    }
+
+    footer small{
+        margin-top: 20px;
+    }
 }
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
@@ -1208,6 +1263,10 @@ header button:hover{
     display: grid;
     grid-template-columns: 1fr 1100px 1fr;
     position: relative;
+}
+
+.interview_title{
+    text-align: center;
 }
 
 .interview_left{
@@ -1272,7 +1331,7 @@ header button:hover{
 }
 
 .interview_item_text_qa:nth-child(3){
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .interview_item_text_qa h4{
@@ -1304,6 +1363,81 @@ header button:hover{
 @media screen and (max-width:1300px){
     #interview{
         grid-template-columns: 8vw 1fr 8vw;
+    }
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #interview{
+        padding: 0;
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .interview_title{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .interview_middle{
+        padding: 60px 0;
+    }
+
+    .interview_middle:before {
+        width: 76.9%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        background-color: #EBF5FF;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .interview_item{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .interview_item:nth-child(2){
+        margin-top: 34px;
+    }
+
+    .interview_item:nth-child(3) img{
+        order: -1;
+    }
+
+    .interview_item img{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .interview_item_text{
+        margin-top: 25px;
+    }
+
+    .interview_item_text_qa{
+        padding: 30px;
+    }
+
+    .interview_item_text_qa h4{
+        font-size: 16px;
+    }
+
+    .interview_item_text_qa p{
+        margin-top: 10px;
+    }
+
+    /* Backgroung / 背景イラスト */
+    .interview_bg{
+        width: 25.6vw;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        z-index: 10;
     }
 }
 /*!********************************************************************************!*\
@@ -1538,6 +1672,59 @@ header button:hover{
         font-size: 22px;
     }
 }
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:768px){
+    #point{
+        padding: 60px 20px;
+        background-color: #EBF5FF;
+        background-image: url(./images/slash_01.svg);
+        background-repeat: no-repeat;
+        background-position: top 30px right 0;
+        background-size: 28.2vw;
+    }
+
+    .point_title{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .point_content{
+        padding: 0;
+    }
+
+    .point_item{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .point_item:nth-child(1){
+        margin-top: 34px;
+    }
+
+    .point_item img{
+        width: 100%;
+    }
+
+    .point_item:nth-child(2) img{
+        order: -1;
+    }
+
+    .point_item_text{
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .point_item span{
+        font-size: 40px;
+    }
+
+    .point_item p{
+        margin-top: 30px;
+    }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/precedent.css ***!
   \********************************************************************************/
@@ -1753,11 +1940,8 @@ header button:hover{
 
 .recruit_content table{
     width: 100%;
+    border-collapse: separate;
     border-spacing: 0 20px;
-}
-
-.recruit_content table tr{
-    margin-top: 20px;
 }
 
 .recruit_content th{
@@ -1788,11 +1972,50 @@ header button:hover{
 }
 
 /*---------------------------------
-    Tablet / タブレット
+    Tablet / タブレット版
 ----------------------------------*/
 @media screen and (max-width:1100px){
     .recruit_content{
-        padding: 0 50px;
+        padding: 0 40px;
+    }
+}
+
+/*---------------------------------
+    Mobile / スマホ版
+----------------------------------*/
+@media screen and (max-width:767px){
+    #recruit{
+        padding: 60px 20px;
+    }
+
+    .recruit_content{
+        margin-top: 34px;
+        padding: 0;
+    }
+
+    .recruit_content table{
+        border-spacing: 0 15px;
+    }
+
+    .recruit_content th,
+    .recruit_content td{
+        display: block;
+        width: 100%;
+    }
+
+    .recruit_content th{
+        padding-top: 0;
+    }
+
+    .recruit_content td{
+        margin-top: 10px;
+        padding: 20px;
+    }
+
+    .table_navy_bg{
+        background-color: #292F4A;
+        margin: 15px 0;
+        padding: 0 20px 0.1em;
     }
 }
 /*!*******************************************************************************!*\
@@ -1950,6 +2173,30 @@ header button:hover{
 ----------------------------------*/
 @media screen and (max-width:1100px){
     
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #schedule{
+        padding: 60px 20px;
+        background-size: 0;
+    }
+
+    .schedule_content h3{
+        width: 100%;
+        font-size: 16px;
+        margin-top: 34px;
+    }
+
+    .schedule_content iframe{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350/196;
+        display: block;
+        margin: 34px auto 26px;
+    }
 }
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/slick.css ***!
