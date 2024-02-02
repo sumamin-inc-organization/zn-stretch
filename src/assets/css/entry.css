@@ -133,6 +133,7 @@ select:focus{
     background-color: #292F4A;
     color: #fff;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 60px;
     letter-spacing: 0.16rem;
@@ -162,4 +163,78 @@ select:focus{
     .entry_form td{
         width: 70%;
     }
+}
+
+/*---------------------------------
+    Mobile / スマホ版
+----------------------------------*/
+@media screen and (max-width:767px){
+    #entry{
+        padding: 60px 20px;
+    }
+
+    .entry_title h2{
+        font-size: 40px;
+    }
+    
+    .entry_title span{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .entry_content{
+        margin-top: 34px;
+    }
+
+    .entry_content p{
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    /* Form / 応募フォーム */
+    .entry_form{
+        background-color: #fff;
+        margin: 34px auto 0;
+        padding: 10px 20px 80px;
+        border-radius: 0;
+    }
+
+    .entry_form table{
+        border-collapse: collapse;
+    }
+
+    .entry_form th,
+    .entry_form td{
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .entry_form th{
+        margin-top: 20px;
+    }
+
+    .entry_form td{
+        margin-top: 10px;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .entry_form input[type="text" i],
+    .entry_form input[type="email" i],
+    .entry_form input[type="tel" i],
+    .entry_form select{
+        border-radius: 0;
+    }
+
+    .entry_form .select_wrap::after{
+        right: 14px;
+    }
+
+    .entry_form input[type="submit" i]{
+        margin-top: 60px;
+    }
+
 }

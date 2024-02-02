@@ -80,3 +80,56 @@
         font-size: 22px;
     }
 }
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:768px){
+    #point{
+        padding: 60px 20px;
+        background-color: #EBF5FF;
+        background-image: url(../images/common/slash_01.svg);
+        background-repeat: no-repeat;
+        background-position: top 30px right 0;
+        background-size: 28.2vw;
+    }
+
+    .point_title{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .point_content{
+        padding: 0;
+    }
+
+    .point_item{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .point_item:nth-child(1){
+        margin-top: 34px;
+    }
+
+    .point_item img{
+        width: 100%;
+    }
+
+    .point_item:nth-child(2) img{
+        order: -1;
+    }
+
+    .point_item_text{
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .point_item span{
+        font-size: 40px;
+    }
+
+    .point_item p{
+        margin-top: 30px;
+    }
+}

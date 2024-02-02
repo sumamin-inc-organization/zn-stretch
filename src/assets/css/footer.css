@@ -23,4 +23,28 @@ footer small{
     margin-top: 70px;
     font-size: 16px;
     line-height: 1;
+    letter-spacing: 0.04rem;
+}
+
+
+/*----------------------------
+    Responsive /レスポンシブ
+----------------------------*/
+/* スマホ版 */
+@media screen and (max-width:768px){
+    footer{
+        padding: 55px 0;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    footer img{
+        width: 242px;
+    }
+
+    footer small{
+        margin-top: 20px;
+    }
 }

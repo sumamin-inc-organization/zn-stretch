@@ -151,3 +151,27 @@
 @media screen and (max-width:1100px){
     
 }
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #schedule{
+        padding: 60px 20px;
+        background-size: 0;
+    }
+
+    .schedule_content h3{
+        width: 100%;
+        font-size: 16px;
+        margin-top: 34px;
+    }
+
+    .schedule_content iframe{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350/196;
+        display: block;
+        margin: 34px auto 26px;
+    }
+}
