@@ -104,7 +104,7 @@ select:focus{
 }
 
 .input_lightblue{
-    color:#81B3E6;
+    color:#96BEE6;
 }
 
 .entry_form .select_wrap{
@@ -218,8 +218,9 @@ select:focus{
         margin-top: 10px;
     }
 
-    ::placeholder{
-        font-size: 14px;
+    ::placeholder,
+    .input_lightblue{
+        font-size: 14px !important;
     }
 
     .entry_form input[type="text" i],

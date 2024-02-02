@@ -5,5 +5,12 @@ $('.about_slick').slick({
     pauseOnHover: false, //スライドの上にマウスを乗せても停止させない
     centerMode: true,
     centerPadding: '13.2%',
-    slidesToShow: 2
+    slidesToShow: 2,
+    responsive:[{
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            centerPadding: '20px'
+        }
+    }]
 });
