@@ -1,18 +1,12 @@
 #area{
-    padding: 130px 8vw 150px;
+    padding: 130px 8vw 310px;
 }
 
 .area_wrap{
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
-}
-
-.area_wrap img{
-    width: 80.3%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
 }
 
 .area_content{
@@ -20,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding-bottom: 24%;
+    /* padding-bottom: 24%; */
 }
 
 .area_content .bg_gradient{
@@ -34,7 +28,18 @@
 .area_content p:last-child{
     font-size: 16px;
     line-height: 28px;
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.area_wrap_right{
+    width: 80.3%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.area_wrap_right img{
+    width: 100%;
 }
 
 /*---------------------------------
@@ -42,7 +47,7 @@
 ----------------------------------*/
 @media screen and (max-width:1100px){
     #area{
-        padding: 130px 50px 150px;
+        padding: 130px 40px 150px;
     }
 
     .area_wrap img{
@@ -63,17 +68,53 @@
 
 @media screen and (max-width:1024px){
     .area_wrap img{
-        width: 60%;
-        top: initial;
-        bottom: 0;
+        /* width: 60%; */
+        /* top: initial; */
+        /* bottom: 0; */
     }
 
     .area_content{
-        margin-top: 30px;
-        padding-bottom: 0;
+        /* margin-top: 30px; */
+        /* padding-bottom: 0; */
     }
 
     .area_content .bg_gradient{
-        font-size: 24px;
+        /* font-size: 24px; */
+    }
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #area{
+        padding: 60px 20px;
+    }
+
+    .area_wrap{
+        flex-direction: column;
+    }
+
+    .area_title{
+        padding: 0 10px;
+    }
+
+    .area_content{
+        margin-top: 24px;
+        padding: 0 10px;
+    }
+
+    .area_content .bg_gradient{
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .area_content p:last-child{
+        margin-top: 30px;
+    }
+
+    .area_wrap_right{
+        position: initial;
+        width: 100%;
     }
 }

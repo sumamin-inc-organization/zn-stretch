@@ -218,11 +218,6 @@ select:focus{
         margin-top: 10px;
     }
 
-    ::placeholder,
-    .input_lightblue{
-        font-size: 14px !important;
-    }
-
     .entry_form input[type="text" i],
     .entry_form input[type="email" i],
     .entry_form input[type="tel" i],
