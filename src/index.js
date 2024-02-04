@@ -1,5 +1,5 @@
 /*----------------------------
-      CSS / スタイリングシート
+    CSS / スタイリングシート
 ----------------------------*/
 import "./assets/css/common/reset.css";
 import "./assets/css/common/typography.css";
@@ -20,7 +20,7 @@ import "./assets/css/schedule.css";
 import "./assets/css/slick.css";
 
 /*----------------------------
-      Timeline / 1日の流れ
+    Timeline / 1日の流れ
 ----------------------------*/
 //線が伸びるための設定を関数でまとめる
 function ScrollTimelineAnime(){
@@ -72,6 +72,9 @@ $(document).ready(function () {
 		autoplaySpeed: 2000,
 		nextArrow: document.getElementById("slider-next"),
 		prevArrow: document.getElementById("slider-prev"),
+		centerMode: true,
+		centerPadding:"13.6vw",
+		// variableWidth: true,
 	});
 
 	// Click event for indicators
