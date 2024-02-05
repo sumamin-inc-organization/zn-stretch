@@ -198,6 +198,7 @@
 @media screen and (max-width:767px){
     #precedent{
         grid-template-columns: 20px 1fr 20px;
+        padding-top: 60px;
     }
 
     .precedent_middle{

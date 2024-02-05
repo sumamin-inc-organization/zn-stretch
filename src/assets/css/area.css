@@ -107,6 +107,7 @@
     .area_content .bg_gradient{
         font-size: 22px;
         margin-top: 10px;
+        letter-spacing: -0.01rem;
     }
 
     .area_content p:last-child{
