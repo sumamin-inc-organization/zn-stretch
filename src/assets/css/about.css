@@ -84,7 +84,7 @@
 @media screen and (max-width:767px){
     #about{
         background-color: #fff;
-        padding: 60px 0;
+        padding: 40px 0 60px;
         background-image: url(../images/about/about_bg_sp.png);
         background-repeat: no-repeat;
         background-position: top 370px right 0;
@@ -94,6 +94,7 @@
     .about_top {
         background-position: top 0 left 0;
         background-size: 20.5vw;
+        padding-top: 20px;
         padding-bottom: 60px;
     }
 

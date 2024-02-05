@@ -114,7 +114,7 @@
 
 .precedent_bottom_item .data{
     font-size: 16px;
-    list-style: 1.75;
+    line-height: 1.75;
     margin-top: 10px;
 }
 
@@ -200,6 +200,20 @@
         grid-template-columns: 20px 1fr 20px;
     }
 
+    .precedent_middle{
+        padding-bottom: 60px;
+    }
+
+    .precedent_middle:before{
+        width: calc(100% - 65px);
+        height: calc(100% - 40px);
+        border-radius: 30px 0 0 30px;
+    }
+
+    .precedent_right:before{
+        height: calc(100% - 40px);
+    }
+
     .precedent_top{
         flex-direction: column;
         align-items: flex-start;
@@ -233,9 +247,25 @@
     .precedent_bottom{
         margin-top: 90px;
         flex-direction: column;
+        row-gap: 60px;
     }
 
     .precedent_bottom_item img{
         width: 61.5vw;
+    }
+
+    .precedent_bottom_item .salary{
+        width: 286px;
+        font-size: 20px;
+    }
+
+    .precedent_bottom_item .price{
+        font-size: 40px;
+    }
+
+    .precedent_bg_01{
+        width: 25.6vw;
+        top: 290px;
+        /* z-index: 0; */
     }
 }
