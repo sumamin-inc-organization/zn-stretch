@@ -51,12 +51,13 @@
             <div class="precedent_left"></div>
             <div class="precedent_middle navy">
                 <div class="precedent_top">
-                    <img src="assets/images/precedent/precedent_image.jpg" alt="">
+                    <img class="pc_only" src="assets/images/precedent/precedent_image.jpg" alt="">
+                    <img class="sp_only" src="assets/images/precedent/precedent_image_sp.jpg" alt="">
                     <div class="precedent_top_text">
                         <h2 class="sec_title">PRECEDENT</h2>
                         <span class="sec_title_sub">給与事例</span>
-                        <p class="regular font-notosans">全力ストレッチの給与体系は､ストレッチ業界で最高水準。<br>
-                        理想の高収入が目指せます。<br>
+                        <p class="regular font-notosans">全力ストレッチの給与体系は､ストレッチ業界で最高水準。<br class="pc_only">
+                        理想の高収入が目指せます。<br class="pc_only">
                         入社○ヶ月で月収○○円に到達したトレーナーも！<br>
                         年収1,000万円以上も､あなたの活躍次第で到達可能です。</p>
                     </div>
@@ -136,7 +137,8 @@
 
             <div class="point_content">
                 <div class="point_item">
-                    <img src="assets/images/point/point_01_figure.svg" alt="">
+                    <img class="pc_only" src="assets/images/point/point_01_figure.png" alt="">
+                    <img class="sp_only" src="assets/images/point/point_01_figure_sp.png" alt="">
                     <div class="point_item_text">
                         <span class="font-roboto bold tx_gradient">01</span>
                         <h3 class="font-notosans bold white bg_gradient">業界で最高水準の給与体系</h3>
@@ -538,7 +540,7 @@
                         <table class="font-notosans navy">
                             <tr>
                                 <th class="navy medium">お名前<span class="white regular">必須</span></th>
-                                <td><input class="form_input regular navy" id="name" type="text" name="yourname" placeholder="フルネームをご入力ください"></td>
+                                <td><input class="form_input regular navy" id="name" type="text" name="yourname" autocomplete="name" placeholder="フルネームをご入力ください"></td>
                             </tr>
                             <tr>
                                 <th class="navy medium">生年月日<span class="white regular">必須</span></th>
@@ -550,7 +552,7 @@
                             </tr>
                             <tr>
                                 <th class="navy medium">電話番号<span class="white regular">必須</span></th>
-                                <td><input class="form_input regular navy" id="tel" type="tel" name="yourtel" placeholder="ハイフンなしでご入力ください"></td>
+                                <td><input class="form_input regular navy" id="tel" type="tel" name="yourtel" autocomplete="email" placeholder="ハイフンなしでご入力ください"></td>
                             </tr>
                             <tr class="work_location">
                                 <th class="navy medium">希望エリア<span class="not_required"></span></th>

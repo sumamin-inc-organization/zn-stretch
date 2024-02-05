@@ -191,3 +191,51 @@
         /* font-size: 32px; */
     }
 }
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:1300px){
+    #precedent{
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .precedent_top{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 70px;
+    }
+
+    .precedent_top img{
+        width: 82.1vw;
+        height: auto;
+        aspect-ratio: 320/279;
+        object-fit: cover;
+        object-position: top;
+        margin-left: -20px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .precedent_top_text{
+        padding: 0 10px;
+    }
+
+    .precedent_top_text h2,
+    .precedent_top_text span{
+        margin-left: 10px;
+    }
+
+    .precedent_top p{
+        line-height: 2.1;
+        letter-spacing: 0.02rem;
+    }
+
+    .precedent_bottom{
+        margin-top: 90px;
+        flex-direction: column;
+    }
+
+    .precedent_bottom_item img{
+        width: 61.5vw;
+    }
+}
