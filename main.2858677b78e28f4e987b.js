@@ -270,7 +270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_schedule_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/css/schedule.css */ "./src/assets/css/schedule.css");
 /* harmony import */ var _assets_css_slick_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/css/slick.css */ "./src/assets/css/slick.css");
 /*----------------------------
-      CSS / スタイリングシート
+    CSS / スタイリングシート
 ----------------------------*/
 
 
@@ -291,7 +291,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /*----------------------------
-      Timeline / 1日の流れ
+    Timeline / 1日の流れ
 ----------------------------*/
 //線が伸びるための設定を関数でまとめる
 function ScrollTimelineAnime(){
@@ -343,6 +343,9 @@ $(document).ready(function () {
 		autoplaySpeed: 2000,
 		nextArrow: document.getElementById("slider-next"),
 		prevArrow: document.getElementById("slider-prev"),
+		centerMode: true,
+		centerPadding:"13.6vw",
+		// variableWidth: true,
 	});
 
 	// Click event for indicators
@@ -365,4 +368,4 @@ $(document).ready(function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=main.bb14cdcd8d4f809f4f54.js.map
+//# sourceMappingURL=main.2858677b78e28f4e987b.js.map

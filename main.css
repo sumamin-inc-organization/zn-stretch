@@ -465,20 +465,14 @@ button.gradient-btn {
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/area.css ***!
   \***************************************************************************/
 #area{
-    padding: 130px 8vw 150px;
+    padding: 130px 8vw 18%;
 }
 
 .area_wrap{
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
-}
-
-.area_wrap img{
-    width: 80.3%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
 }
 
 .area_content{
@@ -486,7 +480,7 @@ button.gradient-btn {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding-bottom: 24%;
+    /* padding-bottom: 24%; */
 }
 
 .area_content .bg_gradient{
@@ -500,7 +494,18 @@ button.gradient-btn {
 .area_content p:last-child{
     font-size: 16px;
     line-height: 28px;
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.area_wrap_right{
+    width: 80.3%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.area_wrap_right img{
+    width: 100%;
 }
 
 /*---------------------------------
@@ -508,7 +513,7 @@ button.gradient-btn {
 ----------------------------------*/
 @media screen and (max-width:1100px){
     #area{
-        padding: 130px 50px 150px;
+        padding: 130px 40px 150px;
     }
 
     .area_wrap img{
@@ -529,18 +534,54 @@ button.gradient-btn {
 
 @media screen and (max-width:1024px){
     .area_wrap img{
-        width: 60%;
-        top: initial;
-        bottom: 0;
+        /* width: 60%; */
+        /* top: initial; */
+        /* bottom: 0; */
     }
 
     .area_content{
-        margin-top: 30px;
-        padding-bottom: 0;
+        /* margin-top: 30px; */
+        /* padding-bottom: 0; */
     }
 
     .area_content .bg_gradient{
-        font-size: 24px;
+        /* font-size: 24px; */
+    }
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #area{
+        padding: 60px 20px;
+    }
+
+    .area_wrap{
+        flex-direction: column;
+    }
+
+    .area_title{
+        padding: 0 10px;
+    }
+
+    .area_content{
+        margin-top: 24px;
+        padding: 0 10px;
+    }
+
+    .area_content .bg_gradient{
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .area_content p:last-child{
+        margin-top: 30px;
+    }
+
+    .area_wrap_right{
+        position: initial;
+        width: 100%;
     }
 }
 /*!****************************************************************************!*\
@@ -766,11 +807,6 @@ select:focus{
         margin-top: 10px;
     }
 
-    ::placeholder,
-    .input_lightblue{
-        font-size: 14px !important;
-    }
-
     .entry_form input[type="text" i],
     .entry_form input[type="email" i],
     .entry_form input[type="tel" i],
@@ -791,76 +827,59 @@ select:focus{
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
   \***************************************************************************/
 #flow{
-    /* margin-bottom: 200px; */
-    /* background-color: #EBF5FF; */
-    background: linear-gradient(to bottom, #EBF5FF 90%, #fff 90%);
+  margin-top: 160px;
 }
 
-.flow_top{
-    /* background-color: #EBF5FF; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1100px 1fr; */
-    position: relative;
-    padding: 0 8vw;
+.flow_slider{
+  display: grid;
+  grid-template-columns: 1fr 1100px 1fr;
+  grid-template-rows: 130px 1fr;
+  position: relative;
+  padding: 150px 0 120px;
 }
 
-.flow_top_middle{
+.flow_slider::after{
+  grid-column: 2/4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background-color: #EBF5FF;
+  border-radius: 50px 0 0 50px;
+}
+
+.flow_slider_top{
     display: flex;
     justify-content: space-between;
     align-items: end;
-    position: relative;
     /* padding: 150px 0 0 100px; */
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-top: 150px;
+    /* max-width: 1100px; */
+    /* margin: 0 auto; */
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /* padding-top: 100px; */
+    padding-left: 100px;
 }
 
-/* .flow_top_middle::before{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    background-color: #EBF5FF;
-    border-radius: 50px 0 0 0;
-} */
-
-.flow_top_right{
-    background-color: #EBF5FF;
-}
-
-.flow_bottom{
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1100px 1f; */
-    /* position: relative; */
-    /* padding: 75px 0 150px 100px; */
-    margin-top: 70px;
-    padding: 0 8vw;
+.flow_slider_bottom{
+  /* margin: 70px 20px 0 !important; */
+  /* padding-left: 100px; */
+  /* padding-bottom: 125px; */
+  grid-column: 2/4;
+  grid-row: 2/3;
+  margin-top: 70px;
+  margin-left: 100px;
+  /* padding-bottom: 120px; */
+  overflow-x: hidden;
 }
 
 .insp-slider{
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* .flow_bottom::before{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    background-color: #EBF5FF;
-    border-radius: 50px 0 0 50px;
-} */
-
-.insp-slider{
-    /* grid-column: 2/4; */
+  margin-left: calc(-13.6vw - 20px);
+  /* width: 1000px; */
 }
 
 /*----------------------------
@@ -894,6 +913,7 @@ select:focus{
     display: flex;
     gap: 8px;
   }
+
   .slider-btn {
     background: transparent;
     border: none;
@@ -927,6 +947,14 @@ select:focus{
     padding-right: 0;
   }
   
+  .flow_slider_bottom .slick-track{
+    /* display: flex; */
+  }
+
+  .flow_slider_bottom .slick-slide {
+    /* height: auto !important; */
+  }
+  
   /*----------------------------
       Slider
       スライダー
@@ -934,6 +962,7 @@ select:focus{
   .card{
     border-radius: 20px;
     overflow: hidden;
+    margin: 0 20px;
   }
 
   .card_left{
@@ -957,7 +986,6 @@ select:focus{
 
   .card_right_step{
     display: flex;
-    /* align-items: end; */
     align-items: start;
     column-gap: 20px;
   }
@@ -976,7 +1004,6 @@ select:focus{
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.08rem;
-    /* margin-bottom: 5px; */
     margin-top: 8px;
     text-align: justify;
   }
@@ -998,51 +1025,19 @@ select:focus{
     border-radius: 5px;
     margin-top: 20px;
   }
+
   .card_right .card_right_navy p{
     margin-top: 0;
-  }
-
-  .slide_item {
-    width: 50%;
-    position: relative;
   }
   
   .card-inner {
     display: flex;
     flex-direction: row;
-    /* gap: 2px; */
-  }
-
-  .step4 .card_right_step{
-    /* align-items: start; */
-  }
-
-  .step4 .card_right h3{
-    /* margin-top: 10px; */
-    /* margin-bottom: 0; */
-    /* line-height: 1.75; */
   }
   
-  /* .slide_item p {
-    position: absolute;
-    width: 180px;
-    height: 40px;
-    top: 0px;
-    left: 0;
-    z-index: 3;
-    background-color: #ffffff;
-    clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
-    display: grid;
-    place-content: center;
-    letter-spacing: 2.88px;
-  } */
-  
+  .indicator:hover,
   .active {
     color: #6496DC;
-  }
-  
-  .ba_label{
-    font-size: 16px;
   }
 
 /*---------------------------------
@@ -1152,11 +1147,109 @@ select:focus{
 }
 
 @media screen and (max-width:1100px){
+  .flow_slider{
+    grid-template-columns: 40px 1fr 40px;
+  }
+
     .flow_calltoaction_content button{
         /* width: 296px; */
         /* font-size: 16px; */
         line-height: 48px;
     }
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+  #flow{
+    margin-top: 0;
+  }
+  
+  .flow_slider{
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 120px 1fr;
+    padding: 80px 0 60px;
+  }
+
+  .flow_slider::after{
+    width: 76.9vw;
+    border-radius: 30px 0 0 30px;
+  }
+
+  .flow_slider_top{
+    flex-direction: column;
+    padding-left: 10px;
+    align-items: start;
+  }
+
+  .slider-controls{
+    align-self: flex-end;
+  }
+
+  .indicators{
+    display: none;
+  }
+
+  .slider-buttons{
+    column-gap: 0;
+  }
+
+  .slider-btn svg{
+    width: 30px;
+    height: 30px;
+  }
+
+  .flow_slider_bottom{
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .card{
+    /* margin: 0 10px; */
+  }
+
+  .card-inner{
+    flex-direction: column;
+  }
+
+  .card_left,
+  .card_right{
+    width: 100%;
+  }
+
+  .card_left img{
+    aspect-ratio: 3/2;
+  }
+
+  .card_right{
+    padding: 30px 30px 50px;
+  }
+
+  .card_right_step{
+    flex-direction: column;
+  }
+
+  .card_right span{
+    font-size: 16px;
+  }
+
+  .card_right .step_number{
+    font-size: 26px;
+  }
+
+  .card_right p{
+    margin-top: 10px;
+  }
+
+  .card_right .card_right_navy{
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .card_right .card_right_navy p{
+    text-align: center;
+  }
 }
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
@@ -1920,6 +2013,54 @@ header button:hover{
 
     .precedent_bottom_item .price{
         /* font-size: 32px; */
+    }
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:1300px){
+    #precedent{
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .precedent_top{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 70px;
+    }
+
+    .precedent_top img{
+        width: 82.1vw;
+        height: auto;
+        aspect-ratio: 320/279;
+        object-fit: cover;
+        object-position: top;
+        margin-left: -20px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .precedent_top_text{
+        padding: 0 10px;
+    }
+
+    .precedent_top_text h2,
+    .precedent_top_text span{
+        margin-left: 10px;
+    }
+
+    .precedent_top p{
+        line-height: 2.1;
+        letter-spacing: 0.02rem;
+    }
+
+    .precedent_bottom{
+        margin-top: 90px;
+        flex-direction: column;
+    }
+
+    .precedent_bottom_item img{
+        width: 61.5vw;
     }
 }
 /*!******************************************************************************!*\
