@@ -31,13 +31,20 @@ header button:hover{
     Tablet / タブレット
 ----------------------------------*/
 @media screen and (max-width:1100px){
-  header{
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-
   header h1{
     width: 242px;
+  }
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:767px){
+  header{
+    padding: 20px 20px 0;
+  }
+
+  header h1{
+    width: 157px;
   }
 }

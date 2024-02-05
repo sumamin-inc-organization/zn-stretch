@@ -54,6 +54,7 @@
 .keyvisual_left .ten-million{
     /* font-size: 50px; */
     font-size: 3.31vw;
+    letter-spacing: -0.02rem;
 }
 
 .keyvisual_left .comma{
@@ -137,4 +138,78 @@
 
 #keyvisual button:hover svg .cls-1{
     fill: #30508D;
+}
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #keyvisual{
+        background-image: url(../images/keyvisual/keyvisual_bg_sp.png);
+        padding: 65px 20px 60px;
+    }
+
+    .keyvisual_content{
+        max-width: 100%;
+    }
+
+    .keyvisual_left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keyvisual_left img{
+        width: 66.7vw;
+        margin-left: 0;
+    }
+
+    .keyvisual_left .kevisual_img{
+        width: 100%;
+        /* margin-left: 65px; */
+        margin-top: -20px;
+    }
+
+    .keyvisual_left .keyvisual_copy{
+        font-size: 16px;
+        margin-top: -60px;
+    }
+
+    .keyvisual_left .ten-million{
+        font-size: 30px;
+        /* letter-spacing: 0; */
+    }
+
+    .keyvisual_left_point{
+        width: 100%;
+        margin-top: 20px;
+        column-gap: 7px;
+    }
+
+    .keyvisual_left_point_item{
+        padding: 10px 0 15px;
+    }
+
+    .keyvisual_left_point_item h3 .point{
+        font-size: 12px;
+    }
+
+    .keyvisual_left_point_item h3 .number{
+        font-size: 20px;
+    }
+
+    .keyvisual_left_point_item p{
+        font-size: 16px;
+    }
+
+    #keyvisual button{
+        font-size: 20px;
+        margin-top: 34px;
+    }
+
+    #keyvisual button svg{
+        width: 9px;
+        right: 20px;
+    }
 }

@@ -413,7 +413,7 @@ button.gradient-btn {
 @media screen and (max-width:767px){
     #about{
         background-color: #fff;
-        padding: 60px 0;
+        padding: 40px 0 60px;
         background-image: url(./images/about_bg_sp.png);
         background-repeat: no-repeat;
         background-position: top 370px right 0;
@@ -423,6 +423,7 @@ button.gradient-btn {
     .about_top {
         background-position: top 0 left 0;
         background-size: 20.5vw;
+        padding-top: 20px;
         padding-bottom: 60px;
     }
 
@@ -1340,14 +1341,21 @@ header button:hover{
     Tablet / タブレット
 ----------------------------------*/
 @media screen and (max-width:1100px){
-  header{
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-
   header h1{
     width: 242px;
+  }
+}
+
+/*---------------------------------
+    Tablet / タブレット
+----------------------------------*/
+@media screen and (max-width:767px){
+  header{
+    padding: 20px 20px 0;
+  }
+
+  header h1{
+    width: 157px;
   }
 }
 /*!********************************************************************************!*\
@@ -1677,6 +1685,48 @@ header button:hover{
 #keyvisual button:hover svg .cls-1{
     fill: #30508D;
 }
+
+/*---------------------------------
+    Mobile / スマホ
+----------------------------------*/
+@media screen and (max-width:767px){
+    #keyvisual{
+        background-image: url(./images/keyvisual_bg_sp.png);
+        padding: 17% 20px 6%;
+    }
+
+    .keyvisual_content{
+        max-width: 100%;
+    }
+
+    .keyvisual_left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keyvisual_left img{
+        width: 66.7vw;
+        margin-left: 0;
+    }
+
+    .keyvisual_left .kevisual_img{
+        width: 100%;
+        /* margin-left: 65px; */
+        margin-top: -20px;
+    }
+
+    .keyvisual_left .keyvisual_copy{
+        font-size: 17px;
+        letter-spacing: 0;
+    }
+
+    .keyvisual_left .ten-million{
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+}
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/navigation.css ***!
   \*********************************************************************************/
@@ -1815,6 +1865,10 @@ header button:hover{
         font-size: 40px;
     }
 
+    .point_item h3{
+        letter-spacing: 0;
+    }
+
     .point_item p{
         margin-top: 30px;
     }
@@ -1938,7 +1992,7 @@ header button:hover{
 
 .precedent_bottom_item .data{
     font-size: 16px;
-    list-style: 1.75;
+    line-height: 1.75;
     margin-top: 10px;
 }
 
@@ -2019,9 +2073,23 @@ header button:hover{
 /*---------------------------------
     Mobile / スマホ
 ----------------------------------*/
-@media screen and (max-width:1300px){
+@media screen and (max-width:767px){
     #precedent{
         grid-template-columns: 20px 1fr 20px;
+    }
+
+    .precedent_middle{
+        padding-bottom: 60px;
+    }
+
+    .precedent_middle:before{
+        width: calc(100% - 65px);
+        height: calc(100% - 40px);
+        border-radius: 30px 0 0 30px;
+    }
+
+    .precedent_right:before{
+        height: calc(100% - 40px);
     }
 
     .precedent_top{
@@ -2057,10 +2125,26 @@ header button:hover{
     .precedent_bottom{
         margin-top: 90px;
         flex-direction: column;
+        row-gap: 60px;
     }
 
     .precedent_bottom_item img{
         width: 61.5vw;
+    }
+
+    .precedent_bottom_item .salary{
+        width: 286px;
+        font-size: 20px;
+    }
+
+    .precedent_bottom_item .price{
+        font-size: 40px;
+    }
+
+    .precedent_bg_01{
+        width: 25.6vw;
+        top: 290px;
+        /* z-index: 0; */
     }
 }
 /*!******************************************************************************!*\
