@@ -291,6 +291,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /*----------------------------
+    Navigation / ナビゲーション
+----------------------------*/
+$(".openbtn2").click(function () {//ボタンがクリックされたら
+	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+	$("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+});
+
+$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+	$(".openbtn2").removeClass('active');//ボタンの activeクラスを除去し
+	$("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+});
+
+/*----------------------------
     Timeline / 1日の流れ
 ----------------------------*/
 //線が伸びるための設定を関数でまとめる
@@ -368,4 +381,4 @@ $(document).ready(function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=main.2858677b78e28f4e987b.js.map
+//# sourceMappingURL=main.8c0f5b0196b11e1fed03.js.map

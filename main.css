@@ -386,7 +386,7 @@ button.gradient-btn {
 }
 
 .about_slick h4{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.08rem;
     margin-top: 25px;
@@ -395,17 +395,7 @@ button.gradient-btn {
 /*----------------------------
     Tablet / タブレット
 ----------------------------*/
-@media screen and (max-width:1200px){
-    .about_slick h4{
-        font-size: 18px;
-    }
-}
 
-@media screen and (max-width:1100px){
-    .about_slick h4{
-        font-size: 16px;
-    }
-}
 
 /*----------------------------
     Mobile / スマホ
@@ -1383,6 +1373,13 @@ header h1{
     width: 303px;
 }
 
+.header_right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  column-gap: 40px;
+}
+
 header button{
   width: 250px;
   border-radius: 25px;
@@ -1491,7 +1488,7 @@ header button:hover{
     margin-top: 25px;
     background-color: #fff;
     border-radius:20px;
-    padding: 30px 20px;
+    padding: 30px;
 }
 
 .interview_item_text_qa:nth-child(3){
@@ -1827,7 +1824,186 @@ header button:hover{
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/navigation.css ***!
   \*********************************************************************************/
+/*---------------------------------
+    Hamburger / ハンバーガーボタン
+----------------------------------*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn2{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    width: 30px;
+    height:14px;
+    cursor: pointer;
+    /* background:#fff; */
+    margin-top: 3px;
+    z-index: 3000;
+}
+    
+/*ボタン内側*/
+.openbtn2 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    }
 
+
+.openbtn2 span:nth-of-type(1) {
+    top: 0; 
+    width: 100%;
+}
+
+.openbtn2 span:nth-of-type(2) {
+    top: initial;
+    bottom: 0;
+    width: 100%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn2.active span:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    transform: translateY(6px) rotate(-45deg);
+    width: 100%;
+    background-color: #092F4A;
+}
+
+.openbtn2.active span:nth-of-type(2) {
+    top: inherit;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-6px) rotate(45deg);
+    width: 100%;
+    background-color: #092F4A;
+}
+
+/*---------------------------------
+    Hamburger / ハンバーガー中身
+----------------------------------*/
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 2000;
+    /*ナビのスタート位置と形状*/
+    top:0;
+    right: -120%;
+    width:100%;
+    height: 100vh;/*ナビの高さ*/
+    background-color:#EBF5FF;
+    background-image: url(./images/nav_bg.png);
+    background-repeat: no-repeat;
+    background-size: 96.4vw;
+    background-position: right 0 bottom 0;
+    /*動き*/
+    transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 2000; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 2000;
+    top: 100px;
+    left: 30px;
+    /* transform: translate(-50%,-50%); */
+    /* margin-top: 60px; */
+    /* padding-left: 30px; */
+}
+
+#g-nav img{
+    width: 157px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /* z-index: 3000; */
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+    list-style: none;
+    text-align: left;
+
+}
+
+#g-nav li a{
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+#g-nav li a h2{
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+}
+
+#g-nav li a span{
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.08rem;
+}
+
+/* CTA */
+.button_wrap{
+    position: absolute;
+    bottom: 20px;
+    width:calc(100% - 40px);
+}
+
+#g-nav button{
+    width: 100%;
+    border-radius: 35px;    
+    font-size: 25px;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: 0.11rem;
+    position: relative;
+    margin-top: 30px;
+}
+
+#g-nav button svg{
+    width: 9px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 20px;
+}
+
+#g-nav button:hover svg .cls-1{
+    fill: #30508D;
+}
 /*!****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/point.css ***!
   \****************************************************************************/
