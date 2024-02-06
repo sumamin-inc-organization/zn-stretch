@@ -57,7 +57,7 @@
 }
 
 .about_slick h4{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.08rem;
     margin-top: 25px;
@@ -66,17 +66,7 @@
 /*----------------------------
     Tablet / タブレット
 ----------------------------*/
-@media screen and (max-width:1200px){
-    .about_slick h4{
-        font-size: 18px;
-    }
-}
 
-@media screen and (max-width:1100px){
-    .about_slick h4{
-        font-size: 16px;
-    }
-}
 
 /*----------------------------
     Mobile / スマホ

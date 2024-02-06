@@ -574,6 +574,7 @@ button.gradient-btn {
     .area_content .bg_gradient{
         font-size: 22px;
         margin-top: 10px;
+        letter-spacing: -0.01rem;
     }
 
     .area_content p:last-child{
@@ -1049,7 +1050,7 @@ select:focus{
     background-image: url(./images/flow_banner_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    /* background-position: bottom; */
+    background-position: top 0 left 0;
     position: relative;
     padding-left: 10vw;
     margin-top: 200px;
@@ -1085,20 +1086,13 @@ select:focus{
     /* font-size: 16px; */
     /* font-size: min(1.06vw, 16px); */
     font-size: 1.06vw;
-    line-height: 2.2em;
+    line-height: 2.2;
     letter-spacing: 0.05rem;
     margin-top: 1.99vw;
 }
 
 .cta_number{
     font-size: 25px;
-}
-
-.flow_calltoaction img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 53.8vw;
 }
 
 /*----------------------------
@@ -1251,6 +1245,74 @@ select:focus{
   .card_right .card_right_navy p{
     text-align: center;
   }
+
+  /* Banner */
+  .flow_calltoaction{
+    background-image: url(./images/flow_cta_bg_sp.png);
+    background-size: 100%;
+    background-position: top 20px left 0;
+    position: relative;
+    margin-top: 60px;
+    padding: 60px 0 0;
+  }
+
+  .flow_calltoaction::after{
+    background: linear-gradient(to right, #81B3E6 50%, #467DD2 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+  }
+
+  .flow_calltoaction_content{
+    padding: 0 20px;
+  }
+
+  .flow_calltoaction_content h3{
+    font-size: 25px;
+    font-size: 6.41vw;
+    letter-spacing: 0.04rem;
+    margin-left: 10px;
+  }
+
+  .flow_calltoaction_content h3:nth-child(2){
+    margin-top: 10px;
+  }
+
+  .flow_calltoaction_content p{
+    font-size: 16px;
+    font-size: 4.1vw;
+    line-height: 1.75;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+  .cta_number{
+    font-size: 25px;
+    font-size: 6.41vw;
+  }
+
+  .flow_calltoaction_content button{
+    width: 100%;
+    font-size: 20px;
+    font-size: 5.13vw;
+    line-height: 55px;
+    margin-top: 30px;
+  }
+
+  .flow_calltoaction_content button svg{
+    width: 9px;
+    height: 14px;
+  }
+
+  .flow_calltoaction img{
+    width: 100%;
+    margin-top: 50px;
+}
 }
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
@@ -1601,6 +1663,7 @@ header button:hover{
 .keyvisual_left .ten-million{
     /* font-size: 50px; */
     font-size: 3.31vw;
+    letter-spacing: -0.02rem;
 }
 
 .keyvisual_left .comma{
@@ -1692,7 +1755,7 @@ header button:hover{
 @media screen and (max-width:767px){
     #keyvisual{
         background-image: url(./images/keyvisual_bg_sp.png);
-        padding: 17% 20px 6%;
+        padding: 65px 20px 60px;
     }
 
     .keyvisual_content{
@@ -1718,13 +1781,47 @@ header button:hover{
     }
 
     .keyvisual_left .keyvisual_copy{
-        font-size: 17px;
-        letter-spacing: 0;
+        font-size: 16px;
+        margin-top: -60px;
     }
 
     .keyvisual_left .ten-million{
         font-size: 30px;
-        letter-spacing: 0;
+        /* letter-spacing: 0; */
+    }
+
+    .keyvisual_left_point{
+        width: 100%;
+        margin-top: 20px;
+        column-gap: 7px;
+    }
+
+    .keyvisual_left_point_item{
+        padding: 10px 0 15px;
+    }
+
+    .keyvisual_left_point_item h3 .point{
+        font-size: 12px;
+    }
+
+    .keyvisual_left_point_item h3 .number{
+        font-size: 20px;
+    }
+
+    .keyvisual_left_point_item p{
+        font-size: 16px;
+    }
+
+    #keyvisual button{
+        font-size: 20px;
+        line-height: 55px;
+        margin-top: 34px;
+    }
+
+    #keyvisual button svg{
+        width: 9px;
+        height: 14px;
+        right: 20px;
     }
 }
 /*!*********************************************************************************!*\
@@ -2076,6 +2173,7 @@ header button:hover{
 @media screen and (max-width:767px){
     #precedent{
         grid-template-columns: 20px 1fr 20px;
+        padding-top: 60px;
     }
 
     .precedent_middle{

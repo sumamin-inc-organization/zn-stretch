@@ -11,6 +11,13 @@ header h1{
     width: 303px;
 }
 
+.header_right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  column-gap: 40px;
+}
+
 header button{
   width: 250px;
   border-radius: 25px;
