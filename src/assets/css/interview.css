@@ -43,6 +43,8 @@
 
 .interview_item img{
     width: 48.2%;
+    /* height: 100%; */
+    object-fit: cover;
     border-radius: 20px;
 }
 

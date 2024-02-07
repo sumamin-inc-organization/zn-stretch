@@ -482,5 +482,35 @@
   .flow_calltoaction img{
     width: 100%;
     margin-top: 50px;
-}
+  }
+
+  /* SPのみ　アコーディオン */
+  .sp_accordion{
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+
+  .sp_accordion::after{
+    content: '';
+    width: 10px;
+    height: 6px;
+    background-image: url(../images/flow/icon_accordion.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    /* transition: all .5s ease; */
+  }
+
+  .sp_accordion.close::after{
+    transform: rotate(180deg);
+    top: initial;
+    bottom: 40%;
+  }
+
+  .sp_accordion_content{
+    display: none;
+  }
 }

@@ -11,13 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <!-- Media -->
     <link rel="stylesheet" type="text/css" href="./images/slick.css"/>
-<script defer src="main.2858677b78e28f4e987b.js"></script><link href="main.css" rel="stylesheet"></head>
+<script defer src="main.8c0f5b0196b11e1fed03.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>
     <header>
         <h1><img src="./images/logo_wh.png" alt="全力ストレッチ"></h1>
         <div class="header_right">
             <button class="gradient-btn pc_only" type="button" onclick="location.href='#entry'">WEBで簡単エントリー</button>
-        </div>
+
+            <!-- ハンバーガーメニュー -->
+            <div class="openbtn2"><span></span><span></span></div>
+                <nav id="g-nav">
+                    <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                        <!-- <div class="nav_wrap"> -->
+                            <img class="nav_wrap_left" src="./images/nav_img.jpg">
+                            <div class="nav_wrap_right">
+                                <img class="sp_only" src="./images/logo_bk.png">
+                                <ul class="font-roboto bold">
+                                    <li><a href="#precedent"><h2 class="tx_gradient" >PRECEDENT</h2><span class="font-notosans medium navy">給与事例</span></a></li>
+                                    <li><a href="#about"><h2 class="tx_gradient" >ABOUT</h2><span class="font-notosans medium navy">全力ストレッチとは</span></a></li>
+                                    <li><a href="#point"><h2 class="tx_gradient" >POINT</h2><span class="font-notosans medium navy">全力ストレッチのポイント</span></a></li>
+                                    <li><a href="#schedule"><h2 class="tx_gradient" >SCHEDULE</h2><span class="font-notosans medium navy">仕事内容</span></a></li>
+                                    <li><a href="#interview"><h2 class="tx_gradient" >INTERVIEW</h2><span class="font-notosans medium navy">先輩インタビュー</span></a></li>
+                                    <li><a href="#area"><h2 class="tx_gradient" >AREA</h2><span class="font-notosans medium navy">あなたに合ったエリアで働ける</span></a></li>
+                                    <li><a href="#flow"><h2 class="tx_gradient" >FLOW</h2><span class="font-notosans medium navy">エントリーからデビューまで</span></a></li>
+                                    <li class="timeline_17"><a href="#recruit"><h2 class="tx_gradient" >RECRUIT</h2><span class="font-notosans medium navy">募集要項</span></a></li>
+                                </ul>
+                                <div class="button_wrap"><button class="gradient-btn" type="button" onclick="location.href='#entry'">WEBで簡単エントリー<svg id="_レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.1 20.77"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="design"><polygon class="cls-1" points=".64 20.77 0 20 11.54 10.38 0 .77 .64 0 13.1 10.38 .64 20.77"/></g></svg></button></div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </nav>
+            </div>
     </header>
 
     <main>
@@ -58,15 +82,14 @@
                         <h2 class="sec_title">PRECEDENT</h2>
                         <span class="sec_title_sub">給与事例</span>
                         <p class="regular font-notosans">全力ストレッチの給与体系は､ストレッチ業界で最高水準。<br class="pc_only">
-                        理想の高収入が目指せます。<br class="pc_only">
-                        入社○ヶ月で月収○○円に到達したトレーナーも！<br>
+                        理想の高収入が目指せます。最短2年で店長に昇進し、3年目には年収1000万円を掴むメンバーもいます。<br>
                         年収1,000万円以上も､あなたの活躍次第で到達可能です。</p>
                     </div>
                 </div>
                 <div class="precedent_bottom">
                     <div class="precedent_bottom_item font-notosans">
                         <img src="./images/precedent_sae.png" alt="">
-                        <h3 class="medium">入社○年目 ERISAさん</h3>
+                        <h3 class="medium">本部講師 ERISAさん</h3>
                         <p class="data medium">勤務務時間：160h/月<br>
                         指名料：270,000円<br>
                         給与：1,000,000円</p>
@@ -75,7 +98,7 @@
 
                     <div class="precedent_bottom_item font-notosans">
                         <img src="./images/precedent_mari.png" alt="">
-                        <h3 class="medium">入社○年目 MARIさん</h3>
+                        <h3 class="medium">六本木店 店長 MARIさん</h3>
                         <p class="data medium">勤務務時間：140h/月<br>
                             指名料：180,000円<br>
                             給与：540,000円</p>
@@ -84,7 +107,7 @@
 
                     <div class="precedent_bottom_item font-notosans">
                         <img src="./images/precedent_norina.png" alt="">
-                        <h3 class="medium">入社○年目 NORINAさん</h3>
+                        <h3 class="medium">三田店オーナー NORINAさん</h3>
                         <p class="data medium">勤務務時間：120h/月<br>
                             指名料：153,000円<br>
                             給与：360,000円</p>
@@ -253,17 +276,17 @@
                     <img src="./images/interview_img_01.jpg">
                     <div class="interview_item_text">
                         <div class="interview_item_text_name font-notosans medium navy">
-                            <span>入社○年目 〇〇店</span>
-                            <h3>〇〇さん</h3>
+                            <span>中途入社6年目</span>
+                            <h3>ERISAさん</h3>
                         </div>
                         <div class="interview_item_text_qa font-notosans">
                             <h4 class="medium lightblue">どうして全力ストレッチを選んだのか。</h4>
-                            <p class="regular navy">未経験でも研修が充実していたので始めやすかったなど。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                            <p class="regular navy">スタッフたちが成長し、豊かな生活を送る手助けができることです。スタッフたちが幸福度を高め、やりがいを感じながら働くことができる環境を整えることで、自分自身も充実感を得ることができます。</p>
                         </div>
 
                         <div class="interview_item_text_qa font-notosans">
-                            <h4 class="medium lightblue">現在のやりがいは？</h4>
-                            <p class="regular navy">それまでに就いた仕事に比べ、ワークライフバランスや給与、キャリアアップはどうなったか。今後はどういった未来を目指しているか、など。未来に希望が持てそうな内容にする。</p>
+                            <h4 class="medium lightblue">現在の仕事のおもしろさは何ですか？</h4>
+                            <p class="regular navy">トレーナー時代は、自分の指名を増やして売り上げを増やし、それが収入に繋がることが最大の楽しみでした。当社に入社することで、収入面や精神面もかなり安定し、仕事に対するモチベーションも高まりました。</p>
                         </div>
                     </div>
                 </div>
@@ -271,20 +294,21 @@
                 <div class="interview_item">
                     <div class="interview_item_text">
                         <div class="interview_item_text_name font-notosans medium navy">
-                            <span>入社○年目 〇〇店</span>
-                            <h3>〇〇さん</h3>
+                            <span>全力ストレッチ 六本木店</span>
+                            <h3>MARIさん</h3>
                         </div>
                         <div class="interview_item_text_qa font-notosans">
-                            <h4 class="medium lightblue">どうして全力ストレッチを選んだのか。</h4>
-                            <p class="regular navy">未経験でも研修が充実していたので始めやすかったなど。テキストテキストテキストテキストテキストテキストテキスト。</p>
+                            <h4 class="medium lightblue">現在の仕事のおもしろさはなんですか？</h4>
+                            <p class="regular navy">スタッフたちが成長し、豊かな生活を送る手助けができることです。スタッフたちが幸福度を高め、やりがいを感じながら働くことができる環境を整えることで、自分自身も充実感を得ることができます。</p>
                         </div>
 
                         <div class="interview_item_text_qa font-notosans">
-                            <h4 class="medium lightblue">現在のやりがいは？</h4>
-                            <p class="regular navy">それまでに就いた仕事に比べ、ワークライフバランスや給与、キャリアアップはどうなったか。今後はどういった未来を目指しているか、など。未来に希望が持てそうな内容にする。</p>
+                            <h4 class="medium lightblue">どんな働き方ができますか？
+                            </h4>
+                            <p class="regular navy">残業は一切なく、シフト制のお休みも柔軟に対応してもらえます。この前は有給を使って2週間のハワイ旅行に行ってきました。当社では家庭を優先に働く方も多いので、長期的な活躍が可能だと思います。</p>
                         </div>
                     </div>
-                    <img src="./images/interview_img_01.jpg">
+                    <img src="./images/interview_img_02.jpg">
                 </div>
             </div>
             <div class="interview_right"></div>
@@ -479,14 +503,13 @@
                     <tr>
                         <th class="medium">勤務時間</th>
                         <td class="regular"><p>10:00～22:00内でシフト制<br>
-                        ★週○日､1日○h～OK！フルタイムも大歓迎！ライフスタイルに合った働き方が可能です。<p>
-                        <p class="table_navy_bg medium white">シフト例</p>
-                        <p>・入社○年目 週5回勤務の場合
-                         月160時間×時給4,000円＋指名300,000円＝940,000円<br>
-                        ・入社○年目 週3回勤務の場合<br>
-                         月96時間×時給3,000円＋指名210,000円＝498,000円<br>
-                        ・入社○ヶ月 週2回勤務の場合<br>
-                         月64時間×時給1,800円＋指名150,000円＝265,200円</p>
+                        ★フルタイムも大歓迎！ライフスタイルに合った働き方が可能です。<p>
+                        <p class="table_navy_bg medium white">モデル年収例</p>
+                        <p>★年収310万円／22歳　トレーナー職　経験1年<br>
+                            ★年収600万円／23歳　チーフトレーナー職　経験2年<br>
+                            ★年収800万円／24歳　店長職　経験5年<br>
+                            ★年収800万円／31歳　トレーナー職　経験1年<br>
+                            ★年収1000万円／27歳　トレーナー職　経験3年</p>
                         </td>
                     </tr>
 
