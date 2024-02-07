@@ -9,6 +9,7 @@ $('.about_slick').slick({
     responsive:[{
         breakpoint: 767,
         settings: {
+            slidesToShow: 1,
             centerPadding: '20px'
         }
     }]
