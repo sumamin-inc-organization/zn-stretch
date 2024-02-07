@@ -49,8 +49,12 @@
     Tablet / タブレット版
 ----------------------------------*/
 @media screen and (max-width:1100px){
+    #recruit{
+        padding: 120px 40px;
+    }
+
     .recruit_content{
-        padding: 0 40px;
+        /* padding: 0 40px; */
     }
 }
 

@@ -20,6 +20,19 @@ import "./assets/css/schedule.css";
 import "./assets/css/slick.css";
 
 /*----------------------------
+    Color change / スクロール位置に応じて色変更
+----------------------------*/
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.js-header').addClass('change-color');
+	} else {
+			$('.js-header').removeClass('change-color');
+	}
+	});
+});
+
+/*----------------------------
     Navigation / ナビゲーション
 ----------------------------*/
 $(".openbtn2").click(function () {//ボタンがクリックされたら
@@ -88,6 +101,13 @@ $(document).ready(function () {
 		centerMode: true,
 		centerPadding:"13.6vw",
 		// variableWidth: true,
+		responsive:[{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '20px'
+			}
+		}]
 	});
 
 	// Click event for indicators

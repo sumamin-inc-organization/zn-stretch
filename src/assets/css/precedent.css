@@ -110,6 +110,7 @@
     line-height: 1;
     letter-spacing: 0.05rem;
     margin-top: 20px;
+    text-align: center;
 }
 
 .precedent_bottom_item .data{
@@ -174,8 +175,18 @@
 }
 
 @media screen and (max-width:1100px){
+    #precedent{
+        grid-template-columns: 40px 1fr 40px;
+    }
+    
     .precedent_top{
-        column-gap: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 70px;
+    }
+
+    .precedent_bottom_item h3{
+        letter-spacing: 0;
     }
 
     .precedent_bottom_item img{

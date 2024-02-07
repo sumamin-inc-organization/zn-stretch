@@ -156,6 +156,14 @@ select:focus{
     Tablet / タブレット版
 ----------------------------------*/
 @media screen and (max-width:1100px){
+    #entry{
+        padding: 120px 40px 100px;
+    }
+
+    .entry_form{
+        padding: 55px 20px 75px;
+    }
+
     .entry_form th{
         width: 30%;
     }

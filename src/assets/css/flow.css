@@ -212,6 +212,10 @@
     color: #6496DC;
   }
 
+  .sp_accordion{
+    pointer-events: none;
+  }
+
 /*---------------------------------
     Banner / バナー
 ----------------------------------*/
@@ -316,11 +320,88 @@
     grid-template-columns: 40px 1fr 40px;
   }
 
-    .flow_calltoaction_content button{
-        /* width: 296px; */
-        /* font-size: 16px; */
-        line-height: 48px;
-    }
+  .flow_calltoaction_content button{
+    /* width: 296px; */
+    /* font-size: 16px; */
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .flow_slider_top{
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: start;
+  }
+
+  .flow_slider_bottom{
+    margin-left: 40px;
+  }
+
+  .slider-controls{
+    align-self: flex-end;
+  }
+
+  .insp-slider{
+    margin-left: -20px;
+  }
+
+  .card{
+    /* width: 100%; */
+    margin: 0 10px;
+  }
+
+  .card-inner{
+    flex-direction: column;
+  }
+
+  .card_left,
+  .card_right{
+    width: 100%;
+  }
+
+  .card_left img{
+    aspect-ratio: 3/2;
+  }
+
+  .card_right{
+    padding: 30px 30px 50px;
+  }
+
+  .card_right_step{
+    flex-direction: column;
+  }
+
+  /* SPのみ　アコーディオン */
+  .sp_accordion{
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease;
+    pointer-events: initial;
+  }
+
+  .sp_accordion::after{
+    content: '';
+    width: 10px;
+    height: 6px;
+    background-image: url(../images/flow/icon_accordion.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    /* transition: all .5s ease; */
+  }
+
+  .sp_accordion.close::after{
+    transform: rotate(180deg);
+    top: initial;
+    bottom: 40%;
+  }
+
+  .sp_accordion_content{
+    display: none;
+  }
 }
 
 /*---------------------------------
@@ -370,8 +451,13 @@
     margin-left: 0;
   }
 
+  .insp-slider{
+    margin-left: -20px;
+  }
+
   .card{
-    /* margin: 0 10px; */
+    /* width: 100%; */
+    margin: 0 10px;
   }
 
   .card-inner{
@@ -489,6 +575,7 @@
     position: relative;
     cursor: pointer;
     transition: all .5s ease;
+    pointer-events: initial;
   }
 
   .sp_accordion::after{

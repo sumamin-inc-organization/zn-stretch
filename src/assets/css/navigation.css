@@ -23,6 +23,10 @@
     background-color: #fff;
     }
 
+.openbtn2 span.change-color {
+    /* background-color: #292F4A; */
+    /* transition: 0.3s; */
+}
 
 .openbtn2 span:nth-of-type(1) {
     top: 0; 
@@ -222,8 +226,8 @@
 
     #g-nav ul{
         /* position: initial; */
-        top: 50%;
-        transform: translateY(-50%);
+        top: 15%;
+        /* transform: translateY(-50%); */
         left: 17.7%;
     }
 

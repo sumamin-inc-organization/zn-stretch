@@ -120,6 +120,7 @@
 	height:0;/*はじめは高さを0に*/
 	/* background: #ccc; */
     border-left: dotted 4px #092F4A;
+    /* transition: linear; */
 }
 
 /*タイムラインの見出し横の丸の位置と形状*/
@@ -149,7 +150,9 @@
     Tablet / タブレット
 ----------------------------------*/
 @media screen and (max-width:1100px){
-    
+    .timeline{
+        padding: 0 40px;
+    }
 }
 
 /*---------------------------------
@@ -173,5 +176,42 @@
         aspect-ratio: 350/196;
         display: block;
         margin: 34px auto 26px;
+    }
+
+    /* 1日の流れ */
+    .timeline{
+        margin-top: 34px;
+        padding: 0;
+    }
+
+    .timeline dl{
+        margin-left: 30px;
+        column-gap: 15px;
+    }
+
+    .timeline dt{
+        font-size: 20px;
+        margin-top: -3px;
+    }
+
+    .timeline dd{
+        flex-direction: column;
+    }
+
+    .timeline dd img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .timeline dd .timeline_text{
+        padding: 20px;
+    }
+
+    .timeline dd .timeline_text p{
+        margin-top: 15px;
+    }
+
+    .timeline li::after{
+        top: 0;
     }
 }

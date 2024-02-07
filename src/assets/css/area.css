@@ -81,6 +81,10 @@
     .area_content .bg_gradient{
         /* font-size: 24px; */
     }
+
+    .area_wrap_right{
+        top: 33%;
+    }
 }
 
 /*---------------------------------
