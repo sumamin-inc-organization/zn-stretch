@@ -291,6 +291,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /*----------------------------
+    Color change / スクロール位置に応じて色変更
+----------------------------*/
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.js-header').addClass('change-color');
+	} else {
+			$('.js-header').removeClass('change-color');
+	}
+	});
+});
+
+/*----------------------------
     Navigation / ナビゲーション
 ----------------------------*/
 $(".openbtn2").click(function () {//ボタンがクリックされたら
@@ -359,6 +372,13 @@ $(document).ready(function () {
 		centerMode: true,
 		centerPadding:"13.6vw",
 		// variableWidth: true,
+		responsive:[{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '20px'
+			}
+		}]
 	});
 
 	// Click event for indicators
@@ -377,8 +397,24 @@ $(document).ready(function () {
 		$indicators.eq(nextSlide).addClass("active");
 	});
 });
+
+/*----------------------------
+    Accordion
+    アコーディオン
+----------------------------*/
+$('.sp_accordion').on('click', function() {//タイトル要素をクリックしたら
+	var findElm = $(this).next(".sp_accordion_content");//直後のアコーディオンを行うエリアを取得し
+	$(findElm).slideToggle();//アコーディオンの上下動作
+    
+	if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+		$(this).removeClass('close');//クラス名を除去し
+	}else{//それ以外は
+		$(this).addClass('close');//クラス名closeを付与
+	}
+});
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.8c0f5b0196b11e1fed03.js.map
+//# sourceMappingURL=main.cc973c103c7856a8c72f.js.map

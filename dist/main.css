@@ -48,7 +48,11 @@
    /* Set core root defaults 
          コアルートのデフォルトを設定する */
    html:focus-within {
-     scroll-behavior: smooth;
+     /* scroll-behavior: smooth; */
+   }
+
+   html{
+    scroll-behavior: smooth;
    }
    
    /* Set core body defaults 
@@ -296,7 +300,7 @@ button.gradient-btn {
 }
 
 /* タブレットのみ表示 */
-@media screen and(min-width:768px) and (max-width:1024px){
+@media screen and(min-width:768px) and (max-width:1100px){
     .pc_only{
         display: none;
     }
@@ -538,6 +542,10 @@ button.gradient-btn {
     .area_content .bg_gradient{
         /* font-size: 24px; */
     }
+
+    .area_wrap_right{
+        top: 33%;
+    }
 }
 
 /*---------------------------------
@@ -737,6 +745,14 @@ select:focus{
     Tablet / タブレット版
 ----------------------------------*/
 @media screen and (max-width:1100px){
+    #entry{
+        padding: 120px 40px 100px;
+    }
+
+    .entry_form{
+        padding: 55px 20px 75px;
+    }
+
     .entry_form th{
         width: 30%;
     }
@@ -1032,6 +1048,10 @@ select:focus{
     color: #6496DC;
   }
 
+  .sp_accordion{
+    pointer-events: none;
+  }
+
 /*---------------------------------
     Banner / バナー
 ----------------------------------*/
@@ -1136,11 +1156,88 @@ select:focus{
     grid-template-columns: 40px 1fr 40px;
   }
 
-    .flow_calltoaction_content button{
-        /* width: 296px; */
-        /* font-size: 16px; */
-        line-height: 48px;
-    }
+  .flow_calltoaction_content button{
+    /* width: 296px; */
+    /* font-size: 16px; */
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .flow_slider_top{
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: start;
+  }
+
+  .flow_slider_bottom{
+    margin-left: 40px;
+  }
+
+  .slider-controls{
+    align-self: flex-end;
+  }
+
+  .insp-slider{
+    margin-left: -20px;
+  }
+
+  .card{
+    /* width: 100%; */
+    margin: 0 10px;
+  }
+
+  .card-inner{
+    flex-direction: column;
+  }
+
+  .card_left,
+  .card_right{
+    width: 100%;
+  }
+
+  .card_left img{
+    aspect-ratio: 3/2;
+  }
+
+  .card_right{
+    padding: 30px 30px 50px;
+  }
+
+  .card_right_step{
+    flex-direction: column;
+  }
+
+  /* SPのみ　アコーディオン */
+  .sp_accordion{
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease;
+    pointer-events: initial;
+  }
+
+  .sp_accordion::after{
+    content: '';
+    width: 10px;
+    height: 6px;
+    background-image: url(./images/icon_accordion.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    /* transition: all .5s ease; */
+  }
+
+  .sp_accordion.close::after{
+    transform: rotate(180deg);
+    top: initial;
+    bottom: 40%;
+  }
+
+  .sp_accordion_content{
+    display: none;
+  }
 }
 
 /*---------------------------------
@@ -1190,8 +1287,13 @@ select:focus{
     margin-left: 0;
   }
 
+  .insp-slider{
+    margin-left: -20px;
+  }
+
   .card{
-    /* margin: 0 10px; */
+    /* width: 100%; */
+    margin: 0 10px;
   }
 
   .card-inner{
@@ -1302,7 +1404,38 @@ select:focus{
   .flow_calltoaction img{
     width: 100%;
     margin-top: 50px;
-}
+  }
+
+  /* SPのみ　アコーディオン */
+  .sp_accordion{
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease;
+    pointer-events: initial;
+  }
+
+  .sp_accordion::after{
+    content: '';
+    width: 10px;
+    height: 6px;
+    background-image: url(./images/icon_accordion.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    /* transition: all .5s ease; */
+  }
+
+  .sp_accordion.close::after{
+    transform: rotate(180deg);
+    top: initial;
+    bottom: 40%;
+  }
+
+  .sp_accordion_content{
+    display: none;
+  }
 }
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
@@ -1526,6 +1659,29 @@ header button:hover{
 @media screen and (max-width:1300px){
     #interview{
         grid-template-columns: 8vw 1fr 8vw;
+    }
+}
+
+@media screen and (max-width:1100px){
+    #interview{
+        grid-template-columns: 40px 1fr 40px;
+    }
+
+    .interview_item{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .interview_item img{
+        width: 100%;
+    }
+
+    .interview_item:nth-child(3) img{
+        order: -1;
+    }
+
+    .interview_item_text{
+        margin-top: 25px;
     }
 }
 
@@ -1851,6 +2007,10 @@ header button:hover{
     background-color: #fff;
     }
 
+.openbtn2 span.change-color {
+    /* background-color: #292F4A; */
+    /* transition: 0.3s; */
+}
 
 .openbtn2 span:nth-of-type(1) {
     top: 0; 
@@ -1916,7 +2076,7 @@ header button:hover{
     position: fixed;
     z-index: 2000; 
     width: 100%;
-    height: 100vh;/*表示する高さ*/
+    height: 100dvh;/*表示する高さ*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     padding: 20px;
@@ -1930,11 +2090,8 @@ header button:hover{
     /*ナビゲーション天地中央揃え*/
     position: absolute;
     z-index: 2000;
-    top: 100px;
-    left: 30px;
-    /* transform: translate(-50%,-50%); */
-    /* margin-top: 60px; */
-    /* padding-left: 30px; */
+    top: 10%;
+    left: 50px;
 }
 
 #g-nav img{
@@ -1965,6 +2122,7 @@ header button:hover{
 
 #g-nav li a h2{
     font-size: 25px;
+    font-size:min(6.41vw,25px);
     line-height: 1;
     letter-spacing: 0.06rem;
 }
@@ -1972,6 +2130,7 @@ header button:hover{
 #g-nav li a span{
     display: block;
     font-size: 14px;
+    font-size: min(3.59vw,14px);
     line-height: 1;
     letter-spacing: 0.08rem;
 }
@@ -1991,7 +2150,7 @@ header button:hover{
     line-height: 60px;
     letter-spacing: 0.11rem;
     position: relative;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 #g-nav button svg{
@@ -2012,13 +2171,29 @@ header button:hover{
     PC / PC
 ----------------------------------*/
 @media screen and (min-width:768px){
+    .openbtn2{
+        margin-top: 15px;
+    }
+
+    #g-nav{
+        background-image: none;
+    }
+
     #g-nav.panelactive #g-nav-list{
         padding: 0;
         display: flex;
+        position: relative;
     }
 
     .nav_wrap{
         /* display: flex; */
+    }
+
+    #g-nav .nav_logo{
+        width: 157px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
 
     #g-nav .nav_wrap_left{
@@ -2035,6 +2210,23 @@ header button:hover{
 
     #g-nav ul{
         /* position: initial; */
+        top: 15%;
+        /* transform: translateY(-50%); */
+        left: 17.7%;
+    }
+
+    #g-nav li a h2{
+        font-size:max(1.65vw,25px);
+    }
+
+    #g-nav li a span{
+        font-size: max(0.93vw,14px);
+    }
+
+    .button_wrap{
+        bottom: 60px;
+        width: 100%;
+        padding: 0 17.7%;
     }
 }
 /*!****************************************************************************!*\
@@ -2109,9 +2301,13 @@ header button:hover{
     Tablet / タブレット
 ----------------------------------*/
 @media screen and (max-width:1100px){
+    #point{
+        padding: 140px 40px 150px;
+    }
+
     .point_content{
         max-width: 100%;
-        padding: 0 40px;
+        /* padding: 0 40px; */
     }
 
     .point_item{
@@ -2294,6 +2490,7 @@ header button:hover{
     line-height: 1;
     letter-spacing: 0.05rem;
     margin-top: 20px;
+    text-align: center;
 }
 
 .precedent_bottom_item .data{
@@ -2358,8 +2555,18 @@ header button:hover{
 }
 
 @media screen and (max-width:1100px){
+    #precedent{
+        grid-template-columns: 40px 1fr 40px;
+    }
+    
     .precedent_top{
-        column-gap: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 70px;
+    }
+
+    .precedent_bottom_item h3{
+        letter-spacing: 0;
     }
 
     .precedent_bottom_item img{
@@ -2508,8 +2715,12 @@ header button:hover{
     Tablet / タブレット版
 ----------------------------------*/
 @media screen and (max-width:1100px){
+    #recruit{
+        padding: 120px 40px;
+    }
+
     .recruit_content{
-        padding: 0 40px;
+        /* padding: 0 40px; */
     }
 }
 
@@ -2676,6 +2887,7 @@ header button:hover{
 	height:0;/*はじめは高さを0に*/
 	/* background: #ccc; */
     border-left: dotted 4px #092F4A;
+    /* transition: linear; */
 }
 
 /*タイムラインの見出し横の丸の位置と形状*/
@@ -2705,7 +2917,9 @@ header button:hover{
     Tablet / タブレット
 ----------------------------------*/
 @media screen and (max-width:1100px){
-    
+    .timeline{
+        padding: 0 40px;
+    }
 }
 
 /*---------------------------------
@@ -2729,6 +2943,43 @@ header button:hover{
         aspect-ratio: 350/196;
         display: block;
         margin: 34px auto 26px;
+    }
+
+    /* 1日の流れ */
+    .timeline{
+        margin-top: 34px;
+        padding: 0;
+    }
+
+    .timeline dl{
+        margin-left: 30px;
+        column-gap: 15px;
+    }
+
+    .timeline dt{
+        font-size: 20px;
+        margin-top: -3px;
+    }
+
+    .timeline dd{
+        flex-direction: column;
+    }
+
+    .timeline dd img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .timeline dd .timeline_text{
+        padding: 20px;
+    }
+
+    .timeline dd .timeline_text p{
+        margin-top: 15px;
+    }
+
+    .timeline li::after{
+        top: 0;
     }
 }
 /*!****************************************************************************!*\

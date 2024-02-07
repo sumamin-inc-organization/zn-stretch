@@ -66,10 +66,12 @@
 #g-nav{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
-    z-index: 2000;
+    z-index: -1;
+    opacity: 0;
     /*ナビのスタート位置と形状*/
     top:0;
-    right: -120%;
+    left: 0;
+    /* right: -120%; */
     width:100%;
     height: 100vh;/*ナビの高さ*/
     background-color:#EBF5FF;
@@ -79,11 +81,16 @@
     background-position: right 0 bottom 0;
     /*動き*/
     transition: all 0.6s;
+    pointer-events: none;
 }
 
-/*アクティブクラスがついたら位置を0に*/
+/*アクティブクラスがついたら透過なしにして最前面へ*/
 #g-nav.panelactive{
-    right: 0;
+    opacity: 1;
+	z-index:999;
+    /* right: 0; */
+    /* transition: all 0.6s; */
+    pointer-events: initial;
 }
 
 /*ナビゲーションの縦スクロール*/
@@ -158,7 +165,7 @@
     width:calc(100% - 40px);
 }
 
-#g-nav button{
+#g-nav .button_wrap a{
     width: 100%;
     border-radius: 35px;    
     font-size: 25px;
@@ -167,9 +174,10 @@
     letter-spacing: 0.11rem;
     position: relative;
     /* margin-top: 30px; */
+    text-decoration: none;
 }
 
-#g-nav button svg{
+#g-nav .button_wrap svg{
     width: 9px;
     height: 14px;
     position: absolute;
@@ -178,7 +186,7 @@
     right: 20px;
 }
 
-#g-nav button:hover svg .cls-1{
+#g-nav .button_wrap:hover svg .cls-1{
     fill: #30508D;
 }
 
