@@ -72,13 +72,6 @@
 /*---------------------------------
     Gradation / グラデーション
   ----------------------------------*/
-  /* 背景 */
-  .bg_gradient{
-    display: inline-block;
-    background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
-    background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
-  }
-  
   /* 文字 */
   .tx_gradient{
     display: inline-block;

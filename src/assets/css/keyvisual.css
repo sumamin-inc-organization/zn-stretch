@@ -170,14 +170,14 @@
     }
 
     .keyvisual_left img{
-        width: 66.7vw;
+        width: 80vw;
         margin-left: 0;
     }
 
     .keyvisual_left .kevisual_img{
         width: 100%;
         /* margin-left: 65px; */
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     .keyvisual_left .keyvisual_copy{
