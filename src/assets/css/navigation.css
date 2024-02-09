@@ -8,7 +8,7 @@
     height:14px;
     cursor: pointer;
     /* background:#fff; */
-    margin-top: 3px;
+    margin-top: 7px;
     z-index: 3000;
 }
     
@@ -102,7 +102,7 @@
     height: 100dvh;/*表示する高さ*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 20px;
+    padding: 10px 20px;
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: space-between; */
@@ -120,7 +120,7 @@
 #g-nav img{
     width: 157px;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 20px;
     /* z-index: 3000; */
 }

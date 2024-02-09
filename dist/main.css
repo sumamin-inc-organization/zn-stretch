@@ -2345,6 +2345,7 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 90px 0;
+    position: relative;
 }
 
 footer p{
@@ -2367,6 +2368,65 @@ footer small{
     letter-spacing: 0.04rem;
 }
 
+/* 上に戻るボタン */
+.to-top{
+    position: absolute;
+    z-index: 999;
+    right: 40px;
+    bottom: 60px;
+    width: 40px;
+    height: 40px;
+}
+
+footer .arrow{
+	position: relative;
+	display: inline-block;
+	padding: 0 0 0 16px;
+	color: #000;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 15px;
+}
+footer .arrow::before,
+footer .arrow::after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+    transition: 0.5s;
+}
+
+footer .sample5-3::before{
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #292F4A;
+    outline: solid 1px #292F4A;
+}
+
+footer .sample5-3:hover::before{
+    background: #fff;
+}
+
+footer .sample5-3::after{
+    top: 4px;
+	left: 12px;
+	width: 15px;
+	height: 15px;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+footer .sample5-3:hover::after{
+    border-color: #292F4A;
+}
+
 /*----------------------------
     Responsive /レスポンシブ
 ----------------------------*/
@@ -2377,7 +2437,7 @@ footer small{
     }
 
     footer p{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     footer img{
@@ -2386,6 +2446,26 @@ footer small{
 
     footer small{
         margin-top: 20px;
+        font-size: 11px;
+    }
+
+    /* 上に戻る */
+    .to-top{
+        right: 20px;
+        bottom: 50px;
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .sample5-3::before{
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .sample5-3::after{
+        width: 10px;
+        height: 10px;
+        left: 10px;
     }
 
     /* 固定バナー */

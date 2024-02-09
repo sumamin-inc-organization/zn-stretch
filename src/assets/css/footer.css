@@ -31,8 +31,9 @@ footer small{
 .to-top{
     position: absolute;
     z-index: 999;
+    top: 40px;
     right: 40px;
-    bottom: 60px;
+    /* bottom: 60px; */
     width: 40px;
     height: 40px;
 }
@@ -96,7 +97,7 @@ footer .sample5-3:hover::after{
     }
 
     footer p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     footer img{
@@ -105,13 +106,13 @@ footer .sample5-3:hover::after{
 
     footer small{
         margin-top: 20px;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     /* 上に戻る */
     .to-top{
         right: 20px;
-        bottom: 50px;
+        top: 15px;
         width: 30px;
         height: 30px;
     }
@@ -130,7 +131,7 @@ footer .sample5-3:hover::after{
     /* 固定バナー */
     footer .button_wrap{
         position: fixed;
-        bottom: 20px;
+        bottom: 14px;
         width:calc(100% - 40px);
         z-index: 999;
     }
