@@ -728,7 +728,7 @@
  * animation slide-in-bottom
  * ----------------------------------------
  */
- @-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes slide-in-bottom {
     0% {
       -webkit-transform: translateY(100px);
               transform: translateY(100px);
@@ -850,21 +850,6 @@
     .delay-time25{  
         animation-delay: 2.5s;
     }
-
-    /* スマホでは作動させない */
-    @media screen and (max-width:767px){
-        .delay-time02,
-        .delay-time04,
-        .delay-time05,
-        .delay-time06,
-        .delay-time08,
-        .delay-time1,
-        .delay-time15,
-        .delay-time2,
-        .delay-time25{
-            animation-delay: initial;
-        }
-    }
     
     /* アニメーション自体が変化する時間を決めるCSS*/
     
@@ -887,6 +872,22 @@
     .change-time25{  
       animation-duration: 2.5s;
     }
+  
+
+/* スマホでは作動させない */
+@media screen and (max-width:767px){
+  .delay-time02,
+  .delay-time04,
+  .delay-time05,
+  .delay-time06,
+  .delay-time08,
+  .delay-time1,
+  .delay-time15,
+  .delay-time2,
+  .delay-time25{
+      animation-delay: initial;
+  }
+}
 /*!***********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/reset.css ***!
   \***********************************************************************************/
@@ -941,7 +942,7 @@
    }
 
    html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
    }
    
    /* Set core body defaults 
@@ -1125,12 +1126,13 @@
     応募ボタン
 ----------------------------*/
 /* buttonタグのリセットCSS */
-button.gradient-btn {
+.button.gradient-btn {
     border: none;
     appearance: none;
     padding: 0;
-  }
-  
+    text-decoration: none;
+}
+
 /* ボタン本体の装飾 */
 .gradient-btn {
     position: relative; /* static以外を指定 */
@@ -1998,7 +2000,7 @@ select:focus{
     CTA
     応募ボタン
 ----------------------------*/
-.flow_calltoaction_content button{
+.flow_calltoaction_content .button{
     /* width: 370px; */
     width: 24.5vw;
     border-radius: 35px;    
@@ -2012,7 +2014,7 @@ select:focus{
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-.flow_calltoaction_content button svg{
+.flow_calltoaction_content .button svg{
     width: 12px;
     height: 20px;
     position: absolute;
@@ -2021,7 +2023,7 @@ select:focus{
     right: 20px;
 }
 
-.flow_calltoaction_content button:hover svg .cls-1{
+.flow_calltoaction_content .button:hover svg .cls-1{
   fill: #30508D;
 }
 
@@ -2045,7 +2047,7 @@ select:focus{
     grid-template-columns: 40px 1fr 40px;
   }
 
-  .flow_calltoaction_content button{
+  .flow_calltoaction_content .button{
     /* width: 296px; */
     /* font-size: 16px; */
     line-height: 48px;
@@ -2166,6 +2168,14 @@ select:focus{
     column-gap: 0;
   }
 
+  .slider-btn.prev{
+    padding-right: 5px;
+  }
+
+  .slider-btn.next{
+    padding-left: 5px;
+  }
+
   .slider-btn svg{
     width: 30px;
     height: 30px;
@@ -2177,7 +2187,7 @@ select:focus{
   }
 
   .insp-slider{
-    margin-left: -20px;
+    margin-left: -30px;
   }
 
   .card{
@@ -2277,7 +2287,7 @@ select:focus{
     font-size: 6.41vw;
   }
 
-  .flow_calltoaction_content button{
+  .flow_calltoaction_content .button{
     width: 100%;
     font-size: 20px;
     font-size: 5.13vw;
@@ -2285,7 +2295,7 @@ select:focus{
     margin-top: 30px;
   }
 
-  .flow_calltoaction_content button svg{
+  .flow_calltoaction_content .button svg{
     width: 9px;
     height: 14px;
   }
@@ -2357,7 +2367,6 @@ footer small{
     letter-spacing: 0.04rem;
 }
 
-
 /*----------------------------
     Responsive /レスポンシブ
 ----------------------------*/
@@ -2377,6 +2386,39 @@ footer small{
 
     footer small{
         margin-top: 20px;
+    }
+
+    /* 固定バナー */
+    footer .button_wrap{
+        position: fixed;
+        bottom: 20px;
+        width:calc(100% - 40px);
+        z-index: 999;
+    }
+    
+    footer .button_wrap a{
+        width: 100%;
+        border-radius: 35px;    
+        font-size: 25px;
+        font-size: 18px;
+        line-height: 60px;
+        letter-spacing: 0.11rem;
+        position: relative;
+        /* margin-top: 30px; */
+        text-decoration: none;
+    }
+    
+    footer .button_wrap svg{
+        width: 9px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 20px;
+    }
+    
+    footer .button_wrap:hover svg .cls-1{
+        fill: #30508D;
     }
 }
 /*!*****************************************************************************!*\
@@ -2402,7 +2444,7 @@ header h1{
   column-gap: 40px;
 }
 
-header button{
+header .button{
   width: 250px;
   border-radius: 25px;
   /* padding: 10px 0; */
@@ -2410,9 +2452,10 @@ header button{
   line-height: 50px;
   letter-spacing: 0.08rem;
   /* border: solid 1px #30508D; */
+  text-decoration: none;
 }
 
-header button:hover{
+header .button:hover{
   /* border: solid 1px #30508D; */
   outline: solid 1px #30508D;
   outline-offset: 0;
@@ -2778,7 +2821,7 @@ header button:hover{
     CTA
     応募ボタン
 ----------------------------*/
-#keyvisual button{
+#keyvisual .button{
     width: 100%;
     border-radius: 35px;    
     font-size: 25px;
@@ -2790,7 +2833,7 @@ header button:hover{
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-#keyvisual button svg{
+#keyvisual .button svg{
     width: 13px;
     height: 20px;
     position: absolute;
@@ -2799,7 +2842,7 @@ header button:hover{
     right: 30px;
 }
 
-#keyvisual button:hover svg .cls-1{
+#keyvisual .button:hover svg .cls-1{
     fill: #30508D;
 }
 
@@ -2875,13 +2918,13 @@ header button:hover{
         font-size: 16px;
     }
 
-    #keyvisual button{
+    #keyvisual .button{
         font-size: 20px;
         line-height: 55px;
         margin-top: 34px;
     }
 
-    #keyvisual button svg{
+    #keyvisual .button svg{
         width: 9px;
         height: 14px;
         right: 20px;
