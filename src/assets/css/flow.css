@@ -273,7 +273,7 @@
     CTA
     応募ボタン
 ----------------------------*/
-.flow_calltoaction_content button{
+.flow_calltoaction_content .button{
     /* width: 370px; */
     width: 24.5vw;
     border-radius: 35px;    
@@ -287,7 +287,7 @@
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-.flow_calltoaction_content button svg{
+.flow_calltoaction_content .button svg{
     width: 12px;
     height: 20px;
     position: absolute;
@@ -296,7 +296,7 @@
     right: 20px;
 }
 
-.flow_calltoaction_content button:hover svg .cls-1{
+.flow_calltoaction_content .button:hover svg .cls-1{
   fill: #30508D;
 }
 
@@ -320,7 +320,7 @@
     grid-template-columns: 40px 1fr 40px;
   }
 
-  .flow_calltoaction_content button{
+  .flow_calltoaction_content .button{
     /* width: 296px; */
     /* font-size: 16px; */
     line-height: 48px;
@@ -441,6 +441,14 @@
     column-gap: 0;
   }
 
+  .slider-btn.prev{
+    padding-right: 5px;
+  }
+
+  .slider-btn.next{
+    padding-left: 5px;
+  }
+
   .slider-btn svg{
     width: 30px;
     height: 30px;
@@ -452,7 +460,7 @@
   }
 
   .insp-slider{
-    margin-left: -20px;
+    margin-left: -30px;
   }
 
   .card{
@@ -552,7 +560,7 @@
     font-size: 6.41vw;
   }
 
-  .flow_calltoaction_content button{
+  .flow_calltoaction_content .button{
     width: 100%;
     font-size: 20px;
     font-size: 5.13vw;
@@ -560,7 +568,7 @@
     margin-top: 30px;
   }
 
-  .flow_calltoaction_content button svg{
+  .flow_calltoaction_content .button svg{
     width: 9px;
     height: 14px;
   }

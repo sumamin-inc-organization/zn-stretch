@@ -49,7 +49,7 @@
    }
 
    html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
    }
    
    /* Set core body defaults 

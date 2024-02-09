@@ -26,7 +26,6 @@ footer small{
     letter-spacing: 0.04rem;
 }
 
-
 /*----------------------------
     Responsive /レスポンシブ
 ----------------------------*/
@@ -46,5 +45,38 @@ footer small{
 
     footer small{
         margin-top: 20px;
+    }
+
+    /* 固定バナー */
+    footer .button_wrap{
+        position: fixed;
+        bottom: 20px;
+        width:calc(100% - 40px);
+        z-index: 999;
+    }
+    
+    footer .button_wrap a{
+        width: 100%;
+        border-radius: 35px;    
+        font-size: 25px;
+        font-size: 18px;
+        line-height: 60px;
+        letter-spacing: 0.11rem;
+        position: relative;
+        /* margin-top: 30px; */
+        text-decoration: none;
+    }
+    
+    footer .button_wrap svg{
+        width: 9px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 20px;
+    }
+    
+    footer .button_wrap:hover svg .cls-1{
+        fill: #30508D;
     }
 }

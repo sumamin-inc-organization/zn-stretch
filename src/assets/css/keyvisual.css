@@ -115,7 +115,7 @@
     CTA
     応募ボタン
 ----------------------------*/
-#keyvisual button{
+#keyvisual .button{
     width: 100%;
     border-radius: 35px;    
     font-size: 25px;
@@ -127,7 +127,7 @@
     box-shadow: 3px 3px 5px rgba(131, 151, 198, .6);
 }
 
-#keyvisual button svg{
+#keyvisual .button svg{
     width: 13px;
     height: 20px;
     position: absolute;
@@ -136,7 +136,7 @@
     right: 30px;
 }
 
-#keyvisual button:hover svg .cls-1{
+#keyvisual .button:hover svg .cls-1{
     fill: #30508D;
 }
 
@@ -212,13 +212,13 @@
         font-size: 16px;
     }
 
-    #keyvisual button{
+    #keyvisual .button{
         font-size: 20px;
         line-height: 55px;
         margin-top: 34px;
     }
 
-    #keyvisual button svg{
+    #keyvisual .button svg{
         width: 9px;
         height: 14px;
         right: 20px;

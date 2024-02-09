@@ -3,12 +3,13 @@
     応募ボタン
 ----------------------------*/
 /* buttonタグのリセットCSS */
-button.gradient-btn {
+.button.gradient-btn {
     border: none;
     appearance: none;
     padding: 0;
-  }
-  
+    text-decoration: none;
+}
+
 /* ボタン本体の装飾 */
 .gradient-btn {
     position: relative; /* static以外を指定 */
