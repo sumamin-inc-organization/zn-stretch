@@ -437,6 +437,42 @@ $('.sp_accordion').on('click', function() {//タイトル要素をクリック�
 	}
 });
 
+/*----------------------------
+    Fixed Footer
+    固定フッター
+----------------------------*/
+//フロートボタンを特定の位置から特定の位置まで表示させる
+$(window).on('load',function(){//頁内の全ての要素が読み込まれてから実行
+  //ドキュメント全体の高さ
+  var pageHeight = $(document).height();
+  //頁上部から最初のCTAボタンまでの距離 ＋ CTAボタンの高さ(outerHeight:ボーダーの外側の高さ)
+  var ctaFirst = $('#keyvisual').offset().top + $('#keyvisual').outerHeight();
+  //ドキュメント全体の高さ - 頁上部から最後のCTAボタンまでの距離
+  var ctaLast = pageHeight - $('#entry').offset().top;
+
+  $(window).on('scroll',function(){//スクロールすると実行される
+    //現在のトップからの位置 ＝ ウィンドウの高さ ＋ スクロールした高さ
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    //スクロールが最初のCTAボタンを超える＆最後のCTAボタンを超えない場合
+    if ($(window).scrollTop() > ctaFirst && pageHeight - scrollPosition  >= ctaLast) {
+      $('.floatBtn').fadeIn(100);//0.1秒で出現
+    } else {//最初のCTAボタンを超えない＆最後のCTAボタンを超えた場合
+      $('.floatBtn').fadeOut(100);//0.1秒で消える
+    }
+  });
+});
+
+/*----------------------------
+    Page link
+    ページ内リンク
+----------------------------*/
+$('#page-link a[href*="#"]').click(function() {
+	var elmHash = $(this).attr('href');
+	var headerHeight = $('header').outerHeight(); // ヘッダーの高さを取得
+	var pos = $(elmHash).offset().top - headerHeight - 0; // ヘッダーの高さと余白を考慮した位置を計算
+	$('body,html').animate({ scrollTop: pos }, 500);
+	return false;
+});
 
 // 動きのきっかけの起点となるアニメーションの名前を定義
 function fadeAnime(){
@@ -776,4 +812,4 @@ function fadeAnime(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.30142b7bdae32df4d62f.js.map
+//# sourceMappingURL=main.793aad1f688c6b9d233b.js.map
