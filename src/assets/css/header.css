@@ -1,6 +1,6 @@
 header{
     position: fixed;
-    padding: 40px 40px 0;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -34,6 +34,16 @@ header button:hover{
   outline-offset: 0;
 }
 
+.header.change-color {
+  background-color: rgba(255, 255, 255, 0.8); /* スクロールしたあとのヘッダー背景色 */
+  transition: 0.3s;
+}
+
+.header span.change-color-2 {
+  background-color: #30508D; /* スクロールしたあとのヘッダー背景色 */
+  transition: 0.3s;
+}
+
 /*---------------------------------
     Tablet / タブレット
 ----------------------------------*/
@@ -48,7 +58,7 @@ header button:hover{
 ----------------------------------*/
 @media screen and (max-width:767px){
   header{
-    padding: 20px 20px 0;
+    padding: 20px;
   }
 
   header h1{

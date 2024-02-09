@@ -33,6 +33,16 @@ $(function () {
 	});
 });
 
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.js-header').addClass('change-color-2');
+	} else {
+			$('.js-header').removeClass('change-color-2');
+	}
+	});
+});
+
 /*----------------------------
     Navigation / ナビゲーション
 ----------------------------*/

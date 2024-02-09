@@ -317,6 +317,16 @@ $(function () {
 	});
 });
 
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.js-header').addClass('change-color-2');
+	} else {
+			$('.js-header').removeClass('change-color-2');
+	}
+	});
+});
+
 /*----------------------------
     Navigation / ナビゲーション
 ----------------------------*/
@@ -737,6 +747,17 @@ function fadeAnime(){
 		}
 	  });
 	
+	//Gradient
+	$('.bg_gradient_Trigger').each(function(){ //bgUDextendTriggerというクラス名が
+		var elemPos = $(this).offset().top+200;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+		  $(this).addClass('bg_gradient');// 画面内に入ったらbgUDextendというクラス名を追記
+		}else{
+		  $(this).removeClass('bg_gradient');// 画面外に出たらbgUDextendというクラス名を外す
+		}
+	  });
   
 	
   }
@@ -755,4 +776,4 @@ function fadeAnime(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.a8b55ce9692221e492da.js.map
+//# sourceMappingURL=main.30142b7bdae32df4d62f.js.map
