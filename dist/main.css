@@ -2372,8 +2372,9 @@ footer small{
 .to-top{
     position: absolute;
     z-index: 999;
-    right: 40px;
-    bottom: 60px;
+    top: 40px;
+    right: 60px;
+    /* bottom: 60px; */
     width: 40px;
     height: 40px;
 }
@@ -2400,8 +2401,8 @@ footer .arrow::after{
 }
 
 footer .sample5-3::before{
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	background: #292F4A;
@@ -2413,8 +2414,10 @@ footer .sample5-3:hover::before{
 }
 
 footer .sample5-3::after{
+    /* top: 8px; */
+	/* left: 12.5px; */
     top: 4px;
-	left: 12px;
+    left: 23px;
 	width: 15px;
 	height: 15px;
 	border-top: 1px solid #fff;
@@ -2437,41 +2440,49 @@ footer .sample5-3:hover::after{
     }
 
     footer p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     footer img{
-        width: 242px;
+        width:210px;
+        margin-right: 10px;
     }
 
     footer small{
         margin-top: 20px;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     /* 上に戻る */
     .to-top{
         right: 20px;
-        bottom: 50px;
-        width: 30px;
-        height: 30px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
     }
 
     footer .sample5-3::before{
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 
     footer .sample5-3::after{
-        width: 10px;
-        height: 10px;
-        left: 10px;
+        top: 4px;
+        left: 12.5px;
+    }
+
+    footer .sample5-3:hover::before{
+        background: #292F4A;
+    }
+    
+    footer .sample5-3:hover::after{
+        border-color: #fff;
     }
 
     /* 固定バナー */
     footer .button_wrap{
         position: fixed;
-        bottom: 20px;
+        bottom: 14px;
         width:calc(100% - 40px);
         z-index: 999;
     }
@@ -2506,7 +2517,7 @@ footer .sample5-3:hover::after{
   \*****************************************************************************/
 header{
     position: fixed;
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -2542,7 +2553,7 @@ header .button:hover{
 }
 
 .header.change-color {
-  background-color: rgba(255, 255, 255, 0.8); /* スクロールしたあとのヘッダー背景色 */
+  background-color: #fff; /* スクロールしたあとのヘッダー背景色 */
   transition: 0.3s;
 }
 
@@ -2565,7 +2576,7 @@ header .button:hover{
 ----------------------------------*/
 @media screen and (max-width:767px){
   header{
-    padding: 20px;
+    padding: 15px 20px;
   }
 
   header h1{
@@ -3023,7 +3034,7 @@ header .button:hover{
     height:14px;
     cursor: pointer;
     /* background:#fff; */
-    margin-top: 3px;
+    margin-top: 7px;
     z-index: 3000;
 }
     
@@ -3117,7 +3128,7 @@ header .button:hover{
     height: 100dvh;/*表示する高さ*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 20px;
+    padding: 10px 20px;
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: space-between; */
@@ -3135,7 +3146,7 @@ header .button:hover{
 #g-nav img{
     width: 157px;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 20px;
     /* z-index: 3000; */
 }
@@ -3176,7 +3187,7 @@ header .button:hover{
 /* CTA */
 .button_wrap{
     position: absolute;
-    bottom: 20px;
+    bottom: 14px !important;
     width:calc(100% - 40px);
 }
 

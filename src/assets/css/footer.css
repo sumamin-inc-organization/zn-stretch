@@ -32,7 +32,7 @@ footer small{
     position: absolute;
     z-index: 999;
     top: 40px;
-    right: 40px;
+    right: 60px;
     /* bottom: 60px; */
     width: 40px;
     height: 40px;
@@ -60,8 +60,8 @@ footer .arrow::after{
 }
 
 footer .sample5-3::before{
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	background: #292F4A;
@@ -73,8 +73,10 @@ footer .sample5-3:hover::before{
 }
 
 footer .sample5-3::after{
+    /* top: 8px; */
+	/* left: 12.5px; */
     top: 4px;
-	left: 12px;
+    left: 23px;
 	width: 15px;
 	height: 15px;
 	border-top: 1px solid #fff;
@@ -101,7 +103,8 @@ footer .sample5-3:hover::after{
     }
 
     footer img{
-        width: 242px;
+        width:210px;
+        margin-right: 10px;
     }
 
     footer small{
@@ -112,20 +115,27 @@ footer .sample5-3:hover::after{
     /* 上に戻る */
     .to-top{
         right: 20px;
-        top: 15px;
-        width: 30px;
-        height: 30px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
     }
 
     footer .sample5-3::before{
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 
     footer .sample5-3::after{
-        width: 10px;
-        height: 10px;
-        left: 10px;
+        top: 4px;
+        left: 12.5px;
+    }
+
+    footer .sample5-3:hover::before{
+        background: #292F4A;
+    }
+    
+    footer .sample5-3:hover::after{
+        border-color: #fff;
     }
 
     /* 固定バナー */

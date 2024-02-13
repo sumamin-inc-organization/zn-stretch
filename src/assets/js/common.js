@@ -10,7 +10,8 @@ $('.about_slick').slick({
         breakpoint: 767,
         settings: {
             slidesToShow: 1,
-            centerPadding: '20px'
+            centerPadding: '20px',
+            autoplay: true,
         }
     }]
 });
