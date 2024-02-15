@@ -905,6 +905,7 @@
     /* Flow内のバナーのみ */
     #flow .marker-text:after {
       background: #fff;
+      transition: all 0.5s;
     }
 
     #flow .marker-text.isActive {
@@ -2608,7 +2609,7 @@ footer .sample5-3:hover::after{
     }
 
     footer .sample5-3::after{
-        top: 4px;
+        top: 7px;
         left: 12.5px;
     }
 
@@ -4101,7 +4102,7 @@ header .button:hover{
 	left:10px;
 	top:15px;
 	width:3px;/*線の太さ*/
-	height:0;/*はじめは高さを0に*/
+	height:100%;/*はじめは高さを0に*/
 	/* background: #ccc; */
     /* background-image: radial-gradient(#092f4a 50%, transparent 50%); */
     /* background-repeat: repeat-y; */
