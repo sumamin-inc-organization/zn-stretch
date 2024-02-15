@@ -341,6 +341,27 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 });
 
 /*----------------------------
+    Media / メディア紹介
+----------------------------*/
+
+$('.about_slick').slick({
+    autoplay: true,
+    autoplaySpeed: 2000, //次のスライドショーが動作するまでの間隔
+	speed: 400, //スライドが切り替わるのにかかるスピード
+    pauseOnHover: false, //スライドの上にマウスを乗せても停止させない
+    centerMode: true,
+    centerPadding: '13.2%',
+    slidesToShow: 2,
+    responsive:[{
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            centerPadding: '12.8%',
+        }
+    }]
+});
+
+/*----------------------------
     Timeline / 1日の流れ
 ----------------------------*/
 //線が伸びるための設定を関数でまとめる
@@ -855,4 +876,4 @@ $(window).on('scroll',function(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.f70a0188a9a08dc53405.js.map
+//# sourceMappingURL=main.ed14812989647db8ab48.js.map

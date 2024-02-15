@@ -1385,6 +1385,10 @@
     height: 405px;
 }
 
+.about_bottom{
+    padding-left: 0; 
+}
+
 .about_bottom h3{
     width: 470px;
     text-align: center;
@@ -1404,6 +1408,7 @@
 
 .about_slick li{
     margin: 0 20px;
+    /* -webkit-backface-visibility: hidden !important;  */
 }
 
 .about_slick .slick-arrow{
@@ -1457,19 +1462,32 @@
         aspect-ratio: 350/196;
     }
 
+    .about_bottom{
+        margin: 0 0 0 20px;
+        overflow: hidden;
+    }
+
     .about_bottom h3{
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         font-size: 16px;
+        margin-left: -20px;
     }
 
     .about_slick{
         margin-top: 34px;
-        margin-left: 20px !important;
+        margin-left: -12.8vw;
     }
 
     .about_slick li{
-        width: 76.9vw !important;
-        margin: 0 10px !important;
+        /* width: 76.9vw; */
+        margin: 0;
+        padding: 0 20px 0 0;
+    }
+
+    .about_slick li img{
+        /* width: 76.9vw; */
+        /* margin: 0 auto; */
+        /* padding: 0; */
     }
 
     .about_slick h4{
