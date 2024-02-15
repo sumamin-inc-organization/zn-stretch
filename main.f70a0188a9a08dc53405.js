@@ -357,7 +357,7 @@ function ScrollTimelineAnime(){
 
 			// 100% を超えたらずっと100%を入れ続ける
 			if(percent  > 100){
-				percent  = 98;
+				percent  = 100;
 			}
 			// ボーダーの長さをセット
 			$(this).children('.border-line').css({
@@ -441,25 +441,19 @@ $('.sp_accordion').on('click', function() {//タイトル要素をクリック�
     Fixed Footer
     固定フッター
 ----------------------------*/
-//フロートボタンを特定の位置から特定の位置まで表示させる
-$(window).on('load',function(){//頁内の全ての要素が読み込まれてから実行
-  //ドキュメント全体の高さ
-  var pageHeight = $(document).height();
-  //頁上部から最初のCTAボタンまでの距離 ＋ CTAボタンの高さ(outerHeight:ボーダーの外側の高さ)
-  var ctaFirst = $('#keyvisual').offset().top + $('#keyvisual').outerHeight();
-  //ドキュメント全体の高さ - 頁上部から最後のCTAボタンまでの距離
-  var ctaLast = pageHeight - $('#entry').offset().top;
+let scrollTop = 0;
+let target = $('#js-floating');   
+let displayStart = $('#js-floating-start').offset().top;   
+let displayEnd = $('#js-floating-end').offset().top;
 
-  $(window).on('scroll',function(){//スクロールすると実行される
-    //現在のトップからの位置 ＝ ウィンドウの高さ ＋ スクロールした高さ
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    //スクロールが最初のCTAボタンを超える＆最後のCTAボタンを超えない場合
-    if ($(window).scrollTop() > ctaFirst && pageHeight - scrollPosition  >= ctaLast) {
-      $('.floatBtn').fadeIn(100);//0.1秒で出現
-    } else {//最初のCTAボタンを超えない＆最後のCTAボタンを超えた場合
-      $('.floatBtn').fadeOut(100);//0.1秒で消える
-    }
-  });
+    
+$(window).scroll(function () {    
+  scrollTop = $(this).scrollTop();
+  if (displayStart < scrollTop && scrollTop < displayEnd) { 
+    $(target).removeClass('is-hidden');
+  } else {
+    $(target).addClass('is-hidden');
+  }
 });
 
 /*----------------------------
@@ -802,15 +796,15 @@ function fadeAnime(){
 	
   }
   
-  // 画面をスクロールをしたら動かしたい場合の記述
-	$(window).scroll(function (){
-	  fadeAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面をスクロールをしたら動かしたい場合の記述
-  
-  // 画面が読み込まれたらすぐに動かしたい場合の記述
-	$(window).on('load', function(){
-	  fadeAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function (){
+	fadeAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function(){
+	fadeAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
 	function slideAnime(){
@@ -850,7 +844,7 @@ $(window).on('scroll',function(){
 		let position = $(this).offset().top;
 		let scroll = $(window).scrollTop();
 		let windowHeight = $(window).height();
-		if (scroll > position - windowHeight + 180){
+		if (scroll > position - windowHeight + 50){
 			$(this).addClass('isActive');
 		}else{
 			$(this).removeClass("isActive");
@@ -861,4 +855,4 @@ $(window).on('scroll',function(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.4c3ede599fdb0ca43643.js.map
+//# sourceMappingURL=main.f70a0188a9a08dc53405.js.map
