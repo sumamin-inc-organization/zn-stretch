@@ -161,8 +161,11 @@
 /* CTA */
 .button_wrap{
     position: absolute;
+    left: 0;
     bottom: 14px !important;
-    width:calc(100% - 40px);
+    /* width:calc(100% - 40px); */
+    width: 100%;
+    padding: 0 20px;
 }
 
 #g-nav .button_wrap a{
@@ -248,8 +251,8 @@
     }
 
     .button_wrap{
+        left: initial;
         bottom: 60px;
-        width: 100%;
         padding: 0 17.7%;
     }
 }

@@ -146,7 +146,7 @@
         font-size: 40px;
     }
 
-    .point_item h3{
+    .point_item h3 span{
         letter-spacing: 0;
     }
 

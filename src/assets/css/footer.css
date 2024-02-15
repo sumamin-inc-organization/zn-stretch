@@ -142,8 +142,9 @@ footer .sample5-3:hover::after{
     footer .button_wrap{
         position: fixed;
         bottom: 14px;
-        width:calc(100% - 40px);
+        /* width:calc(100% - 40px); */
         z-index: 999;
+        appearance: none;
     }
     
     footer .button_wrap a{

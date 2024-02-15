@@ -862,6 +862,52 @@
   }
 }
 
+/*==================================================
+    下線を引く
+    ===================================*/
+    .marker-text {
+      position: relative;
+      color: #fff0;
+      transition: all 0.5s;
+    }
+    
+    .marker-text .marker-text-inner {
+      position: relative;
+      z-index: 2;
+      font-size: inherit;
+    }
+    
+    .marker-text:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+      background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+      z-index: 1;
+      transition: all 0.5s;
+      display: inline-block;
+    }
+
+    .marker-text.isActive {
+      color: #fff;
+    }
+    
+    .marker-text.isActive:after {
+      width: 100%;
+    }
+
+    /* Flow内のバナーのみ */
+    #flow .marker-text:after {
+      background: #fff;
+    }
+
+    #flow .marker-text.isActive {
+      color: #292f4a;
+    }
+
 
     /*==================================================
     アニメーション設定
@@ -872,16 +918,19 @@
         animation-delay: 0.2s;
     }
 
-    .gradient-delay-time02{  
+    .delay-time02{  
         animation-delay: 0.2s;
+        transition-delay: 0.2s;
     }
     
     .delay-time04{  
         animation-delay: 0.4s;
+        transition-delay: 0.4s;
     }
 
     .delay-time05{  
         animation-delay: 0.5s;
+        transition-delay: 0.5s;
     }
 
     .delay-time06{  
@@ -942,6 +991,6 @@
   .delay-time15,
   .delay-time2,
   .delay-time25{
-      animation-delay: initial;
+      /* animation-delay: initial; */
   }
 }

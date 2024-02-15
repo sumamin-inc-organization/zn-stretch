@@ -243,7 +243,7 @@
 
 .flow_calltoaction_content h3{
     display: inline-block;
-    background-color: #fff;
+    /* background-color: #fff; */
     /* font-size: min(2.71vw, 41px); */
     font-size: 2.71vw;
     line-height: 1;
