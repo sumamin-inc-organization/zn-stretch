@@ -956,6 +956,17 @@
     .delay-time25{  
         animation-delay: 2.5s;
     }
+
+    /* 背景グラデーション時間差 */
+    .delay-time02.marker-text:after{
+      animation-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+    
+    .delay-time04.marker-text:after{
+      animation-delay: 0.4s;
+      transition-delay: 0.4s;
+    }
     
     /* アニメーション自体が変化する時間を決めるCSS*/
     
@@ -982,15 +993,22 @@
 
 /* スマホでは作動させない */
 @media screen and (max-width:767px){
-  .delay-time02,
-  .delay-time04,
-  .delay-time05,
-  .delay-time06,
-  .delay-time08,
-  .delay-time1,
-  .delay-time15,
-  .delay-time2,
-  .delay-time25{
-      /* animation-delay: initial; */
+  /* 背景グラデーション */
+  #precedent .delay-time02.marker-text:after{
+    animation-delay: initial;
+    transition-delay: initial;
+  }
+  
+  #precedent .delay-time04.marker-text:after{
+    animation-delay: initial;
+    transition-delay: initial;
+  }
+
+  /* Timeline */
+  #schedule .delay-time02,
+  #schedule .delay-time04,
+  #schedule .delay-time06{
+      animation-delay: initial;
+      transition-delay: initial;
   }
 }

@@ -566,7 +566,7 @@ $(window).on('scroll',function(){
 		let position = $(this).offset().top;
 		let scroll = $(window).scrollTop();
 		let windowHeight = $(window).height();
-		if (scroll > position - windowHeight + 180){
+		if (scroll > position - windowHeight + 50){
 			$(this).addClass('isActive');
 		}else{
 			$(this).removeClass("isActive");

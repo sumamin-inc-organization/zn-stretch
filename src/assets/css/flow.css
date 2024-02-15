@@ -119,14 +119,6 @@
     padding-right: 0;
   }
   
-  .flow_slider_bottom .slick-track{
-    /* display: flex; */
-  }
-
-  .flow_slider_bottom .slick-slide {
-    /* height: auto !important; */
-  }
-  
   /*----------------------------
       Slider
       スライダー
@@ -153,6 +145,7 @@
     background: #fff;
     padding: 50px;
     width: 58%;
+    height: 100%;
     /* border-radius: 0 20px 20px 0; */
   }
 
