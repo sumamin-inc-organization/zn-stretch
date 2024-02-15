@@ -116,16 +116,18 @@
     /*線の位置*/
 	position: absolute;
 	left:10px;
-	top:20px;
-	width:0;/*線の太さ*/
+	top:15px;
+	width:3px;/*線の太さ*/
 	height:0;/*はじめは高さを0に*/
 	/* background: #ccc; */
-    border-left: dotted 4px #092F4A;
-    /* transition: linear; */
+    /* background-image: radial-gradient(#092f4a 50%, transparent 50%); */
+    /* background-repeat: repeat-y; */
+    /* background-size: 3px 3px; */
+    background-image: url(../images/schedule/liner_dot.svg);
 }
 
 .border-line.last {
-	top: 0;
+    top: 4px;
 }
 
 /*タイムラインの見出し横の丸の位置と形状*/
@@ -139,12 +141,6 @@
     background-image: url(../images/schedule/timeline_circle.png);
     background-size: 100%;
     z-index: 2;
-	/* background:#fff; */
-    /* border-width: 3px; */
-    /* border-style: solid; */
-    /* border-image-source: linear-gradient(to right, #96BEE6, #6496DC); */
-    /* border-image-slice: 1; */
-    /* border-radius: 50%; */
 }
 
 .timeline li:last-child::after{

@@ -865,6 +865,52 @@
   }
 }
 
+/*==================================================
+    下線を引く
+    ===================================*/
+    .marker-text {
+      position: relative;
+      color: #fff0;
+      transition: all 0.5s;
+    }
+    
+    .marker-text .marker-text-inner {
+      position: relative;
+      z-index: 2;
+      font-size: inherit;
+    }
+    
+    .marker-text:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+      background: -webkit-linear-gradient(0deg, #82B4E6 0%, #467DD2 100%);
+      z-index: 1;
+      transition: all 0.5s;
+      display: inline-block;
+    }
+
+    .marker-text.isActive {
+      color: #fff;
+    }
+    
+    .marker-text.isActive:after {
+      width: 100%;
+    }
+
+    /* Flow内のバナーのみ */
+    #flow .marker-text:after {
+      background: #fff;
+    }
+
+    #flow .marker-text.isActive {
+      color: #292f4a;
+    }
+
 
     /*==================================================
     アニメーション設定
@@ -875,16 +921,19 @@
         animation-delay: 0.2s;
     }
 
-    .gradient-delay-time02{  
+    .delay-time02{  
         animation-delay: 0.2s;
+        transition-delay: 0.2s;
     }
     
     .delay-time04{  
         animation-delay: 0.4s;
+        transition-delay: 0.4s;
     }
 
     .delay-time05{  
         animation-delay: 0.5s;
+        transition-delay: 0.5s;
     }
 
     .delay-time06{  
@@ -945,7 +994,7 @@
   .delay-time15,
   .delay-time2,
   .delay-time25{
-      animation-delay: initial;
+      /* animation-delay: initial; */
   }
 }
 /*!***********************************************************************************!*\
@@ -1520,7 +1569,7 @@
         padding: 0 10px;
     }
 
-    .area_content .bg_gradient{
+    .area_content .bg_gradient_text{
         font-size: 22px;
         margin-top: 10px;
         letter-spacing: -0.01rem;
@@ -2030,7 +2079,7 @@ select:focus{
 
 .flow_calltoaction_content h3{
     display: inline-block;
-    background-color: #fff;
+    /* background-color: #fff; */
     /* font-size: min(2.71vw, 41px); */
     font-size: 2.71vw;
     line-height: 1;
@@ -2543,8 +2592,9 @@ footer .sample5-3:hover::after{
     footer .button_wrap{
         position: fixed;
         bottom: 14px;
-        width:calc(100% - 40px);
+        /* width:calc(100% - 40px); */
         z-index: 999;
+        appearance: none;
     }
     
     footer .button_wrap a{
@@ -3247,8 +3297,11 @@ header .button:hover{
 /* CTA */
 .button_wrap{
     position: absolute;
+    left: 0;
     bottom: 14px !important;
-    width:calc(100% - 40px);
+    /* width:calc(100% - 40px); */
+    width: 100%;
+    padding: 0 20px;
 }
 
 #g-nav .button_wrap a{
@@ -3334,8 +3387,8 @@ header .button:hover{
     }
 
     .button_wrap{
+        left: initial;
         bottom: 60px;
-        width: 100%;
         padding: 0 17.7%;
     }
 }
@@ -3490,7 +3543,7 @@ header .button:hover{
         font-size: 40px;
     }
 
-    .point_item h3{
+    .point_item h3 span{
         letter-spacing: 0;
     }
 
@@ -3525,7 +3578,7 @@ header .button:hover{
     transform: translate(-50%, -50%);
     border: solid 1px #ff0000; */
     position: relative;
-    z-index: 3;
+    z-index: 0;
     /* max-width: 1100px; */
     padding-bottom: 115px;
 }

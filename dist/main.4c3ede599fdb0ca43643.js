@@ -843,8 +843,22 @@ function fadeAnime(){
 		$(window).on('load', function(){
 			slideAnime();/* アニメーション用の関数を呼ぶ*/
 		});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+//下線アニメーション
+$(window).on('scroll',function(){
+	$(".lineAnimation").each(function(){
+		let position = $(this).offset().top;
+		let scroll = $(window).scrollTop();
+		let windowHeight = $(window).height();
+		if (scroll > position - windowHeight + 180){
+			$(this).addClass('isActive');
+		}else{
+			$(this).removeClass("isActive");
+	}
+	});
+});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.ef6e1aa10da297555560.js.map
+//# sourceMappingURL=main.4c3ede599fdb0ca43643.js.map
