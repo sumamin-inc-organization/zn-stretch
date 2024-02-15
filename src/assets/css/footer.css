@@ -144,7 +144,9 @@ footer .sample5-3:hover::after{
         bottom: 14px;
         /* width:calc(100% - 40px); */
         z-index: 999;
-        appearance: none;
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease 0s;
     }
     
     footer .button_wrap a{
@@ -171,4 +173,10 @@ footer .sample5-3:hover::after{
     footer .button_wrap:hover svg .cls-1{
         fill: #30508D;
     }
+
+    .button_wrap.is-hidden{
+        visibility: hidden;
+        opacity: 0;
+    }
+
 }

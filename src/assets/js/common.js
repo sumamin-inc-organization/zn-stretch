@@ -11,7 +11,6 @@ $('.about_slick').slick({
         settings: {
             slidesToShow: 1,
             centerPadding: '20px',
-            autoplay: true,
         }
     }]
 });

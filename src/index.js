@@ -57,6 +57,27 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 });
 
 /*----------------------------
+    Media / メディア紹介
+----------------------------*/
+
+$('.about_slick').slick({
+    autoplay: true,
+    autoplaySpeed: 2000, //次のスライドショーが動作するまでの間隔
+	speed: 400, //スライドが切り替わるのにかかるスピード
+    pauseOnHover: false, //スライドの上にマウスを乗せても停止させない
+    centerMode: true,
+    centerPadding: '13.2%',
+    slidesToShow: 2,
+    responsive:[{
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            centerPadding: '12.8%',
+        }
+    }]
+});
+
+/*----------------------------
     Timeline / 1日の流れ
 ----------------------------*/
 //線が伸びるための設定を関数でまとめる
@@ -73,7 +94,7 @@ function ScrollTimelineAnime(){
 
 			// 100% を超えたらずっと100%を入れ続ける
 			if(percent  > 100){
-				percent  = 98;
+				percent  = 100;
 			}
 			// ボーダーの長さをセット
 			$(this).children('.border-line').css({
@@ -157,25 +178,19 @@ $('.sp_accordion').on('click', function() {//タイトル要素をクリック�
     Fixed Footer
     固定フッター
 ----------------------------*/
-//フロートボタンを特定の位置から特定の位置まで表示させる
-$(window).on('load',function(){//頁内の全ての要素が読み込まれてから実行
-  //ドキュメント全体の高さ
-  var pageHeight = $(document).height();
-  //頁上部から最初のCTAボタンまでの距離 ＋ CTAボタンの高さ(outerHeight:ボーダーの外側の高さ)
-  var ctaFirst = $('#keyvisual').offset().top + $('#keyvisual').outerHeight();
-  //ドキュメント全体の高さ - 頁上部から最後のCTAボタンまでの距離
-  var ctaLast = pageHeight - $('#entry').offset().top;
+let scrollTop = 0;
+let target = $('#js-floating');   
+let displayStart = $('#js-floating-start').offset().top;   
+let displayEnd = $('#js-floating-end').offset().top;
 
-  $(window).on('scroll',function(){//スクロールすると実行される
-    //現在のトップからの位置 ＝ ウィンドウの高さ ＋ スクロールした高さ
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    //スクロールが最初のCTAボタンを超える＆最後のCTAボタンを超えない場合
-    if ($(window).scrollTop() > ctaFirst && pageHeight - scrollPosition  >= ctaLast) {
-      $('.floatBtn').fadeIn(100);//0.1秒で出現
-    } else {//最初のCTAボタンを超えない＆最後のCTAボタンを超えた場合
-      $('.floatBtn').fadeOut(100);//0.1秒で消える
-    }
-  });
+    
+$(window).scroll(function () {    
+  scrollTop = $(this).scrollTop();
+  if (displayStart < scrollTop && scrollTop < displayEnd) { 
+    $(target).removeClass('is-hidden');
+  } else {
+    $(target).addClass('is-hidden');
+  }
 });
 
 /*----------------------------

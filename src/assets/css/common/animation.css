@@ -994,11 +994,7 @@
 /* スマホでは作動させない */
 @media screen and (max-width:767px){
   /* 背景グラデーション */
-  #precedent .delay-time02.marker-text:after{
-    animation-delay: initial;
-    transition-delay: initial;
-  }
-  
+  #precedent .delay-time02.marker-text:after,
   #precedent .delay-time04.marker-text:after{
     animation-delay: initial;
     transition-delay: initial;
@@ -1008,6 +1004,13 @@
   #schedule .delay-time02,
   #schedule .delay-time04,
   #schedule .delay-time06{
+      animation-delay: initial;
+      transition-delay: initial;
+  }
+
+  /* Interview */
+  #interview .delay-time02,
+  #interview .delay-time04{
       animation-delay: initial;
       transition-delay: initial;
   }
