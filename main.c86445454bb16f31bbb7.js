@@ -327,6 +327,37 @@ $(function () {
 	});
 });
 
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.scroll_01').addClass('scroll_01_af');
+	} else {
+			$('.scroll_01').removeClass('scroll_01_af');
+	}
+	});
+});
+
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.scroll_02').addClass('scroll_02_af');
+	} else {
+			$('.scroll_02').removeClass('scroll_02_af');
+	}
+	});
+});
+
+$(function () {
+	$(window).on('scroll', function () {
+		if ($('.fv').height() < $(this).scrollTop()) {
+			$('.scroll_01').addClass('scroll_02');
+	} else {
+			$('.scroll_01').removeClass('scroll_02');
+	}
+	});
+});
+
+
 /*----------------------------
     Navigation / ナビゲーション
 ----------------------------*/
@@ -844,4 +875,4 @@ $(window).on('scroll',function(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.e10ae2b9955110686352.js.map
+//# sourceMappingURL=main.c86445454bb16f31bbb7.js.map
