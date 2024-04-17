@@ -9,6 +9,7 @@ header{
 
 header h1{
     width: 303px;
+    position: relative;
 }
 
 .header_right{
@@ -43,6 +44,33 @@ header .button:hover{
 .header span.change-color-2 {
   background-color: #30508D; /* スクロールしたあとのヘッダー背景色 */
   transition: 0.3s;
+}
+
+.header h1 .cls-1.change-color-3 {
+  fill: #30508D; /* スクロールしたあとのヘッダー背景色 */
+  transition: 0.3s;
+}
+
+.scroll_01 {
+  /* z-index: 1; */
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.scroll_01_af{
+  opacity: 0;
+}
+
+.scroll_02 {
+  /* z-index: 0; */
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.scroll_02_af {
+  opacity: 1;
 }
 
 /*---------------------------------

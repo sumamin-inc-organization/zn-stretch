@@ -902,6 +902,7 @@
     /* Flow内のバナーのみ */
     #flow .marker-text:after {
       background: #fff;
+      transition: all 0.5s;
     }
 
     #flow .marker-text.isActive {

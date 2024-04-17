@@ -905,6 +905,7 @@
     /* Flow内のバナーのみ */
     #flow .marker-text:after {
       background: #fff;
+      transition: all 0.5s;
     }
 
     #flow .marker-text.isActive {
@@ -1385,6 +1386,10 @@
     height: 405px;
 }
 
+.about_bottom{
+    padding-left: 0; 
+}
+
 .about_bottom h3{
     width: 470px;
     text-align: center;
@@ -1404,6 +1409,7 @@
 
 .about_slick li{
     margin: 0 20px;
+    /* -webkit-backface-visibility: hidden !important;  */
 }
 
 .about_slick .slick-arrow{
@@ -1457,19 +1463,32 @@
         aspect-ratio: 350/196;
     }
 
+    .about_bottom{
+        margin: 0 0 0 20px;
+        overflow: hidden;
+    }
+
     .about_bottom h3{
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         font-size: 16px;
+        margin-left: -20px;
     }
 
     .about_slick{
         margin-top: 34px;
-        margin-left: 20px !important;
+        margin-left: -12.8vw;
     }
 
     .about_slick li{
-        width: 76.9vw !important;
-        margin: 0 10px !important;
+        /* width: 76.9vw; */
+        margin: 0;
+        padding: 0 20px 0 0;
+    }
+
+    .about_slick li img{
+        /* width: 76.9vw; */
+        /* margin: 0 auto; */
+        /* padding: 0; */
     }
 
     .about_slick h4{
@@ -2590,7 +2609,7 @@ footer .sample5-3:hover::after{
     }
 
     footer .sample5-3::after{
-        top: 4px;
+        top: 7px;
         left: 12.5px;
     }
 
@@ -2658,6 +2677,7 @@ header{
 
 header h1{
     width: 303px;
+    position: relative;
 }
 
 .header_right{
@@ -2692,6 +2712,33 @@ header .button:hover{
 .header span.change-color-2 {
   background-color: #30508D; /* スクロールしたあとのヘッダー背景色 */
   transition: 0.3s;
+}
+
+.header h1 .cls-1.change-color-3 {
+  fill: #30508D; /* スクロールしたあとのヘッダー背景色 */
+  transition: 0.3s;
+}
+
+.scroll_01 {
+  /* z-index: 1; */
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.scroll_01_af{
+  opacity: 0;
+}
+
+.scroll_02 {
+  /* z-index: 0; */
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.scroll_02_af {
+  opacity: 1;
 }
 
 /*---------------------------------
@@ -4083,7 +4130,7 @@ header .button:hover{
 	left:10px;
 	top:15px;
 	width:3px;/*線の太さ*/
-	height:0;/*はじめは高さを0に*/
+	height:100%;/*はじめは高さを0に*/
 	/* background: #ccc; */
     /* background-image: radial-gradient(#092f4a 50%, transparent 50%); */
     /* background-repeat: repeat-y; */
