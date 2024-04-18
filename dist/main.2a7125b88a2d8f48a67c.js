@@ -503,8 +503,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('fadeIn');// 画面内に入ったらfadeInというクラス名を追記
-	  }else{
-	  $(this).removeClass('fadeIn');// 画面外に出たらfadeInというクラス名を外す
 	  }
 	  });
   
@@ -514,8 +512,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
-	  }else{
-	  $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
 	  }
 	  });
   
@@ -525,8 +521,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('fadeDown');// 画面内に入ったらfadeDownというクラス名を追記
-	  }else{
-	  $(this).removeClass('fadeDown');// 画面外に出たらfadeDownというクラス名を外す
 	  }
 	  });
   
@@ -536,8 +530,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('fadeLeft');// 画面内に入ったらfadeLeftというクラス名を追記
-	  }else{
-	  $(this).removeClass('fadeLeft');// 画面外に出たらfadeLeftというクラス名を外す
 	  }
 	  });
   
@@ -547,8 +539,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('fadeRight');// 画面内に入ったらfadeRightというクラス名を追記
-	  }else{
-	  $(this).removeClass('fadeRight');// 画面外に出たらfadeRightというクラス名を外す
 	  }
 	  });
   
@@ -560,8 +550,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('flipDown');// 画面内に入ったらflipDownというクラス名を追記
-	  }else{
-	  $(this).removeClass('flipDown');// 画面外に出たらflipDownというクラス名を外す
 	  }
 	  });
 	
@@ -571,8 +559,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('flipLeft');// 画面内に入ったらflipLeftというクラス名を追記
-	  }else{
-	  $(this).removeClass('flipLeft');// 画面外に出たらflipLeftというクラス名を外す
 	  }
 	  });
   
@@ -582,8 +568,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('flipLeftTop');// 画面内に入ったらflipLeftTopというクラス名を追記
-	  }else{
-	  $(this).removeClass('flipLeftTop');// 画面外に出たらflipLeftTopというクラス名を外す
 	  }
 	  });
   
@@ -593,8 +577,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('flipRight');// 画面内に入ったらflipRightというクラス名を追記
-	  }else{
-	  $(this).removeClass('flipRight');// 画面外に出たらflipRightというクラス名を外す
 	  }
 	  });
   
@@ -604,8 +586,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('flipRightTop');// 画面内に入ったらflipRightTopというクラス名を追記
-	  }else{
-	  $(this).removeClass('flipRightTop');// 画面外に出たらflipRightTopというクラス名を外す
 	  }
 	  });
 	
@@ -617,8 +597,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('rotateX');// 画面内に入ったらrotateXというクラス名を追記
-	  }else{
-	  $(this).removeClass('rotateX');// 画面外に出たらrotateXというクラス名を外す
 	  }
 	  });
   
@@ -628,8 +606,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('rotateY');// 画面内に入ったらrotateYというクラス名を追記
-	  }else{
-	  $(this).removeClass('rotateY');// 画面外に出たらrotateYというクラス名を外す
 	  }
 	  });
   
@@ -639,8 +615,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('rotateLeftZ');// 画面内に入ったらrotateLeftZというクラス名を追記
-	  }else{
-	  $(this).removeClass('rotateLeftZ');// 画面外に出たらrotateLeftZというクラス名を外す
 	  }
 	  });
 	
@@ -650,8 +624,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('rotateRightZ');// 画面内に入ったらrotateRightZというクラス名を追記
-	  }else{
-	  $(this).removeClass('rotateRightZ');// 画面外に出たらrotateRightZというクラス名を外す
 	  }
 	  }); 
 	
@@ -663,8 +635,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('zoomIn');// 画面内に入ったらzoomInというクラス名を追記
-	  }else{
-	  $(this).removeClass('zoomIn');// 画面外に出たらzoomInというクラス名を外す
 	  }
 	  });
   
@@ -676,8 +646,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('zoomOut');// 画面内に入ったらzoomOutというクラス名を追記
-	  }else{
-	  $(this).removeClass('zoomOut');// 画面外に出たらzoomOutというクラス名を外す
 	  }
 	  }); 
 	
@@ -689,8 +657,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
-	  }else{
-	  $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
 	  }
 	  }); 
 	
@@ -702,8 +668,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 	  $(this).addClass('smooth');// 画面内に入ったらsmoothというクラス名を追記
-	  }else{
-	  $(this).removeClass('smooth');// 画面外に出たらsmoothというクラス名を外す
 	  }
 	  }); 
 	  
@@ -715,8 +679,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('lineanime');// 画面内に入ったらlineanimeというクラス名を追記
-	  }else{
-		$(this).removeClass('lineanime');// 画面外に出たらlineanimeというクラス名を外す
 	  }
 	}); 
 	  
@@ -729,8 +691,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgLRextend');// 画面内に入ったらbgLRextendというクラス名を追記
-	  }else{
-		$(this).removeClass('bgLRextend');// 画面外に出たらbgLRextendというクラス名を外す
 	  }
 	}); 
 	
@@ -740,8 +700,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgRLextend');// 画面内に入ったらbgRLextendというクラス名を追記
-	  }else{
-		$(this).removeClass('bgRLextend');// 画面外に出たらbgRLextendというクラス名を外す
 	  }
 	});
 	
@@ -751,8 +709,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgDUextend');// 画面内に入ったらbgDUextendというクラス名を追記
-	  }else{
-		$(this).removeClass('bgDUextend');// 画面外に出たらbgDUextendというクラス名を外す
 	  }
 	});
 	
@@ -762,8 +718,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgUDextend');// 画面内に入ったらbgUDextendというクラス名を追記
-	  }else{
-		$(this).removeClass('bgUDextend');// 画面外に出たらbgUDextendというクラス名を外す
 	  }
 	}); 
 	
@@ -773,8 +727,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgappear');// 画面内に入ったらbgappearというクラス名を追記
-	  }else{
-		$(this).removeClass('bgappear');// 画面外に出たらbgappearというクラス名を外す
 	  }
 	}); 
 	
@@ -784,8 +736,6 @@ function fadeAnime(){
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
 		$(this).addClass('bgUDextend');// 画面内に入ったらbgUDextendというクラス名を追記
-	  }else{
-		$(this).removeClass('bgUDextend');// 画面外に出たらbgUDextendというクラス名を外す
 	  }
 	});
 
@@ -796,8 +746,6 @@ function fadeAnime(){
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
 		  $(this).addClass('slide-in-bottom');// 画面内に入ったらbgUDextendというクラス名を追記
-		}else{
-		  $(this).removeClass('slide-in-bottom');// 画面外に出たらbgUDextendというクラス名を外す
 		}
 	  });
 	
@@ -808,8 +756,6 @@ function fadeAnime(){
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
 		  $(this).addClass('bg_gradient');// 画面内に入ったらbgUDextendというクラス名を追記
-		}else{
-		  $(this).removeClass('bg_gradient');// 画面外に出たらbgUDextendというクラス名を外す
 		}
 	  });
   
@@ -838,11 +784,6 @@ $(window).on('load', function(){
 					//テキスト要素を挟む親要素（左側）とテキスト要素を元位置でアニメーションをおこなう
 					$(this).addClass("slideAnimeLeftRight"); //要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
 					$(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");  //子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
-				}else{
-					//左から右へ表示するクラスを取り除く
-					$(this).removeClass("slideAnimeLeftRight");
-					$(this).children(".leftAnimeInner").removeClass("slideAnimeRightLeft");
-					
 				}
 			});
 			
@@ -866,13 +807,11 @@ $(window).on('scroll',function(){
 		let windowHeight = $(window).height();
 		if (scroll > position - windowHeight + 50){
 			$(this).addClass('isActive');
-		}else{
-			$(this).removeClass("isActive");
-	}
+		}
 	});
 });
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c86445454bb16f31bbb7.js.map
+//# sourceMappingURL=main.2a7125b88a2d8f48a67c.js.map
