@@ -586,7 +586,7 @@
             </div>
         </section>
 
-        <!-- <section id="entry">
+        <section id="entry">
             <div class="entry_title white">
                 <h2 class="font-roboto bold fadeUpTrigger">ENTRY</h2>
                 <span class="font-notosans medium fadeDownTrigger">エントリーフォーム</span>
@@ -594,25 +594,25 @@
 
             <div class="entry_content">
                 <p class="font-notosans medium white">※必須項目をご入力の上、<br class="sp_only">送信ボタンを押してください。<p>
-                    <div class="entry_form fadeUpTrigger">
+                    <form id="contactForm"><div class="entry_form fadeUpTrigger">
                         <table class="font-notosans navy">
                             <tr>
                                 <th class="navy medium">お名前<span class="white regular">必須</span></th>
-                                <td><input class="form_input regular navy" id="name" type="text" name="yourname" autocomplete="name" placeholder="フルネームをご入力ください"></td>
+                                <td><input class="form_input regular navy" id="name" type="text" name="name" autocomplete="name" placeholder="フルネームをご入力ください"></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <th class="navy medium">生年月日<span class="white regular">必須</span></th>
                                 <td><input class="form_input regular navy" id="birthday" type="text" name="yourbirthday" placeholder="20000101"></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <th class="navy medium">メールアドレス<span class="white regular">必須</span></th>
-                                <td><input class="form_input regular navy" id="email" type="email" name="youremail" placeholder="zenryoku@stretch.jp"></td>
+                                <td><input class="form_input regular navy" id="email" type="email" name="email" placeholder="zenryoku@stretch.jp"></td>
                             </tr>
                             <tr>
                                 <th class="navy medium">電話番号<span class="white regular">必須</span></th>
-                                <td><input class="form_input regular navy" id="tel" type="tel" name="yourtel" autocomplete="email" placeholder="ハイフンなしでご入力ください"></td>
+                                <td><input class="form_input regular navy" id="phone" type="tel" name="phone" autocomplete="email" placeholder="ハイフンなしでご入力ください"></td>
                             </tr>
-                            <tr class="work_location">
+                            <!-- <tr class="work_location">
                                 <th class="navy medium">希望エリア<span class="not_required"></span></th>
                                 <td>
                                     <div class="select_wrap"><select onchange="this.className=this.options[this.selectedIndex].className"
@@ -630,12 +630,12 @@
                                         <option class="input_navy">福岡</option>
                                     </select></div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </table>
                         <input type="submit" value="送信">
-                    </div>
+                    </form></div>
             </div>
-        </section> -->
+        </section>
     </main>
     <footer>
         <p class="font-notosans regular navy">体幹軸調整で驚くほど広がる｡</p>
@@ -659,5 +659,26 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Form -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let formData = new FormData(this);
+
+            fetch('process_form.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
